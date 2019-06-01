@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "welcome-teams-tabs-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/welcomeTeamsTabs/WelcomeTeamsTabsWebPart.js",
+          "manifest": "./src/webparts/welcomeTeamsTabs/WelcomeTeamsTabsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "WelcomeTeamsTabsWebPartStrings": "lib/webparts/welcomeTeamsTabs/loc/{locale}.js"
+  }
+}
