@@ -1,0 +1,47 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.2",
+    "packageName": "WelcomeTeamsTabsWebPart",
+    "id": "aa3fecf0-1fd0-4751-aba1-12314dc3a22f",
+    "version": "0.1",
+    "developer": {
+      "name": "Parker Porcupine",
+      "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
+      "privacyUrl": "https://privacy.microsoft.com/en-us/privacystatement",
+      "termsOfUseUrl": "https://www.microsoft.com/en-us/servicesagreement"
+    },
+    "name": {
+      "short": "WelcomeTeamsTabs"
+    },
+    "description": {
+      "short": "Sample welcome Web Part to show as a Teams Tab",
+      "full": "Sample welcome Web Part to show as a Teams Tab"
+    },
+    "icons": {
+      "outline": "cf5ed913-4af6-4f8a-bac9-a1e522536af6_outline.png",
+      "color": "cf5ed913-4af6-4f8a-bac9-a1e522536af6_color.png"
+    },
+    "accentColor": "#004578",
+    "configurableTabs": [
+      {
+        "configurationUrl": "https://{teamSiteDomain}{teamSitePath}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/teamshostedapp.aspx%3FopenPropertyPane=true%26teams%26componentId=cf5ed913-4af6-4f8a-bac9-a1e522536af6%26forceLocale={locale}",
+        "canUpdateConfiguration": true,
+        "scopes": [
+          "team"
+        ]
+      }
+    ],
+    "validDomains": [
+      "*.login.microsoftonline.com",
+      "*.sharepoint.com",
+      "*.sharepoint-df.com",
+      "spoppe-a.akamaihd.net",
+      "spoprod-a.akamaihd.net",
+      "resourceseng.blob.core.windows.net",
+      "msft.spoppe.com"
+    ],
+    "webApplicationInfo": {
+      "resource": "https://{teamSiteDomain}",
+      "id": "00000003-0000-0ff1-ce00-000000000000"
+    }
+  }

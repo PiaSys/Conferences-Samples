@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/consumeSp/ConsumeSpWebPart.js",
+      "manifest": "./src/webparts/consumeSp/ConsumeSpWebPart.manifest.json",
+      "outputPath": "./dist/consume-sp.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "consumeSpStrings": "webparts/consumeSp/loc/{locale}.js"
+  }
+}

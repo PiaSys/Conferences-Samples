@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "read-mail-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/readMail/ReadMailWebPart.js",
+          "manifest": "./src/webparts/readMail/ReadMailWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ReadMailWebPartStrings": "lib/webparts/readMail/loc/{locale}.js"
+  }
+}

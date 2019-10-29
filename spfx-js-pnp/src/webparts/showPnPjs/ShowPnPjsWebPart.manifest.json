@@ -1,0 +1,21 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "d63441be-df92-4554-87e8-708a7ef92d23",
+  "alias": "ShowPnPjsWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "d63441be-df92-4554-87e8-708a7ef92d23",
+    "group": { "default": "Under Development" },
+    "title": { "default": "ShowPnPJS" },
+    "description": { "default": "Sample to show PnP JS Library in action" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "ShowPnPJS",
+      "targetList": ""
+    }
+  }]
+}

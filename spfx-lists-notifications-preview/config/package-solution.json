@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-lists-notifications-preview-client-side-solution",
+    "id": "068405b2-a52b-41cd-b684-3a6e40589b42",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-lists-notifications-preview.sppkg"
+  }
+}

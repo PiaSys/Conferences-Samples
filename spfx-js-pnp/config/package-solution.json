@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-js-pnp-client-side-solution",
+    "id": "03c8c041-314c-40d1-8e79-54094e436796",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-js-pnp.sppkg"
+  }
+}

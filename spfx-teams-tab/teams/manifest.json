@@ -1,0 +1,48 @@
+{
+  "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.2",
+  "packageName": "NewsTeamsTab",
+  "id": "b9bffa40-5ce9-4ff7-9d2e-3fa2aace8e42",
+  "version": "0.1",
+  "developer": {
+    "name": "PiaSys",
+    "websiteUrl": "https://www.piasys.com/",
+    "privacyUrl": "https://www.piasys.com/privacy",
+    "termsOfUseUrl": "https://www.piasys.com/termsOfUse"
+  },
+  "name": {
+    "short": "NewsTeamsTab"
+  },
+  "description": {
+    "short": "Web Part to show news in SPO and Microsoft Teams Tabs",
+    "full": "Web Part to show news in SPO and Microsoft Teams Tabs"
+  },
+  "icons": {
+    "outline": "tab20x20.png",
+    "color": "tab96x96.png"
+  },
+  "accentColor": "#03787C",
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://{teamSiteDomain}{teamSitePath}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/teamshostedapp.aspx%3FopenPropertyPane=true%26teams%26componentId=b9bffa40-5ce9-4ff7-9d2e-3fa2aace8e42",
+      "canUpdateConfiguration": false,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "validDomains": [
+    "*.login.microsoftonline.com",
+    "*.sharepoint.com",
+    "*.sharepoint-df.com",
+    "spoppe-a.akamaihd.net",
+    "spoprod-a.akamaihd.net",
+    "resourceseng.blob.core.windows.net",
+    "msft.spoppe.com",
+    "*.piasys.com"
+  ],
+  "webApplicationInfo": {
+    "resource": "https://{teamSiteDomain}",
+    "id": "00000003-0000-0ff1-ce00-000000000000"
+  }
+}

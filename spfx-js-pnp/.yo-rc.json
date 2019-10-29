@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "spfx-js-pnp",
+    "framework": "none",
+    "version": "1.0.2",
+    "libraryId": "03c8c041-314c-40d1-8e79-54094e436796"
+  }
+}

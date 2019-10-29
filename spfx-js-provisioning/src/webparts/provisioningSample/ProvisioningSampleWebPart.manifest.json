@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "31b2f77f-6ac7-4c21-a423-5c62725f708d",
+  "alias": "ProvisioningSampleWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "31b2f77f-6ac7-4c21-a423-5c62725f708d",
+    "group": { "default": "Under Development" },
+    "title": { "default": "ProvisioningSample" },
+    "description": { "default": "Sample of how to provision artifacts" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "ProvisioningSample"
+    }
+  }]
+}

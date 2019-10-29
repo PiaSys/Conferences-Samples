@@ -1,0 +1,24 @@
+{
+  "solution": {
+    "name": "spfx-js-provisioning-client-side-solution",
+    "id": "c9f9c545-8794-4bde-addd-256d78f1056d",
+    "version": "1.0.0.0",
+    "features": [{
+      "title": "spfx-js-provisioning-client-side-solution",
+      "description": "spfx-js-provisioning-client-side-solution",
+      "id": "b63e213b-e635-45ec-8c64-e08a1e7e2752",
+      "version": "1.0.0.0",
+      "assets": {        
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-js-provisioning.sppkg"
+  }
+}

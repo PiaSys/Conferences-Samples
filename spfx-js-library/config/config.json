@@ -1,0 +1,15 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/externalLib/ExternalLibWebPart.js",
+      "manifest": "./src/webparts/externalLib/ExternalLibWebPart.manifest.json",
+      "outputPath": "./dist/external-lib.bundle.js"
+    }
+  ],
+  "externals": {
+    // "jquery":"https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  },
+  "localizedResources": {
+    "externalLibStrings": "webparts/externalLib/loc/{locale}.js"
+  }
+}

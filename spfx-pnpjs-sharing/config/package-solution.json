@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-pnpjs-sharing-client-side-solution",
+    "id": "99244341-5e2a-413b-bf6b-fc56db758055",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-pnpjs-sharing.sppkg"
+  }
+}

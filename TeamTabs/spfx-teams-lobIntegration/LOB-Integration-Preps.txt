@@ -1,0 +1,2 @@
+https://lob-service.azurewebsites.net/api/customers
+https://spfx-lob-demo-paolopia.azurewebsites.net/api/ListNorthwindCustomers

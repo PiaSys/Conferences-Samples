@@ -1,0 +1,28 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "customers-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/customers/CustomersWebPart.js",
+          "manifest": "./src/webparts/customers/CustomersWebPart.manifest.json"
+        }
+      ]
+    },
+    "orders-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/orders/OrdersWebPart.js",
+          "manifest": "./src/webparts/orders/OrdersWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CustomersWebPartStrings": "lib/webparts/customers/loc/{locale}.js",
+    "OrdersWebPartStrings": "lib/webparts/orders/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

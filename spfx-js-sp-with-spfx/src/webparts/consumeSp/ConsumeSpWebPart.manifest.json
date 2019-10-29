@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "b498ba45-6f36-4395-90ee-f544d8dfa88b",
+  "alias": "ConsumeSpWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "b498ba45-6f36-4395-90ee-f544d8dfa88b",
+    "group": { "default": "Under Development" },
+    "title": { "default": "ConsumeSP" },
+    "description": { "default": "ConsumeSP description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "ConsumeSP"
+    }
+  }]
+}

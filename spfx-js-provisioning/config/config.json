@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/provisioningSample/ProvisioningSampleWebPart.js",
+      "manifest": "./src/webparts/provisioningSample/ProvisioningSampleWebPart.manifest.json",
+      "outputPath": "./dist/provisioning-sample.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "provisioningSampleStrings": "webparts/provisioningSample/loc/{locale}.js"
+  }
+}

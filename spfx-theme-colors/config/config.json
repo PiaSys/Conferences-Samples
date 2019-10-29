@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "play-with-theme-colors-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithThemeColors/PlayWithThemeColorsWebPart.js",
+          "manifest": "./src/webparts/playWithThemeColors/PlayWithThemeColorsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PlayWithThemeColorsWebPartStrings": "lib/webparts/playWithThemeColors/loc/{locale}.js"
+  }
+}

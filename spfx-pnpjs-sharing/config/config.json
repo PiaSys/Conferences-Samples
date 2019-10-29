@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-js-sharing-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pnPJsSharing/PnPJsSharingWebPart.js",
+          "manifest": "./src/webparts/pnPJsSharing/PnPJsSharingWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPJsSharingWebPartStrings": "lib/webparts/pnPJsSharing/loc/{locale}.js"
+  }
+}

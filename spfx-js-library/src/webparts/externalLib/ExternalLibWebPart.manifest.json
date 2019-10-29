@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "fe0c8e4e-b3a9-4067-9754-7c73e23fa6d5",
+  "alias": "ExternalLibWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "fe0c8e4e-b3a9-4067-9754-7c73e23fa6d5",
+    "group": { "default": "Under Development" },
+    "title": { "default": "ExternalLib" },
+    "description": { "default": "Sample to show how to use an external JS library" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "ExternalLib"
+    }
+  }]
+}

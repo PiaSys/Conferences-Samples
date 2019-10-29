@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "show-pn-p-controls-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/showPnPControls/ShowPnPControlsWebPart.js",
+          "manifest": "./src/webparts/showPnPControls/ShowPnPControlsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ShowPnPControlsWebPartStrings": "lib/webparts/showPnPControls/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,47 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.2/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.2",
+    "packageName": "TeamsGraphConsumerWebPart",
+    "id": "aa3fecf0-1fd0-4751-aba1-12314dc3a22f",
+    "version": "0.1",
+    "developer": {
+      "name": "Parker Porcupine",
+      "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
+      "privacyUrl": "https://privacy.microsoft.com/en-us/privacystatement",
+      "termsOfUseUrl": "https://www.microsoft.com/en-us/servicesagreement"
+    },
+    "name": {
+      "short": "TeamsGraphConsumer"
+    },
+    "description": {
+      "short": "Sample Web Part to consume the Microsoft Graph in a Teams Tab",
+      "full": "Sample Web Part to consume the Microsoft Graph in a Teams Tab"
+    },
+    "icons": {
+      "outline": "113c59c9-fc5e-4a19-8541-ad526413e988_outline.png",
+      "color": "113c59c9-fc5e-4a19-8541-ad526413e988_color.png"
+    },
+    "accentColor": "#004578",
+    "configurableTabs": [
+      {
+        "configurationUrl": "https://{teamSiteDomain}{teamSitePath}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/teamshostedapp.aspx%3FopenPropertyPane=true%26teams%26componentId=113c59c9-fc5e-4a19-8541-ad526413e988%26forceLocale={locale}",
+        "canUpdateConfiguration": true,
+        "scopes": [
+          "team"
+        ]
+      }
+    ],
+    "validDomains": [
+      "*.login.microsoftonline.com",
+      "*.sharepoint.com",
+      "*.sharepoint-df.com",
+      "spoppe-a.akamaihd.net",
+      "spoprod-a.akamaihd.net",
+      "resourceseng.blob.core.windows.net",
+      "msft.spoppe.com"
+    ],
+    "webApplicationInfo": {
+      "resource": "https://{teamSiteDomain}",
+      "id": "00000003-0000-0ff1-ce00-000000000000"
+    }
+  }

@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.4.1",
+    "libraryName": "spfx-pnpjs-sharing",
+    "libraryId": "99244341-5e2a-413b-bf6b-fc56db758055",
+    "environment": "spo"
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+    <Field ID="{F4BE4904-D734-4822-B28F-9222B2E113CC}"
+            Name="SPFxEmail"
+            DisplayName="Email Address"
+            Type="Text"
+            Required="FALSE"
+            Group="SPFx Columns" />
+
+    <Field ID="{BE063928-449E-4F14-A145-203034CC996C}"
+            Name="SPFxContactType"
+            DisplayName="Contact Type"
+            Type="Choice"
+            Required="FALSE"
+            Group="SPFx Columns">
+        <CHOICES>
+        <CHOICE>Customer</CHOICE>
+        <CHOICE>Supplier</CHOICE>
+        <CHOICE>Employee</CHOICE>
+        </CHOICES>
+    </Field>
+
+    <ContentType ID="0x0100582B87B16AD543D4BE9B0F965B152472" 
+            Name="SPFxContact" 
+            Group="SPFx Content Types" 
+            Description="Company Contact">
+        <FieldRefs>
+            <FieldRef ID="{F4BE4904-D734-4822-B28F-9222B2E113CC}" /> 
+            <FieldRef ID="{BE063928-449E-4F14-A145-203034CC996C}" />
+        </FieldRefs>
+    </ContentType> 
+
+    <ListInstance 
+            CustomSchema="schema.xml"
+            FeatureId="00bfea71-de22-43b2-a848-c05709900100"
+            Title="SPFx Contacts List" 
+            Description="SPFx Contacts List"
+            TemplateType="100"
+            Url="Lists/SPFxContacts">
+    </ListInstance>
+
+</Elements>

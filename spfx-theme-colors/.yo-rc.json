@@ -1,0 +1,11 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.7.1",
+    "libraryName": "spfx-theme-colors",
+    "libraryId": "bd5545de-d5c8-4df8-910a-5d60dde44e16",
+    "packageManager": "npm",
+    "componentType": "webpart"
+  }
+}

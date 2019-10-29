@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "office-ui-fabric-demo-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/officeUiFabricDemo/OfficeUiFabricDemoWebPart.js",
+          "manifest": "./src/webparts/officeUiFabricDemo/OfficeUiFabricDemoWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "OfficeUiFabricDemoWebPartStrings": "lib/webparts/officeUiFabricDemo/loc/{locale}.js"
+  }
+}

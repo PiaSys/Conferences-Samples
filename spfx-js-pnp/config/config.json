@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/showPnPjs/ShowPnPjsWebPart.js",
+      "manifest": "./src/webparts/showPnPjs/ShowPnPjsWebPart.manifest.json",
+      "outputPath": "./dist/show-pn-pjs.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "showPnPjsStrings": "webparts/showPnPjs/loc/{locale}.js"
+  }
+}
