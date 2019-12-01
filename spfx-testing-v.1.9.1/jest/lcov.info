@@ -1,5 +1,5 @@
 TN:
-SF:C:\spfx\spfx-testing-v.1.9.1\src\webparts\testingSample\components\SampleContent.tsx
+SF:C:\github\PiaSys\Conferences-Samples\spfx-testing-v.1.9.1\src\webparts\testingSample\components\SampleContent.tsx
 FN:14,(anonymous_5)
 FN:16,SampleContent
 FN:38,(anonymous_7)
@@ -35,7 +35,7 @@ BRF:4
 BRH:3
 end_of_record
 TN:
-SF:C:\spfx\spfx-testing-v.1.9.1\src\webparts\testingSample\components\TestingSample.tsx
+SF:C:\github\PiaSys\Conferences-Samples\spfx-testing-v.1.9.1\src\webparts\testingSample\components\TestingSample.tsx
 FN:7,(anonymous_5)
 FN:9,(anonymous_7)
 FN:12,(anonymous_8)

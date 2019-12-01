@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage lines-valid="21" lines-covered="21" line-rate="1" branches-valid="4" branches-covered="3" branch-rate="0.75" timestamp="1568879106351" complexity="0" version="0.1">
+<coverage lines-valid="21" lines-covered="21" line-rate="1" branches-valid="4" branches-covered="3" branch-rate="0.75" timestamp="1574879968037" complexity="0" version="0.1">
   <sources>
-    <source>C:\spfx\spfx-testing-v.1.9.1</source>
+    <source>C:\github\PiaSys\Conferences-Samples\spfx-testing-v.1.9.1</source>
   </sources>
   <packages>
     <class name="SampleContent.tsx" filename="src\webparts\testingSample\components\SampleContent.tsx" line-rate="1" branch-rate="0.75">

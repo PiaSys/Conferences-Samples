@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "provision-artifacts-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/provisionArtifacts/ProvisionArtifactsWebPart.js",
+          "manifest": "./src/webparts/provisionArtifacts/ProvisionArtifactsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ProvisionArtifactsWebPartStrings": "lib/webparts/provisionArtifacts/loc/{locale}.js"
+  }
+}

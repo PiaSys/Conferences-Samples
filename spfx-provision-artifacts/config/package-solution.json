@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-provision-artifacts-client-side-solution",
+    "id": "d19513a9-6260-4f31-bbc3-01ce63136ae1",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "features": [{
+      "title": "spfx-provision-artifacts-client-side-solution",
+      "description": "spfx-provision-artifacts-client-side-solution",
+      "id": "29422381-c870-48c6-88de-44d47164a783",
+      "version": "1.0.0.0",
+      "assets": {        
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-provision-artifacts.sppkg"
+  }
+}
