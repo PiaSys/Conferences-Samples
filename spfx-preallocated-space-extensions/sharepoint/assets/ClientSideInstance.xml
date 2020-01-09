@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="TallHeader"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ComponentId="db1ef070-a199-43ca-a4cf-aee50e736efa"
+        Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}"
+        HostProperties="{&quot;preAllocatedApplicationCustomizerTopHeight&quot;:&quot;150&quot;}">
+    </ClientSideComponentInstance>
+</Elements>
