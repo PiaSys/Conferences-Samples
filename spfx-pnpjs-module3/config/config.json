@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "work-with-fields-and-content-types-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/workWithFieldsAndContentTypes/WorkWithFieldsAndContentTypesWebPart.js",
+          "manifest": "./src/webparts/workWithFieldsAndContentTypes/WorkWithFieldsAndContentTypesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "WorkWithFieldsAndContentTypesWebPartStrings": "lib/webparts/workWithFieldsAndContentTypes/loc/{locale}.js"
+  }
+}
