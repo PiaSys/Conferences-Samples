@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "use-tenant-properties-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/useTenantProperties/UseTenantPropertiesWebPart.js",
+          "manifest": "./src/webparts/useTenantProperties/UseTenantPropertiesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "UseTenantPropertiesWebPartStrings": "lib/webparts/useTenantProperties/loc/{locale}.js"
+  }
+}
