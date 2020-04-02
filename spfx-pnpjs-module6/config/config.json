@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "search-with-pn-pjs-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/searchWithPnPjs/SearchWithPnPjsWebPart.js",
+          "manifest": "./src/webparts/searchWithPnPjs/SearchWithPnPjsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SearchWithPnPjsWebPartStrings": "lib/webparts/searchWithPnPjs/loc/{locale}.js"
+  }
+}
