@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "content-query-consumer-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/contentQueryConsumer/ContentQueryConsumerWebPart.js",
+          "manifest": "./src/webparts/contentQueryConsumer/ContentQueryConsumerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ContentQueryConsumerWebPartStrings": "lib/webparts/contentQueryConsumer/loc/{locale}.js"
+  }
+}

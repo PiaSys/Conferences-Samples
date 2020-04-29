@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "react-content-query-consumer-webpart-client-side-solution",
+    "id": "99314ed3-907d-4b05-bbbd-397501203321",
+    "version": "1.0.0.1",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/react-content-query-consumer-webpart.sppkg"
+  }
+}
