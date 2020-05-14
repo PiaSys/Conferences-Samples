@@ -1,0 +1,64 @@
+﻿<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema https://raw.githubusercontent.com/OfficeDev/PnP-Provisioning-Schema/experimental/OfficeDevPnP.ProvisioningSchema/ProvisioningSchema-2020-02.xsd"
+                  Author="Paolo Pialorsi"
+                  Generator="Human being"
+                  Version="1.0"
+                  Description="A sample Provisioning template to test Teams provisioning"
+                  DisplayName="Teams Provisioning">
+
+  <pnp:Preferences Author="PiaSys.com" Version="1.0" Generator="Human being">
+    <pnp:Parameters>
+      <pnp:Parameter Key="TeamTitle">Test Team</pnp:Parameter>
+      <pnp:Parameter Key="TeamAlias">testteam</pnp:Parameter>
+    </pnp:Parameters>
+  </pnp:Preferences>
+
+  <pnp:Teams>
+
+    <pnp:Team DisplayName="{parameter:TeamTitle}" Description="This is a Team provisioned with PnP"
+              Visibility="Private" Archived="false" MailNickname="{parameter:TeamAlias}">
+      <pnp:FunSettings AllowGiphy="true" GiphyContentRating="Strict"
+                       AllowStickersAndMemes="true" AllowCustomMemes="true"/>
+      <pnp:GuestSettings AllowCreateUpdateChannels="true" AllowDeleteChannels="false"/>
+      <pnp:MembersSettings AllowCreateUpdateChannels="true" AllowDeleteChannels="false"
+                           AllowAddRemoveApps="true"
+                           AllowCreateUpdateRemoveConnectors="true"
+                           AllowCreateUpdateRemoveTabs="false" />
+      <pnp:MessagingSettings AllowUserEditMessages="true" AllowUserDeleteMessages="true"
+                             AllowOwnerDeleteMessages="false"
+                             AllowTeamMentions="true"
+                             AllowChannelMentions="true"/>
+      <pnp:Security>
+        <pnp:Owners ClearExistingItems="false">
+          <pnp:User UserPrincipalName="paolo@piasysdev.onmicrosoft.com" />
+        </pnp:Owners>
+      </pnp:Security>
+      <pnp:Channels>
+        <pnp:Channel DisplayName="General"
+                     Description="General"
+                     IsFavoriteByDefault="true">
+          <pnp:Tabs>
+            <pnp:Tab DisplayName="Wiki" TeamsAppId="com.microsoft.teamspace.tab.wiki" Remove="true" />
+            <pnp:Tab DisplayName="OneNote" TeamsAppId="0d820ecd-def2-4297-adad-78056cde7c78" />
+          </pnp:Tabs>
+        </pnp:Channel>
+        <pnp:Channel DisplayName="Private Channel"
+                     Description="This is a private channel provisioned with PnP"
+                     IsFavoriteByDefault="true" Private="true">
+          <pnp:Tabs>
+            <pnp:Tab DisplayName="Bing" TeamsAppId="com.microsoft.teamspace.tab.web">
+              <pnp:Configuration EntityId=""
+                                 ContentUrl="https://www.bing.com/"
+                                 WebsiteUrl="https://www.bing.com/"
+                                 RemoveUrl="" />
+            </pnp:Tab>
+            <pnp:Tab DisplayName="Wiki" TeamsAppId="com.microsoft.teamspace.tab.wiki" Remove="true" />
+          </pnp:Tabs>
+        </pnp:Channel>
+      </pnp:Channels>
+    </pnp:Team>
+
+  </pnp:Teams>
+
+</pnp:Provisioning>
