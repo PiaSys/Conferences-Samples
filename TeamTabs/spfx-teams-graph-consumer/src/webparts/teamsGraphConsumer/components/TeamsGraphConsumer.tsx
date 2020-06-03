@@ -117,9 +117,6 @@ export default class TeamsGraphConsumer extends React.Component<ITeamsGraphConsu
 
   public render(): React.ReactElement<ITeamsGraphConsumerProps> {
 
-    console.log(this.state);
-    console.log(this.props);
-
     return (
       <div className={ styles.teamsGraphConsumer }>
         <div className={ styles.container }>

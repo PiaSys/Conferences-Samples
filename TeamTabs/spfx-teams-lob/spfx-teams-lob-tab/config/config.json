@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "crm-customers-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/crmCustomers/CrmCustomersWebPart.js",
+          "manifest": "./src/webparts/crmCustomers/CrmCustomersWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CrmCustomersWebPartStrings": "lib/webparts/crmCustomers/loc/{locale}.js"
+  }
+}

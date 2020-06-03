@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-teams-lob-tab-client-side-solution",
+    "id": "65e3e23d-de6c-4df3-b9cd-28ea6922935f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": true,
+    "webApiPermissionRequests": [
+      {
+        "resource": "PaoloPia-LOB-Sample",
+        "scope": "Customers.Read"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-teams-lob-tab.sppkg"
+  }
+}

@@ -22,18 +22,11 @@ export default class TeamsGraphConsumerWebPart extends BaseClientSideWebPart<{}>
   public async onInit(): Promise<any> {
     let retVal: Promise<any> = Promise.resolve();
 
-    this._graphClient = await this.context.msGraphClientFactory
-      .getClient();
+    this._graphClient = await this.context.msGraphClientFactory.getClient();
 
-    if (this.context.microsoftTeams) {
-      retVal = new Promise((resolve, reject) => {
-        this.context.microsoftTeams.getContext(context => {
-          this._teamsContext = context;
-          resolve();
-        });
-      });
+    if (this.context.sdks.microsoftTeams) {
+        this._teamsContext = this.context.sdks.microsoftTeams.context;
     }
-    return retVal;  
   }
 
   public render(): void {
