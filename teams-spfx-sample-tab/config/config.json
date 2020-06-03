@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "sample-team-tab-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sampleTeamTab/SampleTeamTabWebPart.js",
+          "manifest": "./src/webparts/sampleTeamTab/SampleTeamTabWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SampleTeamTabWebPartStrings": "lib/webparts/sampleTeamTab/loc/{locale}.js"
+  }
+}
