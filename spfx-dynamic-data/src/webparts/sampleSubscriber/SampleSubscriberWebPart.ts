@@ -10,7 +10,6 @@ import {
   DynamicDataSharedDepth
 } from '@microsoft/sp-webpart-base';
 
-import * as strings from 'SampleSubscriberWebPartStrings';
 import SampleSubscriber from './components/SampleSubscriber';
 import { ISampleSubscriberProps } from './components/ISampleSubscriberProps';
 
