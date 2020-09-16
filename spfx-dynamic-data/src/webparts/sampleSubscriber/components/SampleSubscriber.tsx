@@ -1,18 +1,23 @@
 import * as React from 'react';
 import styles from './SampleSubscriber.module.scss';
 import { ISampleSubscriberProps } from './ISampleSubscriberProps';
-import { escape } from '@microsoft/sp-lodash-subset';
 import { Placeholder } from "@pnp/spfx-controls-react/lib/Placeholder";
 import { Label } from 'office-ui-fabric-react/lib/Label';
 
 export default class SampleSubscriber extends React.Component<ISampleSubscriberProps, {}> {
   public render(): React.ReactElement<ISampleSubscriberProps> {
-    
-    const dynamicText: string | undefined = this.props.dynamicText.tryGetValue();
-    const dynamicNumber: number | undefined = this.props.dynamicNumber.tryGetValue();
 
-    console.log(dynamicText);
-    console.log(dynamicNumber);
+    // let dynamicTextObject: any = this.props.dynamicText.tryGetValue();
+    // let dynamicNumberObject: any = this.props.dynamicNumber.tryGetValue();
+
+    // console.log(dynamicTextObject.textValue);
+    // console.log(dynamicNumberObject.numericValue);
+
+    const dynamicText: string | undefined = this.props.dynamicText.tryGetValue(); // dynamicTextObject.textValue;
+    const dynamicNumber: number | undefined = this.props.dynamicNumber.tryGetValue(); // dynamicNumberObject.numericValue;
+
+    // console.log(dynamicText);
+    // console.log(dynamicNumber);
 
     return (
       <div className={ styles.sampleSubscriber }>
