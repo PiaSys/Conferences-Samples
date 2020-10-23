@@ -28,21 +28,21 @@
         <Field ID="{23203E97-3BFE-40CB-AFB4-07AA2B86BF45}" Type="Text" Name="ProjectID" DisplayName="ProjectID" Group="Base.Foundation.Columns" MaxLength="255" AllowDeletion="TRUE" />
         <Field ID="{B01B3DBC-4630-4ED1-B5BA-321BC7841E3D}" Type="Text" Name="ProjectName" DisplayName="ProjectName" Group="Base.Foundation.Columns" MaxLength="255" AllowDeletion="TRUE" />
         <Field ID="{A5DE9600-B7A6-42DD-A05E-10D4F1500208}" Type="Text" Name="ProjectManager" DisplayName="ProjectManager" Group="Base.Foundation.Columns"  MaxLength="255" AllowDeletion="TRUE" />
-        <Field ID="{F1A1715E-6C52-40DE-8403-E9AAFD0470D0}" Type="Text" Name="DocumentDescription" DisplayName="Description" Group="Base.Foundation.Columns" MaxLength="255" AllowDeletion="TRUE" />
+        <Field ID="{F1A1715E-6C52-40DE-8403-E9AAFD0470D0}" Type="Text" Name="ProjectDescription" DisplayName="ProjectDescription" Group="Base.Foundation.Columns" MaxLength="255" AllowDeletion="TRUE" />
       </pnp:SiteFields>
 
       <pnp:ContentTypes>
-        <pnp:ContentType ID="0x01005D4F34E4BE7F4B6892AEBE088EDD215E"
+        <pnp:ContentType ID="0x0101005D4F34E4BE7F4B6892AEBE088EDD215E"
                      Name="General Project Document"
                      Group="Base Foundation Content Types"
                      Description="General Project Document Content Type">
           <pnp:FieldRefs>
             <!-- Project ID -->
-            <pnp:FieldRef ID="{23203E97-3BFE-40CB-AFB4-07AA2B86BF45}" />
+            <pnp:FieldRef ID="{23203E97-3BFE-40CB-AFB4-07AA2B86BF45}" UpdateChildren="true"  />
             <!-- Project Name -->
-            <pnp:FieldRef ID="{B01B3DBC-4630-4ED1-B5BA-321BC7841E3D}" />
+            <pnp:FieldRef ID="{B01B3DBC-4630-4ED1-B5BA-321BC7841E3D}" UpdateChildren="true"  />
             <!-- Project Manager -->
-            <pnp:FieldRef ID="{A5DE9600-B7A6-42DD-A05E-10D4F1500208}" UpdateChildren="false" />
+            <pnp:FieldRef ID="{A5DE9600-B7A6-42DD-A05E-10D4F1500208}" UpdateChildren="true" />
             <!-- Project Description -->
             <pnp:FieldRef ID="{F1A1715E-6C52-40DE-8403-E9AAFD0470D0}" UpdateChildren="true" />
           </pnp:FieldRefs>
@@ -65,7 +65,7 @@
                     MaxVersionLimit="10"
                     MinorVersionLimit="10">
           <pnp:ContentTypeBindings>
-            <pnp:ContentTypeBinding ContentTypeID="0x01005D4F34E4BE7F4B6892AEBE088EDD215E" Default="true"/>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101005D4F34E4BE7F4B6892AEBE088EDD215E" Default="true"/>
             <pnp:ContentTypeBinding ContentTypeID="0x0120" Remove="true"/>
           </pnp:ContentTypeBindings>
         </pnp:ListInstance>

@@ -11,6 +11,7 @@ import { WebPartTitle } from '@pnp/spfx-controls-react/lib/WebPartTitle';
 import { Spinner, SpinnerSize } from 'office-ui-fabric-react/lib/components/Spinner';
 import { Label } from 'office-ui-fabric-react/lib/Label';
 import { DefaultButton, IButtonProps } from 'office-ui-fabric-react/lib/Button';
+import { nullRender } from 'office-ui-fabric-react/lib/Utilities';
 
 export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthTokensProps, IPlayWithOAuthTokensState> {
 
@@ -20,7 +21,8 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
     this.state = {
       result: '',
       loading: false,
-      error: undefined
+      error: undefined,
+      customers: null
     };
   }
 
@@ -32,13 +34,12 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
       return;
     }
 
-    debugger;
-
     // update state to indicate loading and remove any previously loaded data
     this.setState({
       error: null,
       loading: true,
-      result: ''
+      result: '',
+      customers: null
     });
 
     const response : IUser = await this.props.graphClient
@@ -68,7 +69,8 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
     this.setState({
       error: null,
       loading: true,
-      result: ''
+      result: '',
+      customers: null
     });
 
     const requestHeaders: Headers = new Headers();
@@ -91,11 +93,13 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
     const nameClaims: IClaim[] = response.CurrentPrincipalClaims.filter((i) => {
       return(i.m_type === "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name");
     });
+
     const username: string = nameClaims.length > 0 ? nameClaims[0].m_value : "";
 
     this.setState({
-      result: `Hi ${username}, I've got your name through the REST API call!`,
-      loading: false
+      result: `Hello ${username}, there are ${response.Customers.length} customers in the response`,
+      loading: false,
+      customers: response.Customers.map(c => c.CustomerID)
     });
   }
 
@@ -105,7 +109,8 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
     this.setState({
       error: null,
       loading: true,
-      result: ''
+      result: '',
+      customers: null
     });
 
     // const accessToken = await this.props.aadTokenProvider.getToken("https://graph.microsoft.com");
@@ -158,7 +163,8 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
 
     this.setState({
       result: `Hello ${username}, there are ${response.Customers.length} customers in the response`,
-      loading: false
+      loading: false,
+      customers: response.Customers.map(c => c.CustomerID)
     });
   }
 
@@ -177,11 +183,18 @@ export default class PlayWithOAuthTokens extends React.Component<IPlayWithOAuthT
               <div>
                 <Label>{this.state.result}</Label>
               </div>
-            ) : (
+              ) : (
               !this.state.loading && this.state.error ?
                 <Label>{this.state.error}</Label> : null
             )
-        }
+          }
+          {
+            this.state.customers ? (
+              <div>
+                {this.state.customers.map(c => <div>{c}</div>)}
+              </div>
+            ) : null
+          }
         <DefaultButton
           text="Call MS Graph"
           onClick={this._callMSGraph}
