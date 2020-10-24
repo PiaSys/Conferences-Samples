@@ -6,6 +6,13 @@
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "isDomainIsolated": true,
+    "developer": {
+      "mpnId": "",
+      "websiteUrl": "https://piasys.com",
+      "privacyUrl": "https://piasys.com/privacy",
+      "termsOfUseUrl": "",
+      "name": "PiaSys.com"
+    },
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",
