@@ -1,0 +1,8 @@
+classSourcedId,userSourcedId,role
+11001,12001,Teacher
+11001,13001,Student
+11001,13002,Student
+11002,12002,Teacher
+11002,13001,Student
+11001,12000,Staff
+11002,12000,Staff

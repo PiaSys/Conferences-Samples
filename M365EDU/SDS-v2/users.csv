@@ -1,0 +1,9 @@
+sourcedId,orgSourcedIds,givenName,familyName,username,password,role,grade
+12000,10001,Staff01,Staff01,staff01@my-school.mobi,P@ssw0rd!,staff,
+12001,10001,Teacher01,Teacher01,teacher01@my-school.mobi,P@ssw0rd!,teacher,
+12002,10001,Teacher02,Teacher02,teacher02@my-school.mobi,P@ssw0rd!,teacher,
+13001,10001,Student01,Student01,student01@my-school.mobi,P@ssw0rd!,student,1
+13002,10001,Student02,Student02,student02@my-school.mobi,P@ssw0rd!,student,3
+,,,,,,,
+,,,,,,,
+,,,,,,,
