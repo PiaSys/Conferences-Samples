@@ -12,10 +12,10 @@ namespace MSALAADB2C
         private static string clientId = "0a3ba30d-f47f-411e-8015-8cbb923dc41f";
 
         // Authority
-        private static string authority = "https://piasysdevb2c.b2clogin.com/tfp/piasysdevb2c.onmicrosoft.com/B2C_1_SignIn/oauth2/v2.0/token";
+        private static string authority = "https://piasysdevb2c.b2clogin.com/tfp/piasysdevb2c.onmicrosoft.com/B2C_1_SignUpIn/oauth2/v2.0/token";
 
-        // Permission scopes
-        private static string[] scopes = new string[] { "https://graph.microsoft.com/.default" };
+        // Permission scopes (empty)
+        private static string[] scopes = new string[0];
 
         static async Task Main(string[] args)
         {
@@ -26,10 +26,10 @@ namespace MSALAADB2C
 
             try
             {
-                Console.WriteLine("Getting delegated access token...");
+                Console.WriteLine("Authenticating user ...");
                 AuthenticationResult result = await app.AcquireTokenInteractive(scopes).ExecuteAsync();
 
-                Console.WriteLine(result.AccessToken);
+                Console.WriteLine(result.IdToken);
             }
             catch (MsalException exc)
             {
