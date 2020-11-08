@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2020/02/ProvisioningSchema">
+  <pnp:Preferences Generator="OfficeDevPnP.Core, Version=3.26.2010.0, Culture=neutral, PublicKeyToken=null" />
+  <pnp:Templates ID="CONTAINER-TEMPLATE-51D308F9334348C7B7469866C3C2A61F">
+    <pnp:ProvisioningTemplate ID="TEMPLATE-51D308F9334348C7B7469866C3C2A61F" Version="1" BaseSiteTemplate="GROUP#0" Scope="RootSite">
+      <pnp:SiteFields>
+        <Field Type="UserMulti" DisplayName="Team Owners" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Mult="TRUE" Sortable="FALSE" Group="PiaSys Columns" ID="{e92a4732-78d4-447c-9b7b-fd85f930d722}" StaticName="PiaSysTeamOwners" Name="PiaSysTeamOwners" />
+        <Field Type="Text" DisplayName="Team Alias" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="PiaSys Columns" ID="{4b55c03d-7874-48c4-8bef-415642faf823}" StaticName="PiaSysTeamAlias" Name="PiaSysTeamAlias" CustomFormatter="">
+        </Field>
+        <Field Type="Text" DisplayName="Team Template Uri" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="PiaSys Columns" ID="{30485156-fc3d-4da1-a211-ed3084c65fde}" StaticName="PiaSysTeamTemplateUri" Name="PiaSysTeamTemplateUri" CustomFormatter="">
+        </Field>
+        <Field Type="Choice" DisplayName="Team Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="PiaSys Columns" ID="{af5e506e-2c87-4d90-8522-33b4b52c95b2}" StaticName="PiaSysTeamStatus" Name="PiaSysTeamStatus" CustomFormatter="">
+          <Default>Requested</Default>
+          <CHOICES>
+            <CHOICE>Requested</CHOICE>
+            <CHOICE>Approved</CHOICE>
+            <CHOICE>Rejected</CHOICE>
+            <CHOICE>Provisioned</CHOICE>
+            <CHOICE>Failed</CHOICE>
+          </CHOICES>
+        </Field>
+        <Field Type="URL" DisplayName="Team Uri" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" Group="PiaSys Columns" ID="{511f0597-f73a-4fab-a9a5-4d5295177e94}" StaticName="PiaSysTeamUri" Name="PiaSysTeamUri" CustomFormatter="">
+        </Field>
+        <Field Type="UserMulti" DisplayName="Team Members" List="UserInfo" Required="FALSE" EnforceUniqueValues="FALSE" ShowField="ImnName" UserSelectionMode="PeopleOnly" UserSelectionScope="0" Mult="TRUE" Sortable="FALSE" Group="PiaSys Columns" ID="{05301bc8-304f-44e5-ab15-825734ec9a8c}" StaticName="PiaSysTeamMembers" Name="PiaSysTeamMembers" />
+        <Field Name="HostType" ID="{7C8702DF-A33C-4E20-8B8B-FBBC603FAEB5}" Type="Text" DisplayName="Host Type" Group="_Hidden" Sealed="TRUE" ReadOnly="FALSE" ShowInEditForm="TRUE" ShowInDisplayForm="TRUE" ShowInNewForm="TRUE" />
+      </pnp:SiteFields>
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x0100BEB01AE12E21D0438F34ACF347215481" Name="PiaSysTeamRequest" Description="" Group="PiaSys Content Types" NewFormUrl="" EditFormUrl="" DisplayFormUrl="">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="c042a256-787d-4a6f-8a8a-cf6ab767f12d" Name="ContentType" UpdateChildren="true" />
+            <pnp:FieldRef ID="fa564e0f-0c70-4ab9-b863-0177e6ddd247" Name="Title" Required="true" UpdateChildren="true" />
+            <pnp:FieldRef ID="4b55c03d-7874-48c4-8bef-415642faf823" Name="PiaSysTeamAlias" UpdateChildren="true" />
+            <pnp:FieldRef ID="e92a4732-78d4-447c-9b7b-fd85f930d722" Name="PiaSysTeamOwners" UpdateChildren="true" />
+            <pnp:FieldRef ID="05301bc8-304f-44e5-ab15-825734ec9a8c" Name="PiaSysTeamMembers" UpdateChildren="true" />
+            <pnp:FieldRef ID="30485156-fc3d-4da1-a211-ed3084c65fde" Name="PiaSysTeamTemplateUri" UpdateChildren="true" />
+            <pnp:FieldRef ID="af5e506e-2c87-4d90-8522-33b4b52c95b2" Name="PiaSysTeamStatus" UpdateChildren="true" />
+            <pnp:FieldRef ID="511f0597-f73a-4fab-a9a5-4d5295177e94" Name="PiaSysTeamUri" UpdateChildren="true" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+      <pnp:Lists>
+        <pnp:ListInstance Title="TeamsProvisioning" Description="" DocumentTemplate="" OnQuickLaunch="true" TemplateType="100" Url="Lists/TeamsProvisioning" MinorVersionLimit="0" MaxVersionLimit="0" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-de22-43b2-a848-c05709900100" ContentTypesEnabled="true" EnableFolderCreation="false" DefaultDisplayFormUrl="{site}/Lists/TeamsProvisioning/DispForm.aspx" DefaultEditFormUrl="{site}/Lists/TeamsProvisioning/EditForm.aspx" DefaultNewFormUrl="{site}/Lists/TeamsProvisioning/NewForm.aspx" ImageUrl="/_layouts/15/images/itgen.gif?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0100BEB01AE12E21D0438F34ACF347215481" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{9606A904-DBDB-405C-BACB-2A1AA31753EB}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Items" Url="{site}/Lists/TeamsProvisioning/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="ID" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="LinkTitle" />
+                <FieldRef Name="PiaSysTeamAlias" />
+                <FieldRef Name="PiaSysTeamOwners" />
+                <FieldRef Name="PiaSysTeamMembers" />
+                <FieldRef Name="PiaSysTeamTemplateUri" />
+                <FieldRef Name="PiaSysTeamStatus" />
+                <FieldRef Name="PiaSysTeamUri" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <Aggregations Value="Off" />
+              <JSLink>clienttemplates.js</JSLink>
+              <ViewData />
+            </View>
+          </pnp:Views>
+          <pnp:Fields>
+            <Field Type="Text" DisplayName="Team Alias" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="PiaSys Columns" ID="{4b55c03d-7874-48c4-8bef-415642faf823}" StaticName="PiaSysTeamAlias" Name="PiaSysTeamAlias" Version="2" CustomFormatter="" ColName="nvarchar4" RowOrdinal="0" />
+            <Field Type="Text" DisplayName="Team Template Uri" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" MaxLength="255" Group="PiaSys Columns" ID="{30485156-fc3d-4da1-a211-ed3084c65fde}" StaticName="PiaSysTeamTemplateUri" Name="PiaSysTeamTemplateUri" Version="2" CustomFormatter="" ColName="nvarchar5" RowOrdinal="0" />
+            <Field Type="Choice" DisplayName="Team Status" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Dropdown" FillInChoice="FALSE" Group="PiaSys Columns" ID="{af5e506e-2c87-4d90-8522-33b4b52c95b2}" StaticName="PiaSysTeamStatus" Name="PiaSysTeamStatus" Version="2" CustomFormatter="" ColName="nvarchar6" RowOrdinal="0">
+              <Default>Requested</Default>
+              <CHOICES>
+                <CHOICE>Requested</CHOICE>
+                <CHOICE>Approved</CHOICE>
+                <CHOICE>Rejected</CHOICE>
+                <CHOICE>Provisioned</CHOICE>
+                <CHOICE>Failed</CHOICE>
+              </CHOICES>
+            </Field>
+            <Field Type="URL" DisplayName="Team Uri" Required="FALSE" EnforceUniqueValues="FALSE" Indexed="FALSE" Format="Hyperlink" Group="PiaSys Columns" ID="{511f0597-f73a-4fab-a9a5-4d5295177e94}" StaticName="PiaSysTeamUri" Name="PiaSysTeamUri" Version="2" CustomFormatter="" ColName="nvarchar7" RowOrdinal="0" ColName2="nvarchar8" RowOrdinal2="0" />
+          </pnp:Fields>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="e92a4732-78d4-447c-9b7b-fd85f930d722" Name="PiaSysTeamOwners" DisplayName="Team Owners" />
+            <pnp:FieldRef ID="05301bc8-304f-44e5-ab15-825734ec9a8c" Name="PiaSysTeamMembers" DisplayName="Team Members" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+        <pnp:ListInstance Title="TeamsTemplates" Description="" DocumentTemplate="{site}/TeamsTemplates/Forms/template.dotx" OnQuickLaunch="true" TemplateType="101" Url="TeamsTemplates" EnableVersioning="true" MinorVersionLimit="0" MaxVersionLimit="500" DraftVersionVisibility="0" TemplateFeatureID="00bfea71-e717-4e80-aa17-d0c71b360101" EnableAttachments="false" DefaultDisplayFormUrl="{site}/TeamsTemplates/Forms/DispForm.aspx" DefaultEditFormUrl="{site}/TeamsTemplates/Forms/EditForm.aspx" DefaultNewFormUrl="{site}/TeamsTemplates/Forms/Upload.aspx" ImageUrl="/_layouts/15/images/itdl.png?rev=47" IrmExpire="false" IrmReject="false" IsApplicationList="false" ValidationFormula="" ValidationMessage="">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0101" Default="true" />
+            <pnp:ContentTypeBinding ContentTypeID="0x0120" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views>
+            <View Name="{999A97E9-9E69-46D9-9D64-F7B06C680291}" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" Type="HTML" DisplayName="All Documents" Url="{site}/TeamsTemplates/Forms/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/dlicon.png?rev=47">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="FileLeafRef" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <FieldRef Name="DocIcon" />
+                <FieldRef Name="LinkFilename" />
+                <FieldRef Name="Modified" />
+                <FieldRef Name="Editor" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+              <JSLink>clienttemplates.js</JSLink>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="d307dff3-340f-44a2-9f4b-fbfe1ba07459" Name="_CommentCount" DisplayName="Comment count" />
+            <pnp:FieldRef ID="db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c" Name="_LikeCount" DisplayName="Like count" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

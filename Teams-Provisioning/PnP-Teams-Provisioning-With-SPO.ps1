@@ -1,6 +1,6 @@
 ﻿# Connect to the target tenant with specific user's identity via Credential Manager
-Connect-PnPOnline "https://<tenant>.sharepoint.com/" -Credentials <CredentialsName>
+Connect-PnPOnline "https://piasysdev.sharepoint.com/" -Credentials PiaSysDev-Paolo
 
 # Apply the tenant template
 Apply-PnPTenantTemplate -Path .\demo-team-template-with-spo.xml `
-    -Parameters @{"TeamTitle"="PnPTeamDemoSIG01C";"TeamAlias"="pnpteamdemosig01c";"CompanyName"="PnP"}
+    -Parameters @{"TeamTitle"="PnPTeamDemo2020110502";"TeamAlias"="pnpteamdemo2020110502";"CompanyName"="PnP"}
