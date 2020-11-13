@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/command-set-extension-manifest.schema.json",
+
+  "id": "e37896bc-97ad-4676-b65a-23e334da1420",
+  "alias": "StartFlowWithArgumentsCommandSet",
+  "componentType": "Extension",
+  "extensionType": "ListViewCommandSet",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+
+  "items": {
+    "START_FLOW": {
+      "title": { "default": "Start Flow" },
+      "iconImageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEsAAABLCAMAAAAPkIrYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABRUExURQAAAJaWlTs6OWtram1sa39+fYCAf1BPTkxLSlhXV1xbWpiXl5ybm3JycaSko2VkY15dXD8+PVNSUbS0tFZVVJ6enVpZWIKBgLOzsk1NTAAAAFMb4y4AAAAbdFJOU///////////////////////////////////ACc0CzUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAE0SURBVFhH7djdcsIgEIbhitXWaqvxp7bc/4WWwKIJ2YV+bGb0gPdoM4FnmOSMFztfz20tzH9a+rVyiFXCIKuAYVYeu1uvfhJblbG7tfaTWDx6BoOtDAZZb+9ZDLLWdpPDQCuLoVYOg60MhlsyVmGJWI0lYVWWgNVZPAZZH9sd9dlbKQZZk8aYzjL0MvQQ62ufdOiqrWnHZkE1C6tZWM3CahaWszoaQyqrO9EY0lgJpbHOCaWxYpdvGvTWpTObMKktRxkTTqa1PEU/QWkNKaU1onTWmFJZCaWxdm7TkFJYEwqzrkcaXIH6oScfYl2NuWEMhVjbfjthHIWeizCWwr6Xv6P4lSjMImzJU6AVb09YCrUixlEDq3CfE/MYSw2sQn5dn8N4qsKyK4GqscTmt+bpOS1r/wBvMtwJbUPcOgAAAABJRU5ErkJggg==",
+      "type": "command"
+    }
+  }
+}

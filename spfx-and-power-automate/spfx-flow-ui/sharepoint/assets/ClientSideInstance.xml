@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <ClientSideComponentInstance
+        Title="StartFlowWithArguments"
+        Location="ClientSideExtension.ListViewCommandSet.CommandBar"
+        ListTemplateId="101"
+        Properties="{&quot;targetContentTypeId&quot;:&quot;0x0101001EA52A6C6B4DB548825829F35F9B87BB&quot;}"
+        ComponentId="e37896bc-97ad-4676-b65a-23e334da1420" />
+</Elements>
