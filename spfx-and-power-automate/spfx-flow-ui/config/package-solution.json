@@ -3,7 +3,7 @@
   "solution": {
     "name": "spfx-flow-ui-client-side-solution",
     "id": "53b9fd28-1b43-4c11-8a29-2571f8a15063",
-    "version": "1.0.0.12",
+    "version": "1.0.0.15",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

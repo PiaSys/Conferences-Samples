@@ -9,7 +9,7 @@ import {
 import { Dialog } from '@microsoft/sp-dialog';
 import { IStartFlowWithArgumentsCommandSetProperties } from './IStartFlowWithArgumentsCommandSetProperties';
 import { StartFlowDialog } from './components/StartFlowDialog/StartFlowDialog';
-import { sp } from "@pnp/sp/presets/all";
+import { IHttpClientOptions, HttpClient } from '@microsoft/sp-http';
 
 import * as strings from 'StartFlowWithArgumentsCommandSetStrings';
 
@@ -58,24 +58,29 @@ export default class StartFlowWithArgumentsCommandSet extends BaseListViewComman
           if(dialog.dialogResult) {
 
             console.log(dialog.dialogResult);
+            
             // console.log(this.context.pageContext.list);
             // console.log(event.selectedRows[0]);
 
-            // var approvers: string[] = dialog.dialogResult.approvers;
-
-            // let listItemId = event.selectedRows[0].getValueByName('ID').toString();
-
-            // let list = sp.web.lists.getByTitle(this.context.pageContext.list.title);
-
-            // // Set the values on the list item
-            // await list.items.getById(listItemId).update({
-            //   LSCTQualityDocumentStatus: strings.PendingApproval,
-            //   LSCTQualityApprovers: approvers,
-            //   LSCTQualityApprovalDeadline: dialog.dialogResult.flowDueDate,
-            //   LSCTQualityRunApprovalFlow: true
-            // });
-
             // TODO: Make an HTTP Request to start the flow
+            const startFlowRequest = {
+              siteUrl: this.context.pageContext.site.absoluteUrl,
+              fileRelativeUrl: `${this.context.pageContext.list.title}/${event.selectedRows[0].getValueByName('FileLeafRef')}`,
+              approvers: dialog.dialogResult.approvers.map(i => i.email),
+              flowDueDate: dialog.dialogResult.flowDueDate
+            };
+
+            console.log(startFlowRequest);
+            
+            const requestHeaders: Headers = new Headers();
+            requestHeaders.append('Content-type', 'application/json');
+
+            const httpClientOptions: IHttpClientOptions = {
+              body: JSON.stringify(startFlowRequest),
+              headers: requestHeaders
+            };
+
+            this.context.httpClient.post("https://prod-148.westeurope.logic.azure.com:443/workflows/751babdbd163494e86a07044c492b9fa/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WxkvQGgynzhFPbSJLB6qFxIG9A7enr4K-jgksRzRSUI", HttpClient.configurations.v1, httpClientOptions);
           }
         });
         break;

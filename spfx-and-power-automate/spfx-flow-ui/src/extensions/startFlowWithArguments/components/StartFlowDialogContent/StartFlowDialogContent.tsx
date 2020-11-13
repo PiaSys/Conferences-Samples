@@ -29,7 +29,7 @@ export class StartFlowDialogContent extends React.Component<IStartFlowDialogCont
         this.state = {
             isLoading: false,
             dialogResult: {
-                approvers: [],
+                approvers: [{ id: Guid.newGuid().toString(), email: '' }],
                 flowDueDate: undefined
             }
         };
