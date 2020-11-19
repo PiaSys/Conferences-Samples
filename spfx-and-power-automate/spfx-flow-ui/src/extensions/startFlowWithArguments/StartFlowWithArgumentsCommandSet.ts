@@ -13,8 +13,11 @@ import { IHttpClientOptions, HttpClient } from '@microsoft/sp-http';
 
 import * as strings from 'StartFlowWithArgumentsCommandSetStrings';
 
+//#region Constants
 const LOG_SOURCE: string = 'StartFlowWithArgumentsCommandSet';
 const START_FLOW_COMMAND: string = 'START_FLOW';
+const FLOW_URL: string = "";
+//#endregion
 
 export default class StartFlowWithArgumentsCommandSet extends BaseListViewCommandSet<IStartFlowWithArgumentsCommandSetProperties> {
 
@@ -62,7 +65,7 @@ export default class StartFlowWithArgumentsCommandSet extends BaseListViewComman
             // console.log(this.context.pageContext.list);
             // console.log(event.selectedRows[0]);
 
-            // TODO: Make an HTTP Request to start the flow
+            // Make an HTTP Request to start the flow
             const startFlowRequest = {
               siteUrl: this.context.pageContext.site.absoluteUrl,
               fileRelativeUrl: `${this.context.pageContext.list.title}/${event.selectedRows[0].getValueByName('FileLeafRef')}`,
@@ -70,7 +73,7 @@ export default class StartFlowWithArgumentsCommandSet extends BaseListViewComman
               flowDueDate: dialog.dialogResult.flowDueDate
             };
 
-            console.log(startFlowRequest);
+            // console.log(startFlowRequest);
             
             const requestHeaders: Headers = new Headers();
             requestHeaders.append('Content-type', 'application/json');
@@ -80,7 +83,9 @@ export default class StartFlowWithArgumentsCommandSet extends BaseListViewComman
               headers: requestHeaders
             };
 
-            this.context.httpClient.post("https://prod-148.westeurope.logic.azure.com:443/workflows/751babdbd163494e86a07044c492b9fa/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WxkvQGgynzhFPbSJLB6qFxIG9A7enr4K-jgksRzRSUI", HttpClient.configurations.v1, httpClientOptions);
+            this.context.httpClient.post(FLOW_URL,
+              HttpClient.configurations.v1, 
+              httpClientOptions);
           }
         });
         break;
