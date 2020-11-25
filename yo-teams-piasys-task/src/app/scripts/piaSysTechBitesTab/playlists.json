@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "key": "PLB_fukFwGnsT7FnVDBejvoHVcN4_8w9Uj",
+            "text": "Microsoft Teams"
+        },
+        {
+            "key": "PLB_fukFwGnsQrngQBT9J8Qpkkpiqq-z76",
+            "text": "SharePoint Framework"
+        },
+        {
+            "key": "PLB_fukFwGnsQi6wZDN7ZjqYHjK5e93N6-",
+            "text": "Microsoft Graph"
+        },
+        {
+            "key": "PLB_fukFwGnsTOa22uIVlhh6kuVBqwKJ3N",
+            "text": "Microsoft 365 Education"
+        },
+        {
+            "key": "PLB_fukFwGnsQ6J6u-VsmcQkmqEDNzC-QB",
+            "text": "Security"
+        },
+        {
+            "key": "PLB_fukFwGnsRkQfO-dIpodY_j_BO-5nSl",
+            "text": "PnPjs"
+        }
+    ]
+}       
