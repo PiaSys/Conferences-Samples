@@ -116,3 +116,6 @@ SET DEBUG=msteams
 ```
 
 If you are using Microsoft Azure to host your Microsoft Teams app, then you can add `DEBUG` as an Application Setting with the value of `msteams`.
+
+
+https://teams.microsoft.com/l/task/<APP_ID>?url=<TASKINFO.URL>&height=<TASKINFO.HEIGHT>&width=<TASKINFO.WIDTH>&title=<TASKINFO.TITLE>
