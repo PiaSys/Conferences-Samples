@@ -1,0 +1,64 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.8",
+    "id": "8b53143b-705c-4c33-9fb2-f3d425cf5e9c",
+    "version": "1.3",
+    "packageName": "SPFxTeamsMultiTab",
+    "developer": {
+      "name": "PiaSys.com",
+      "websiteUrl": "https://www.piasys.com",
+      "privacyUrl": "https://www.piasys.com/privacy.html",
+      "termsOfUseUrl": "https://www.piasys.com"
+    },
+    "name": {
+      "short": "PiaSys Multi-tab Personal App",
+      "full": "PiaSys Multi-tab Personal App"
+    },
+    "description": {
+      "short": "PiaSys Multi-tab Personal App",
+      "full": "Teams App to provide a multi-tab Personal App"
+    },
+    "icons": {
+      "outline": "icon-outline.png",
+      "color": "icon-color.png"
+    },
+    "accentColor": "#D85028",
+    "configurableTabs": [],
+    "staticTabs": [
+      {
+        "entityId": "com.piasys.firstTab",
+        "name": "First Tab",
+        "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=a8977c3f-51b5-4a32-9009-eddddece9256%26forceLocale={locale}",
+        "scopes": [
+          "personal"
+        ]
+      },
+      {
+        "entityId": "com.piasys.secondTab",
+        "name": "Second Tab",
+        "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=f40e0414-eba3-4531-a0dc-1f05f2028e83%26forceLocale={locale}",
+        "scopes": [
+          "personal"
+        ]
+      }
+    ],
+    "bots": [],
+    "connectors": [],
+    "composeExtensions": [],
+    "permissions": [
+      "identity",
+      "messageTeamMembers"
+    ],
+    "validDomains": [
+        "msft.spoppe.com",
+        "spoppe-a.akamaihd.net",
+        "*.sharepoint-df.com",
+        "*.login.microsoftonline.com",
+        "*.sharepoint.com",
+        "spoprod-a.akamaihd.net",
+        "resourceseng.blob.core.windows.net"
+    ],
+    "showLoadingIndicator": false,
+    "isFullScreen": false
+  }
+  
