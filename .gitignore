@@ -33,3 +33,4 @@ obj
 *.scss.ts
 
 packages/
+/yo-teams-piasys-sso-tab-backend/PiaSys.YoTeamsSSO.Backend/Properties/PublishProfiles/piasys-yoteams-sso-backend - Zip Deploy.pubxml
