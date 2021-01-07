@@ -1,0 +1,67 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://raw.githubusercontent.com/pnp/media/master/parker/pnp/300w/parker.png"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Welcome to this form built with **Adaptive Card!**"
+        },
+        {
+            "type": "Input.Text",
+            "id": "FirstName",
+            "placeholder": "enter your first name",
+            "maxLength": 200
+        },
+        {
+            "type": "Input.Text",
+            "id": "LastName",
+            "placeholder": "enter your last name",
+            "maxLength": 200
+        },
+        {
+          "type": "Input.Date",
+          "id": "BirthDate",
+          "placeholder": "Enter your birthdate",
+          "value": "2017-10-12"
+        },
+        {
+          "type": "Input.ChoiceSet",
+          "id": "FavoriteColor",
+          "style": "compact",
+          "isMultiSelect": false,
+          "value": "1",
+          "choices": [
+            {
+              "title": "Red",
+              "value": "1"
+            },
+            {
+              "title": "Green",
+              "value": "2"
+            },
+            {
+              "title": "Blue",
+              "value": "3"
+            }
+          ]
+        },
+        {
+          "type": "Input.Toggle",
+          "id": "DoYouLikeThis",
+          "title": "Do you like this form?",
+          "value": "false",
+          "valueOn": "true",
+          "valueOff": "false"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Submit form"
+        }
+    ]
+}

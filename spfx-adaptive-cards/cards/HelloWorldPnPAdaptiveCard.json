@@ -1,0 +1,25 @@
+{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        {
+            "type": "Image",
+            "url": "https://raw.githubusercontent.com/pnp/media/master/parker/pnp/300w/parker.png"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Welcome to this **Adaptive Card!**"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Send data"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Go to PnP",
+            "url": "http://pnp.github.io/"
+        }
+    ]
+}

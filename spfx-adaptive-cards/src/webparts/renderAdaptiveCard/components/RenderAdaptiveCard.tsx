@@ -88,6 +88,7 @@ export default class RenderAdaptiveCard extends React.Component<IRenderAdaptiveC
 
     if (action._propertyBag["type"] === "Action.Submit") {
       alert("You pressed a submit button!");
+      alert(`Firstname: ${action._processedData.FirstName}\nLastname: ${action._processedData.LastName}\nBirthdate: ${action._processedData.BirthDate}\nFavorite color: ${action._processedData.FavoriteColor}\nDo you like this form: ${action._processedData.DoYouLikeThis}\n`);
     }
     else if (action._propertyBag["type"] === "Action.OpenUrl") {
       window.open(action.url, "_blank");

@@ -1,0 +1,11 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "PiaSys.com",
+      "unitTestsEnabled": false,
+      "useAzureAppInsights": false
+    },
+    "libraryName": "yoTeamsPiasysCardTask",
+    "generator-version": "2.16.0"
+  }
+}
