@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="11" failures="0" time="3.325">
+  <testsuite name="Fake: just a test" errors="0" failures="0" skipped="0" timestamp="2021-01-20T17:45:21" time="0.76" tests="1">
+    <testcase classname="Fake: just a test Test something" name="Fake: just a test Test something" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="Testing Sample: Unit Test" errors="0" failures="0" skipped="0" timestamp="2021-01-20T17:45:21" time="1.967" tests="3">
+    <testcase classname="Testing Sample: Unit Test Should do something" name="Testing Sample: Unit Test Should do something" time="0.03">
+    </testcase>
+    <testcase classname="Testing Sample: Unit Test &lt;TestingSample /&gt; should render something" name="Testing Sample: Unit Test &lt;TestingSample /&gt; should render something" time="0.006">
+    </testcase>
+    <testcase classname="Testing Sample: Unit Test &lt;TestingSample /&gt; should have properties initialized" name="Testing Sample: Unit Test &lt;TestingSample /&gt; should have properties initialized" time="0.003">
+    </testcase>
+  </testsuite>
+  <testsuite name="SampleContent: Unit Test" errors="0" failures="0" skipped="0" timestamp="2021-01-20T17:45:21" time="2.108" tests="7">
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should render something" name="SampleContent: Unit Test &lt;SampleContent /&gt; should render something" time="0.035">
+    </testcase>
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should render the main DIV element" name="SampleContent: Unit Test &lt;SampleContent /&gt; should render the main DIV element" time="0.006">
+    </testcase>
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should render as a React component" name="SampleContent: Unit Test &lt;SampleContent /&gt; should render as a React component" time="0.002">
+    </testcase>
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should have state initialized" name="SampleContent: Unit Test &lt;SampleContent /&gt; should have state initialized" time="0.004">
+    </testcase>
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should have properties initialized" name="SampleContent: Unit Test &lt;SampleContent /&gt; should have properties initialized" time="0.004">
+    </testcase>
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should properly increment state" name="SampleContent: Unit Test &lt;SampleContent /&gt; should properly increment state" time="0.006">
+    </testcase>
+    <testcase classname="SampleContent: Unit Test &lt;SampleContent /&gt; should call componentDidMount only once" name="SampleContent: Unit Test &lt;SampleContent /&gt; should call componentDidMount only once" time="0.002">
+    </testcase>
+  </testsuite>
+</testsuites>
