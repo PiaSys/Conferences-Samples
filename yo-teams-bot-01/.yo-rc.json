@@ -1,0 +1,9 @@
+{
+  "generator-teams": {
+    "promptValues": {
+      "developer": "Paolo Pialorsi"
+    },
+    "libraryName": "yoTeamsBot01",
+    "generator-version": "3.0.3"
+  }
+}
