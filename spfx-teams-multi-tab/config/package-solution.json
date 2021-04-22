@@ -3,7 +3,7 @@
   "solution": {
     "name": "spfx-teams-multi-tab-client-side-solution",
     "id": "29ba10c0-0259-4744-886b-daf80e807adc",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
