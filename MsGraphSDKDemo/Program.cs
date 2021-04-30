@@ -2,6 +2,7 @@
 using Microsoft.Graph.Auth;
 using Microsoft.Identity.Client;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace MsGraphSDKDemo
@@ -34,8 +35,95 @@ namespace MsGraphSDKDemo
             // Create a new instance of the GraphServiceClient based on the just created authentication provider
             var graphClient = new GraphServiceClient(authProvider);
 
-            // await SimpleQueries(graphClient);
-            await Pagination(graphClient);
+            await ManageSPOData(graphClient);
+        }
+
+        private static async Task ManageSPOData(GraphServiceClient graphClient)
+        {
+            // Retrieve the ID of the target list
+            var listsQuery = await graphClient.Sites.GetByPath("sites/MSGraphSDKDemo", "piasysdev.sharepoint.com")
+                .Lists
+                .Request()
+                .Filter("DisplayName eq 'Sample Data'")
+                .Select("Id")
+                .GetAsync();
+
+            if (listsQuery != null && listsQuery.Count > 0)
+            {
+                var sampleDataId = listsQuery[0].Id;
+
+                // Read an item
+                var item = await graphClient.Sites.GetByPath("sites/MSGraphSDKDemo", "piasysdev.sharepoint.com")
+                    .Lists[sampleDataId]
+                    .Items["1"]
+                    .Request()
+                    .GetAsync();
+
+                // Access item metadata fields
+                Console.WriteLine($"Title: {item.Fields.AdditionalData["Title"]}");
+
+                Console.WriteLine($"Description: {GetListItemValue<string>(item, "Description")}");
+                Console.WriteLine($"Enabled: {GetListItemValue<bool>(item, "Enabled")}");
+                Console.WriteLine($"ExpireDateTime: {GetListItemValue<DateTime>(item, "ExpireDateTime")}");
+
+                // Create a new item to add
+                Wait();
+                var newItem = new ListItem
+                {
+                    Fields = new FieldValueSet
+                    {
+                        AdditionalData = new Dictionary<string, object>()
+                        {
+                            {"Title", "New Item"},
+                            {"Description", "Description of the new item"},
+                            {"Owner", "paolo@piasysdev.onmicrosoft.com"},
+                            {"Counter", 200},
+                            {"Enabled", true},
+                            {"ExpireDateTime", DateTime.Now.AddDays(60)},
+                            {"Status", "Suspended"},
+                            {"md856ca9bed5439c98683de78ea0cd09", "-1;#.NET Core|b5b5795a-5b9b-4c3d-9add-8f56e0e45a7c" }
+                        }
+                    }
+                };
+
+                // Add a new item to the collection of items of the "Sample Data" list
+                newItem = await graphClient.Sites.GetByPath("sites/MSGraphSDKDemo", "piasysdev.sharepoint.com")
+                    .Lists[sampleDataId]
+                    .Items
+                    .Request()
+                    .AddAsync(newItem);
+
+                Console.WriteLine($"Added new item with ID: {newItem.Id}");
+
+                // Update the new item
+                Wait();
+                var updatedItem = new ListItem
+                {
+                    Fields = new FieldValueSet
+                    {
+                        AdditionalData = new Dictionary<string, object>()
+                        {
+                            {"Title", $"{newItem.Fields.AdditionalData["Title"]} - Updated"},
+                            {"ExpireDateTime", DateTime.Now.AddDays(90)},
+                        }
+                    }
+                };
+
+                // Update the item in the "Sample Data" list
+                updatedItem = await graphClient.Sites.GetByPath("sites/MSGraphSDKDemo", "piasysdev.sharepoint.com")
+                    .Lists[sampleDataId]
+                    .Items[newItem.Id]
+                    .Request()
+                    .UpdateAsync(updatedItem);
+
+                // Delete the item from the "Sample Data" list
+                Wait();
+                await graphClient.Sites.GetByPath("sites/MSGraphSDKDemo", "piasysdev.sharepoint.com")
+                    .Lists[sampleDataId]
+                    .Items[newItem.Id]
+                    .Request()
+                    .DeleteAsync();
+            }
         }
 
         private static async Task Pagination(GraphServiceClient graphClient)
@@ -119,12 +207,6 @@ namespace MsGraphSDKDemo
             }
         }
 
-        private static void Wait()
-        {
-            Console.WriteLine("Press ENTER to continue ...");
-            Console.ReadLine();
-        }
-
         private static void DisplayUsers(IGraphServiceUsersCollectionPage users)
         {
             Console.WriteLine(users.Count);
@@ -182,6 +264,32 @@ namespace MsGraphSDKDemo
             if (docs.Count > 0)
             {
                 Console.WriteLine(docs[0].Fields.AdditionalData["Title"]);
+            }
+        }
+
+        private static void Wait()
+        {
+            Console.WriteLine("Press ENTER to continue ...");
+            Console.ReadLine();
+        }
+
+        private static TResult GetListItemValue<TResult>(ListItem item, string fieldName)
+        {
+            if (item == null)
+            {
+                throw new ArgumentNullException(nameof(item));
+            }
+
+            switch (Type.GetTypeCode(typeof(TResult)))
+            {
+                case TypeCode.DateTime:
+                    return item.Fields.AdditionalData.ContainsKey(fieldName) ?
+                        (TResult)((object)(DateTime.Parse((string)item.Fields.AdditionalData[fieldName]))):
+                        default(TResult);
+                default:
+                    return item.Fields.AdditionalData.ContainsKey(fieldName) ?
+                        (TResult)item.Fields.AdditionalData[fieldName] :
+                        default(TResult);
             }
         }
     }
