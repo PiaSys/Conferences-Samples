@@ -1,8 +1,11 @@
 ﻿using Microsoft.Graph;
 using Microsoft.Graph.Auth;
 using Microsoft.Identity.Client;
+using Newtonsoft.Json;
 using System;
+using System.Linq;
 using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace MsGraphSDKDemo
@@ -35,7 +38,95 @@ namespace MsGraphSDKDemo
             // Create a new instance of the GraphServiceClient based on the just created authentication provider
             var graphClient = new GraphServiceClient(authProvider);
 
-            await ManageSPOData(graphClient);
+            await GraphBatchingParallel(graphClient);
+            await GraphBatchingSequential(graphClient);
+        }
+
+        private static async Task GraphBatchingParallel(GraphServiceClient graphClient)
+        {
+            // Create a batch request content "container"
+            var batchRequestContent = new BatchRequestContent();
+
+            // Prepare some requests to add to the batch
+            var usersRequest = graphClient.Users.Request().Select("Id,DisplayName");
+            var listsRequest = graphClient.Sites.GetByPath("sites/MSGraphSDKDemo", "piasysdev.sharepoint.com").Lists.Request().Select("Id,DisplayName").OrderBy("DisplayName");
+
+            // Add the requests to the batch
+            var usersRequestId = batchRequestContent.AddBatchRequestStep(usersRequest);
+            var listsRequestId = batchRequestContent.AddBatchRequestStep(listsRequest);
+
+            // Execute the batch request
+            var returnedResponse = await graphClient.Batch.Request().PostAsync(batchRequestContent);
+
+            // Start with the list of lists
+            var listResponse = await returnedResponse
+                .GetResponseByIdAsync(listsRequestId);
+            if (listResponse.IsSuccessStatusCode)
+            {
+                var listsJson = await listResponse.Content.ReadAsStringAsync();
+                var lists = JsonConvert.DeserializeAnonymousType(listsJson,
+                    new { value = new[] { new { Id = "", DisplayName = "" } } });
+
+                foreach (var l in lists.value)
+                {
+                    Console.WriteLine($"[{l.Id}] - {l.DisplayName}");
+                }
+            }
+
+            // Then process the list of users
+            var usersResponse = await returnedResponse
+                .GetResponseByIdAsync(usersRequestId);
+            if (usersResponse.IsSuccessStatusCode)
+            {
+                var usersJson = await usersResponse.Content.ReadAsStringAsync();
+                var users = JsonConvert.DeserializeAnonymousType(usersJson,
+                    new { value = new[] { new { Id = "", DisplayName = "" } } });
+
+                foreach (var u in users.value)
+                {
+                    Console.WriteLine($"[{u.Id}] - {u.DisplayName}");
+                }
+            }
+        }
+
+        private static async Task GraphBatchingSequential(GraphServiceClient graphClient)
+        {
+            // Create a batch request content "container"
+            var batchRequestContent = new BatchRequestContent();
+
+            // Prepare some requests to add to the batch
+            var userRequest = graphClient.Users["paolo@piasysdev.onmicrosoft.com"].Request().Select("Id,DisplayName");
+            var userDriveRequest = graphClient.Users["paolo@piasysdev.onmicrosoft.com"].Drive.Request().Select("Id,WebUrl");
+
+            var userHttpRequest = new HttpRequestMessage(HttpMethod.Get, userRequest.RequestUrl);
+            var userDriveHttpRequest = new HttpRequestMessage(HttpMethod.Get, userDriveRequest.RequestUrl);
+
+            var userRequestId = batchRequestContent.AddBatchRequestStep(new BatchRequestStep("1", userHttpRequest));
+            var userDriveRequestId = batchRequestContent.AddBatchRequestStep(new BatchRequestStep("2", userDriveHttpRequest,
+                (new string[] { "1" }).ToList()));
+
+            // Execute the batch request
+            var returnedResponse = await graphClient.Batch.Request().PostAsync(batchRequestContent);
+
+            // Process batch responses
+            var responseHandler = new ResponseHandler(new Serializer());
+
+            // Now process the dependencies
+            var userResponse = await returnedResponse
+                .GetResponseByIdAsync("1");
+            if (userResponse.IsSuccessStatusCode)
+            {
+                var user = await responseHandler.HandleResponse<User>(userResponse);
+                Console.WriteLine($"{user.Id} - {user.DisplayName}");
+            }
+
+            var userDriveResponse = await returnedResponse
+                .GetResponseByIdAsync("2");
+            if (userDriveResponse.IsSuccessStatusCode)
+            {
+                var drive = await responseHandler.HandleResponse<Drive>(userDriveResponse);
+                Console.WriteLine($"{drive.Id} - {drive.WebUrl}");
+            }
         }
 
         private static async Task ManageSPOData(GraphServiceClient graphClient)
