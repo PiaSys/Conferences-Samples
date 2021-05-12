@@ -4,11 +4,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using PnP.Core.QueryModel;
+using PnP.Core.Model;
 using PnP.Core.Services;
 using PnP.Core.Services.Builder.Configuration;
 using PnP.Core.Auth.Services.Builder.Configuration;
 using System.Linq;
-using PnP.Core.Auth;
 
 namespace PnPCoreSDKAuthDemo
 {
