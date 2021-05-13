@@ -10,7 +10,7 @@ using PnP.Core.Services.Builder.Configuration;
 using PnP.Core.Auth.Services.Builder.Configuration;
 using System.Linq;
 
-namespace PnPCoreSDKAuthDemo
+namespace PnPCoreSDKQueryModel
 {
     class Program
     {
