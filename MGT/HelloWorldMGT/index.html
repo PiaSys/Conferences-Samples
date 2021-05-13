@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Hello World Microsoft Graph Toolkit!</title>
+        <script src="https://unpkg.com/@microsoft/mgt/dist/bundle/mgt-loader.js"></script>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let loginControl = document.getElementById('mgtLogin');
+                let personControl = document.getElementById('mgtPerson');
+                loginControl.addEventListener('loginCompleted', function() {
+                    personControl.style.display = 'block';
+                });
+                loginControl.addEventListener('logoutCompleted', function() {
+                    personControl.style.display = 'none';
+                });
+
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Hello World Microsoft Graph Toolkit!</h1>
+        <mgt-msal-provider client-id="85c9403d-4c54-446a-b4b9-8b8922dac05c"></mgt-msal-provider>
+        <mgt-login id="mgtLogin"></mgt-login>
+        <mgt-person id="mgtPerson" person-query="me" view="twoLines" person-card="hover" style="display: none;"></mgt-person>
+    </body>
+</html>
