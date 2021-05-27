@@ -7,6 +7,13 @@
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,
+    "developer": {
+      "name": "PiaSys.com",
+      "privacyUrl": "https://piasys.com/privacy",
+      "termsOfUseUrl": "https://piasys.com/",
+      "websiteUrl": "https://piasys.com/",
+      "mpnId": "000000"
+    },
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",

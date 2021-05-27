@@ -107,7 +107,7 @@ export default class TeamsGraphConsumer extends React.Component<ITeamsGraphConsu
     }
   }
 
-  private _onSubjectChanged = (newValue: string) : void => {
+  private _onSubjectChanged = (event: any, newValue: string) : void => {
 
     // update the component state accordingly to the current user's input
     this.setState({
@@ -132,7 +132,7 @@ export default class TeamsGraphConsumer extends React.Component<ITeamsGraphConsu
                   <div className={`ms-Grid-col ms-sm6 ms-md6 ms-lg6 ${styles.formField}`}>
                     <TextField 
                       value={ this.state.subject } 
-                      onChanged={ this._onSubjectChanged } />
+                      onChange={ this._onSubjectChanged } />
                   </div>
                 </div>
                 <div className="ms-Grid-row">

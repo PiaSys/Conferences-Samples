@@ -6,7 +6,7 @@ export class ConsumeSPOService implements IConsumeSPOService {
 
     async getSPOInformation(token: string): Promise<ISPOInformation | undefined> {
 
-        const functionUrl = `https://<function-url>.azurewebsites.net/api/ConsumeSPO?code=<function-key>`;
+        const functionUrl = `https://piasys-yoteams-sso-backend.azurewebsites.net/api/ConsumeSPO?code=PP6YLdfKxdMgkyHaaoQbW7XFMAQG5v5n9yzS7/BLzG8Cr8MNEpdJ/w==`;
 
         console.log(functionUrl);
 

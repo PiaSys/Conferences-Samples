@@ -3,10 +3,17 @@
   "solution": {
     "name": "spfx-teams-helloworld-client-side-solution",
     "id": "9a38f740-6dd9-493f-8ff0-555438b687f9",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
-    "isDomainIsolated": false
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "PiaSys.com",
+      "privacyUrl": "https://piasys.com/privacy",
+      "termsOfUseUrl": "https://piasys.com/",
+      "websiteUrl": "https://piasys.com/",
+      "mpnId": "000000"
+    } 
   },
   "paths": {
     "zippedPackage": "solution/spfx-teams-helloworld.sppkg"

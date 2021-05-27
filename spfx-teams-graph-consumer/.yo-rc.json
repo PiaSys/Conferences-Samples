@@ -2,7 +2,7 @@
   "@microsoft/generator-sharepoint": {
     "isCreatingSolution": true,
     "environment": "spo",
-    "version": "1.8.2",
+    "version": "1.12.1",
     "libraryName": "spfx-teams-graph-consumer",
     "libraryId": "e9cfdac5-9c7e-4e16-97f8-0fed773fa49f",
     "packageManager": "npm",
