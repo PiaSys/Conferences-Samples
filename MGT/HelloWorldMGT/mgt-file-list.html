@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Hello World Microsoft Graph Toolkit!</title>
+        <script src="https://unpkg.com/@microsoft/mgt/dist/bundle/mgt-loader.js"></script>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let loginControl = document.getElementById('mgtLogin');
+                let fileListControl = document.getElementById('mgtFileList');
+                loginControl.addEventListener('loginCompleted', function() {
+                    fileListControl.style.display = 'block';
+                });
+                loginControl.addEventListener('logoutCompleted', function() {
+                    fileListControl.style.display = 'none';
+                });
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Microsoft Graph Toolkit - File List Component</h1>
+        <mgt-msal-provider client-id="85c9403d-4c54-446a-b4b9-8b8922dac05c"></mgt-msal-provider>
+        <mgt-login id="mgtLogin"></mgt-login>
+        <mgt-file-list id="mgtFileList" file-list-query="me/drive/root/children" view="twolines" page-size="5" file-extensions="docx,xlsx">
+            <template data-type="file">
+                <a href="{{file.webUrl}}">{{file.name}}</a>
+            </template>        
+        </mgt-file-list>
+    </body>
+</html>
