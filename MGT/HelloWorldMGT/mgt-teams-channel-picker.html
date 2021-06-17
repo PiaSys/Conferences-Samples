@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Hello World Microsoft Graph Toolkit!</title>
+        <script src="https://unpkg.com/@microsoft/mgt/dist/bundle/mgt-loader.js"></script>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let loginControl = document.getElementById('mgtLogin');
+                let channelPickerControl = document.getElementById('mgtChannelPicker');
+                loginControl.addEventListener('loginCompleted', function() {
+                    channelPickerControl.style.display = 'block';
+                });
+                loginControl.addEventListener('logoutCompleted', function() {
+                    channelPickerControl.style.display = 'none';
+                });
+
+                channelPickerControl.addEventListener('selectionChanged', function(event) {
+                    console.log(event);
+                    console.log(event.detail[0].team);
+                    console.log(event.detail[0].channel);
+                });
+            });
+
+        </script>
+
+    </head>
+    <body>
+        <h1>Microsoft Graph Toolkit - Teams Channel Picker Component</h1>
+        <mgt-msal-provider client-id="85c9403d-4c54-446a-b4b9-8b8922dac05c"></mgt-msal-provider>
+        <mgt-login id="mgtLogin"></mgt-login>
+        <mgt-teams-channel-picker id="mgtChannelPicker" style="display: none;">
+        </mgt-teams-channel-picker>
+    </body>
+</html>
