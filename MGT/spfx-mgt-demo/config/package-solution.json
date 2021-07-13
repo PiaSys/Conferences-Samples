@@ -3,9 +3,10 @@
   "solution": {
     "name": "spfx-mgt-demo-client-side-solution",
     "id": "415332b0-9e04-4dcd-90b7-2a5a4cd7d397",
-    "version": "1.0.0.0",
+    "version": "1.0.0.1",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
+    "skipFeatureDeployment": true,
     "developer": {
       "name": "",
       "websiteUrl": "",
