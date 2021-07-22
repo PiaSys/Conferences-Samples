@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiaSys.AzureSearch.Sample", "PiaSys.AzureSearch.Sample.csproj", "{95FB0A9B-3986-4960-86B4-9DF497F0059B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{95FB0A9B-3986-4960-86B4-9DF497F0059B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95FB0A9B-3986-4960-86B4-9DF497F0059B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95FB0A9B-3986-4960-86B4-9DF497F0059B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95FB0A9B-3986-4960-86B4-9DF497F0059B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB46A72D-075F-4BE9-8F34-FF55F27A3703}
+	EndGlobalSection
+EndGlobal
