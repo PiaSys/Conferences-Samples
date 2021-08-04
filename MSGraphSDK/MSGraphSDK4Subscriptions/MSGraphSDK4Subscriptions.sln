@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGraphSDK4Subscriptions", "MSGraphSDK4Subscriptions.csproj", "{1818044A-1DC7-4154-864B-02D7D4CA86DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSGraphSDK4Subscriber", "..\MSGraphSDK4Subscriber\MSGraphSDK4Subscriber.csproj", "{29ABAA26-E55D-4E16-BE56-9BA87E9BD86A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1818044A-1DC7-4154-864B-02D7D4CA86DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1818044A-1DC7-4154-864B-02D7D4CA86DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1818044A-1DC7-4154-864B-02D7D4CA86DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1818044A-1DC7-4154-864B-02D7D4CA86DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29ABAA26-E55D-4E16-BE56-9BA87E9BD86A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29ABAA26-E55D-4E16-BE56-9BA87E9BD86A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29ABAA26-E55D-4E16-BE56-9BA87E9BD86A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29ABAA26-E55D-4E16-BE56-9BA87E9BD86A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD6FFE71-4F2F-47D2-8BAB-B13D842CE3DD}
+	EndGlobalSection
+EndGlobal
