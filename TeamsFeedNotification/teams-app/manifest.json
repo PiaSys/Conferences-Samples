@@ -1,0 +1,47 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.8",
+    "id": "d9cd1ec4-1492-4e62-8739-51e8b01d396f",
+    "version": "1.0.1",
+    "packageName": "FeedNotificationDemoApp",
+    "developer": {
+        "name": "PiaSys.com",
+        "websiteUrl": "https://piasys.com",
+        "privacyUrl": "https://piasys.com",
+        "termsOfUseUrl": "https://piasys.com"
+    },
+    "name": {
+        "short": "Feed Notification Demo App",
+        "full": "Feed Notification Demo Apps"
+    },
+    "description": {
+        "short": "Sample about how to use Feed Notifications in Teams",
+        "full": "Sample about how to use Feed Notifications in Teams"
+    },
+    "icons": {
+        "outline": "icon-outline.png",
+        "color": "icon-color.png"
+    },
+    "accentColor": "#FFFFFF",
+    "configurableTabs": [],
+    "staticTabs": [],
+    "bots": [],
+    "connectors": [],
+    "composeExtensions": [],
+    "webApplicationInfo": {
+        "id": "18af415f-6d86-4ce5-80c8-87d792b80b57",
+        "resource": "https://piasys.com"
+    },
+    "activities": {
+        "activityTypes": [
+            {
+                "type": "customNotification",
+                "description": "Sample notification",
+                "templateText": "{sender} has a notification for you!"
+            }
+        ]
+    },
+    "validDomains": [
+        "piasys.com"
+    ]
+}
