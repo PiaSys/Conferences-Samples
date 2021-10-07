@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-ace-hello-world-client-side-solution",
+    "id": "47d69497-e4df-4779-89a6-4d6bef0f6cfe",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.13.0-beta.20"
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-ace-hello-world.sppkg"
+  }
+}

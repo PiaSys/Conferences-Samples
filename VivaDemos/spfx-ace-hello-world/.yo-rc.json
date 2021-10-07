@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.0-beta.20",
+    "libraryName": "spfx-ace-hello-world",
+    "libraryId": "47d69497-e4df-4779-89a6-4d6bef0f6cfe",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "templateType": "PrimaryText"
+  }
+}

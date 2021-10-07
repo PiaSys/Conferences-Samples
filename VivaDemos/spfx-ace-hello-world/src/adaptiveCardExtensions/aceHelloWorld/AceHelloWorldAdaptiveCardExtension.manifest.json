@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "9576fd53-11a4-4f47-b0de-cc7b64dd4752",
+  "alias": "AceHelloWorldAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard", "SharePointWebPart"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "ACEHelloWorld" },
+    "description": { "default": "ACEHelloWorld description" },
+    "officeFabricIconFontName": "SharePointLogo",
+    "properties": {
+      "title": "ACEHelloWorld",
+      "description": "ACEHelloWorld description",
+      "iconProperty": "" // Default to sharepointlogo
+    }
+  }]
+}

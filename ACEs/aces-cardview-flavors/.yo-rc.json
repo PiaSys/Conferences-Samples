@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": false,
+    "environment": "spo",
+    "version": "1.13.0-beta.20",
+    "libraryName": "aces-cardview-flavors",
+    "libraryId": "8320fe4c-d323-4842-9c39-187384df9b9a",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "templateType": "Basic",
+    "componentType": "adaptiveCardExtension"
+  }
+}

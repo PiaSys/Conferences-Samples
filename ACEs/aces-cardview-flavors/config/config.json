@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "basic-card-sample-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/basicCardSample/BasicCardSampleAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/basicCardSample/BasicCardSampleAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    },
+    "image-card-sample-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/imageCardSample/ImageCardSampleAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/imageCardSample/ImageCardSampleAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    },
+    "primary-text-card-sample-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/primaryTextCardSample/PrimaryTextCardSampleAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/primaryTextCardSample/PrimaryTextCardSampleAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "BasicCardSampleAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/basicCardSample/loc/{locale}.js",
+    "ImageCardSampleAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/imageCardSample/loc/{locale}.js",
+    "PrimaryTextCardSampleAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/primaryTextCardSample/loc/{locale}.js"
+  }
+}

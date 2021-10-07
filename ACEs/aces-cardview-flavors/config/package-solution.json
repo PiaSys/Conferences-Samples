@@ -1,0 +1,20 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "aces-cardview-flavors-client-side-solution",
+    "id": "8320fe4c-d323-4842-9c39-187384df9b9a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.13.0-beta.20"
+    }
+  },
+  "paths": {
+    "zippedPackage": "solution/aces-cardview-flavors.sppkg"
+  }
+}
