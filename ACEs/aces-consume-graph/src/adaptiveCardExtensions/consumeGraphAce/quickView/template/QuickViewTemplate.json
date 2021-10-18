@@ -1,0 +1,107 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "Container",
+      "spacing": "Large",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "START",
+                  "wrap": true
+                }
+              ],
+              "width": "90px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "END",
+                  "wrap": true
+                }
+              ],
+              "width": "90px"
+            },
+            {
+              "type": "Column",
+              "spacing": "Large",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "SUBJECT",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            }
+          ]
+        }
+      ],
+      "bleed": true
+    },
+    {
+      "$data": "${events}",
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${formatDateTime(start.dateTime, 'yyyy-MM-dd hh:mm')}",
+                  "wrap": true
+                }
+              ],
+              "width": "90px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${formatDateTime(end.dateTime, 'yyyy-MM-dd hh:mm')}",
+                  "wrap": true
+                }
+              ],
+              "width": "90px"
+            },
+            {
+              "type": "Column",
+              "spacing": "Large",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${subject}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            }
+          ]
+        }
+     ]
+    }
+  ]
+}

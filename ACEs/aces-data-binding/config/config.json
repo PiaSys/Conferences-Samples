@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "data-binding-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/dataBindingAce/DataBindingAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/dataBindingAce/DataBindingAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "DataBindingAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/dataBindingAce/loc/{locale}.js"
+  }
+}

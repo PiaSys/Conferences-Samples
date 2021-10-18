@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.0-beta.24",
+    "libraryName": "aces-consume-graph",
+    "libraryId": "54860d6f-9f1e-4317-9b62-4234f793648f",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "templateType": "Basic"
+  }
+}

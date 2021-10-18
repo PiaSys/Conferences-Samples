@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "consume-spo-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/consumeSpoAce/ConsumeSpoAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/consumeSpoAce/ConsumeSpoAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ConsumeSpoAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/consumeSpoAce/loc/{locale}.js"
+  }
+}

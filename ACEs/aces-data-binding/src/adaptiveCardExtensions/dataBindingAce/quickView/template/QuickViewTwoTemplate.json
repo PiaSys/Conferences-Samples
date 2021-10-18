@@ -1,0 +1,146 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${subTitle}",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Container",
+      "spacing": "Large",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "spacing": "Large",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "DATE",
+                  "wrap": true
+                }
+              ],
+              "width": "50px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "CUSTOMER",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "STATUS",
+                  "wrap": true
+                }
+              ],
+              "width": "60px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "AMOUNT",
+                  "wrap": true
+                }
+              ],
+              "width": "70px"
+            }
+          ]
+        }
+      ],
+      "bleed": true
+    },
+    {
+      "$data": "${orders}",
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${formatDateTime(date, 'MM-dd')}",
+                  "wrap": true
+                }
+              ],
+              "width": "50px"
+            },
+            {
+              "type": "Column",
+              "spacing": "Medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${customer}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${if(status == 0, 'Inserted', if(status == 1, 'Processed', if(status == 2, 'Delivered', if(status == 3, 'Completed', ''))))}",
+                  "wrap": true
+                }
+              ],
+              "width": "60px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "€${formatNumber(totalAmount, 2)}",
+                  "wrap": true
+                }
+              ],
+              "width": "70px"
+            }
+          ]
+        }
+     ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "Container",
+      "spacing": "Large",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "STATUS",
+                  "wrap": true
+                }
+              ],
+              "width": "70px"
+            },
+            {
+              "type": "Column",
+              "spacing": "Large",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "ISSUE",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "PRIORITY",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            }
+          ]
+        }
+      ],
+      "bleed": true
+    },
+    {
+      "$data": "${allIssues}",
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${status}",
+                  "wrap": true
+                }
+              ],
+              "width": "70px"
+            },
+            {
+              "type": "Column",
+              "spacing": "Large",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${title}",
+                  "wrap": true
+                }
+              ],
+              "width": "stretch"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${priority}",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            }
+          ]
+        }
+     ]
+    }
+  ]
+}
