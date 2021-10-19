@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "submit-data-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/submitDataAce/SubmitDataAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/submitDataAce/SubmitDataAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SubmitDataAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/submitDataAce/loc/{locale}.js"
+  }
+}

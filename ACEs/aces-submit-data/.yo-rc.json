@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.0-beta.24",
+    "libraryName": "aces-submit-data",
+    "libraryId": "4fb9fa8d-825e-4b16-aa09-1f183dc0cacd",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "templateType": "Basic"
+  }
+}

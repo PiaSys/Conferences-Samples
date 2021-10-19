@@ -1,0 +1,14 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "environment": "spo",
+    "version": "1.13.0-beta.24",
+    "libraryName": "aces-consume-3-rdparty-api",
+    "libraryId": "6b7393e0-9b58-45fa-926a-79f0729b815e",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "templateType": "Image"
+  }
+}
