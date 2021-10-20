@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "navigation-sample-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/navigationSampleAce/NavigationSampleAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/navigationSampleAce/NavigationSampleAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "NavigationSampleAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/navigationSampleAce/loc/{locale}.js"
+  }
+}
