@@ -40,17 +40,24 @@ export default class ConsumeSpoAceAdaptiveCardExtension extends BaseAdaptiveCard
     sp.setup({ spfxContext: this.context });
 
     // Trigger download of data
-    setTimeout(async () => {
-      const allIssues: Issue[] = await issuesService.GetIssues(this.properties.issuesListTitle);
-      const newIssues: Issue[] = await issuesService.GetIssuesByStatus(this.properties.issuesListTitle, "New");
-  
-      this.setState({
-        allIssues: allIssues,
-        newIssues: newIssues
-      });
-    }, 500);    
+    setTimeout(this.loadIssues, 500);    
 
     return Promise.resolve();
+  }
+
+  private loadIssues = async (): Promise<void> => {
+
+    if (this.properties.issuesListTitle == undefined || this.properties.issuesListTitle.length == 0) {
+      return;
+    }
+
+    const allIssues: Issue[] = await issuesService.GetIssues(this.properties.issuesListTitle);
+    const newIssues: Issue[] = await issuesService.GetIssuesByStatus(this.properties.issuesListTitle, "New");
+
+    this.setState({
+      allIssues: allIssues,
+      newIssues: newIssues
+    });
   }
 
   public get title(): string {
@@ -79,5 +86,11 @@ export default class ConsumeSpoAceAdaptiveCardExtension extends BaseAdaptiveCard
 
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return this._deferredPropertyPane!.getPropertyPaneConfiguration();
+  }
+
+  protected async onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): Promise<void> {
+    if (propertyPath == "issuesListTitle" && newValue != null && (<string>newValue).length > 0) {
+      await this.loadIssues();
+    }
   }
 }
