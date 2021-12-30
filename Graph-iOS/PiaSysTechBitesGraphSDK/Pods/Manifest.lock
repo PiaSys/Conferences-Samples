@@ -1,0 +1,31 @@
+PODS:
+  - MSAL (1.1.23):
+    - MSAL/app-lib (= 1.1.23)
+  - MSAL/app-lib (1.1.23)
+  - MSGraphClientModels (1.3.0)
+  - MSGraphClientSDK (1.0.0):
+    - MSGraphClientSDK/Authentication (= 1.0.0)
+    - MSGraphClientSDK/Common (= 1.0.0)
+  - MSGraphClientSDK/Authentication (1.0.0)
+  - MSGraphClientSDK/Common (1.0.0):
+    - MSGraphClientSDK/Authentication
+
+DEPENDENCIES:
+  - MSAL
+  - MSGraphClientModels
+  - MSGraphClientSDK
+
+SPEC REPOS:
+  trunk:
+    - MSAL
+    - MSGraphClientModels
+    - MSGraphClientSDK
+
+SPEC CHECKSUMS:
+  MSAL: 2a56fdaf1d62fad0a88847b477ecccf9ddb56fd5
+  MSGraphClientModels: ffef6d0a1cdaa774e1689e38da35301cb74fc72a
+  MSGraphClientSDK: ffc07a58a838e0702c7bf2a856367035d4a335d7
+
+PODFILE CHECKSUM: e8c5fe6d74e6c78d0093d45c0bb7643da561aa5f
+
+COCOAPODS: 1.11.2

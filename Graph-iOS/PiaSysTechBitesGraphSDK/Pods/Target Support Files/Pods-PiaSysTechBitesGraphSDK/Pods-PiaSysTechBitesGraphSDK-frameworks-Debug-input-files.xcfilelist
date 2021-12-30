@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-PiaSysTechBitesGraphSDK/Pods-PiaSysTechBitesGraphSDK-frameworks.sh
+${BUILT_PRODUCTS_DIR}/MSAL/MSAL.framework
+${BUILT_PRODUCTS_DIR}/MSGraphClientModels/MSGraphClientModels.framework
+${BUILT_PRODUCTS_DIR}/MSGraphClientSDK/MSGraphClientSDK.framework

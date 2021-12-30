@@ -1,0 +1,7 @@
+use_frameworks!
+
+target 'PiaSysTechBitesGraphSDK' do
+   pod 'MSAL'
+   pod 'MSGraphClientSDK'
+   pod 'MSGraphClientModels'
+end

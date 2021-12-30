@@ -1,0 +1,6 @@
+framework module MSGraphClientSDK {
+  umbrella header "MSGraphClientSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

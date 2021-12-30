@@ -1,0 +1,6 @@
+framework module Pods_PiaSysTechBitesGraphSDK {
+  umbrella header "Pods-PiaSysTechBitesGraphSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

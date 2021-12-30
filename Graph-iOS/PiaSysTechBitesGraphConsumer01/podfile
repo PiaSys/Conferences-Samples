@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'PiaSysTechBitesGraphConsumer01' do
+   pod 'MSAL'
+end
