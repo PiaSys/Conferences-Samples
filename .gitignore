@@ -34,3 +34,8 @@ obj
 
 packages/
 /yo-teams-piasys-sso-tab-backend/PiaSys.YoTeamsSSO.Backend/Properties/PublishProfiles/piasys-yoteams-sso-backend - Zip Deploy.pubxml
+
+# Exclude certificates
+*.pfx
+*.cer
+/MSGraphSDK/Presence-Notifications/PiaSys.PresenceNotifications/PiaSys.PresenceNotifications.Subscriber/Properties/launchSettings.json

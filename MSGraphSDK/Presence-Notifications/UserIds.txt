@@ -1,0 +1,4 @@
+Paolo: 	bea7a848-0459-4bee-9034-5513ee7f66e0
+Guido:	fab8403a-f0e1-47c5-8dd3-6d7d7580e581
+
+?$filter=id%20in%20('bea7a848-0459-4bee-9034-5513ee7f66e0','fab8403a-f0e1-47c5-8dd3-6d7d7580e581')

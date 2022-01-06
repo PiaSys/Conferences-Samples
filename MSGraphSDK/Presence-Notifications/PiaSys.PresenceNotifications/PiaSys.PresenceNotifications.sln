@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiaSys.PresenceNotifications.Functions", "PiaSys.PresenceNotifications.Functions\PiaSys.PresenceNotifications.Functions.csproj", "{D844D3A6-A82E-4F75-B0CD-C687E791A95A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiaSys.PresenceNotifications.Subscriber", "PiaSys.PresenceNotifications.Subscriber\PiaSys.PresenceNotifications.Subscriber.csproj", "{EEDADBC9-5476-4E14-9CC6-022132C16DE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D844D3A6-A82E-4F75-B0CD-C687E791A95A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D844D3A6-A82E-4F75-B0CD-C687E791A95A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D844D3A6-A82E-4F75-B0CD-C687E791A95A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D844D3A6-A82E-4F75-B0CD-C687E791A95A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEDADBC9-5476-4E14-9CC6-022132C16DE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEDADBC9-5476-4E14-9CC6-022132C16DE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEDADBC9-5476-4E14-9CC6-022132C16DE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEDADBC9-5476-4E14-9CC6-022132C16DE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {771EAD3D-61EF-4DC7-8854-85D43A8799E8}
+	EndGlobalSection
+EndGlobal
