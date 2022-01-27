@@ -6,6 +6,7 @@ export interface IQuickViewTwoData {
   subTitle: string;
   title: string;
   orders: Order[];
+  statusFilter: number;
 }
 
 export class QuickViewTwo extends BaseAdaptiveCardView<
@@ -17,7 +18,8 @@ export class QuickViewTwo extends BaseAdaptiveCardView<
     return {
       subTitle: strings.SubTitle,
       title: strings.Title,
-      orders: this.state.orders
+      orders: this.state.orders,
+      statusFilter: this.properties.statusFilter
     };
   }
 

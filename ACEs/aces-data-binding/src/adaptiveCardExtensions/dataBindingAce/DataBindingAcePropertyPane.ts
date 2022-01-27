@@ -1,4 +1,4 @@
-import { IPropertyPaneConfiguration, PropertyPaneTextField } from '@microsoft/sp-property-pane';
+import { IPropertyPaneConfiguration, PropertyPaneDropdown, PropertyPaneTextField } from '@microsoft/sp-property-pane';
 import * as strings from 'DataBindingAceAdaptiveCardExtensionStrings';
 
 export class DataBindingAcePropertyPane {
@@ -20,6 +20,31 @@ export class DataBindingAcePropertyPane {
                 PropertyPaneTextField('description', {
                   label: strings.DescriptionFieldLabel,
                   multiline: true
+                }),
+                PropertyPaneDropdown('statusFilter', {
+                  label: strings.StatusFilterFieldLabel,
+                  options: [
+                    {
+                      key: -1,
+                      text: "(No filter)"
+                    },
+                    {
+                      key: 0,
+                      text: "Inserted"
+                    },
+                    {
+                      key: 1,
+                      text: "Processed"
+                    },
+                    {
+                      key: 2,
+                      text: "Delivered"
+                    },
+                    {
+                      key: 3,
+                      text: "Completed"
+                    }
+                  ]
                 })
               ]
             }

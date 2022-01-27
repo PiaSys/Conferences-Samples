@@ -38,8 +38,10 @@
               "items": [
                 {
                   "type": "TextBlock",
-                  "weight": "Bolder",
                   "text": "DATE",
+                  "size": "small",
+                  "weight": "Bolder",
+                  "style": "heading",
                   "wrap": true
                 }
               ],
@@ -50,8 +52,10 @@
               "items": [
                 {
                   "type": "TextBlock",
-                  "weight": "Bolder",
                   "text": "CUSTOMER",
+                  "size": "small",
+                  "weight": "Bolder",
+                  "style": "heading",
                   "wrap": true
                 }
               ],
@@ -62,8 +66,10 @@
               "items": [
                 {
                   "type": "TextBlock",
-                  "weight": "Bolder",
                   "text": "STATUS",
+                  "size": "small",
+                  "weight": "Bolder",
+                  "style": "heading",
                   "wrap": true
                 }
               ],
@@ -74,8 +80,10 @@
               "items": [
                 {
                   "type": "TextBlock",
-                  "weight": "Bolder",
                   "text": "AMOUNT",
+                  "size": "small",
+                  "weight": "Bolder",
+                  "style": "heading",
                   "wrap": true
                 }
               ],
@@ -99,6 +107,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${formatDateTime(date, 'MM-dd')}",
+                  "size": "small",
                   "wrap": true
                 }
               ],
@@ -111,6 +120,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${customer}",
+                  "size": "small",
                   "wrap": true
                 }
               ],
@@ -122,6 +132,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${if(status == 0, 'Inserted', if(status == 1, 'Processed', if(status == 2, 'Delivered', if(status == 3, 'Completed', ''))))}",
+                  "size": "small",
                   "wrap": true
                 }
               ],
@@ -133,6 +144,7 @@
                 {
                   "type": "TextBlock",
                   "text": "€${formatNumber(totalAmount, 2)}",
+                  "size": "small",
                   "wrap": true
                 }
               ],

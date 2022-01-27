@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "read-user-data-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/readUserData/ReadUserDataAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/readUserData/ReadUserDataAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ReadUserDataAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/readUserData/loc/{locale}.js"
+  }
+}

@@ -9,6 +9,7 @@ export interface IDataBindingAceAdaptiveCardExtensionProps {
   title: string;
   description: string;
   iconProperty: string;
+  statusFilter: number;
 }
 
 export interface IDataBindingAceAdaptiveCardExtensionState {

@@ -10,6 +10,7 @@ declare interface IDataBindingAceAdaptiveCardExtensionStrings {
   PrimaryText: string;
   QuickView1Button: string;
   QuickView2Button: string;
+  StatusFilterFieldLabel: string;
 }
 
 declare module 'DataBindingAceAdaptiveCardExtensionStrings' {

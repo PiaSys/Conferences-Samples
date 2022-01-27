@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "pn-p-properties-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/pnPPropertiesAce/PnPPropertiesAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/pnPPropertiesAce/PnPPropertiesAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PnPPropertiesAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/pnPPropertiesAce/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
