@@ -1,0 +1,62 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "Input.Text",
+              "id": "subject",
+              "label": "Subject",
+              "placeholder": "Event subject"
+            },
+            {
+              "type": "Input.Date",
+              "id": "startDate",
+              "label": "Start Date"
+            },
+            {
+              "type": "Input.Time",
+              "id": "startTime",
+              "label": "Start Time"
+            },
+            {
+              "type": "Input.Date",
+              "id": "endDate",
+              "label": "End Date"
+            },
+            {
+              "type": "Input.Time",
+              "id": "endTime",
+              "label": "End Time"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "title": "Create",
+      "id": "Submit",
+      "data":{
+        "subject": "{{subject.value}}",
+        "startDate": "{{startDate.value}}",
+        "startTime": "{{startTime.value}}",
+        "endDate": "{{endDate.value}}",
+        "endTime": "{{endTime.value}}"
+      }
+    }
+  ]
+}

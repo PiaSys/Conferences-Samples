@@ -71,6 +71,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${status}",
+                  "size": "small",
                   "wrap": true
                 }
               ],
@@ -83,6 +84,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${title}",
+                  "size": "small",
                   "wrap": true
                 }
               ],
@@ -94,6 +96,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${priority}",
+                  "size": "small",
                   "wrap": true
                 }
               ],

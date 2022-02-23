@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "create-calendar-event-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/createCalendarEvent/CreateCalendarEventAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/createCalendarEvent/CreateCalendarEventAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "CreateCalendarEventAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/createCalendarEvent/loc/{locale}.js"
+  }
+}

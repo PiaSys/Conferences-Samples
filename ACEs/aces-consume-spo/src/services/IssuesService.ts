@@ -38,6 +38,22 @@ export class IssuesService implements IIssuesService {
             .getByTitle(issuesList)
             .getItemsByCAMLQuery({ ViewXml: `<View><ViewFields><FieldRef Name="ID"></FieldRef><FieldRef Name="Title"></FieldRef><FieldRef Name="Priority"></FieldRef><FieldRef Name="Status"></FieldRef></ViewFields><Query><Where><Eq><FieldRef Name="Status"/><Value Type="Choice">${status}</Value></Eq></Where></Query></View>`});
 
+        /**
+         * <View>
+         *      <ViewFields>
+         *          <FieldRef Name="ID"></FieldRef>
+         *          <FieldRef Name="Title"></FieldRef>
+         *          <FieldRef Name="Priority"></FieldRef>
+         *          <FieldRef Name="Status"></FieldRef>
+         *      </ViewFields>
+         *      <Query>
+         *          <Where>
+         *              <Eq><FieldRef Name="Status"/><Value Type="Choice">${status}</Value></Eq>
+         *          </Where>
+         *      </Query>
+         * </View>
+         */
+
         let issues: Issue[] = items.map<Issue>((v, i, a): Issue => { return { 
             title: v.Title,
             status: v.Status,

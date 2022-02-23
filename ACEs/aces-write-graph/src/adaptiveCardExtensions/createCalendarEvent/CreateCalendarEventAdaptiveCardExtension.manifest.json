@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "8895f422-c493-4c44-b41b-ef6fd04cb7d1",
+  "alias": "CreateCalendarEventAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "CreateCalendarEvent" },
+    "description": { "default": "Sample ACE to create a calendar event" },
+    "officeFabricIconFontName": "SharePointLogo",
+    "cardSize": "Large",
+    "properties": {
+      "title": "CreateCalendarEvent",
+      "description": "Sample ACE to create a calendar event",
+      "iconProperty": "" // Default to sharepointlogo
+    }
+  }]
+}

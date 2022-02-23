@@ -97,6 +97,7 @@
     {
       "$data": "${orders}",
       "type": "Container",
+      "$when": "${status == $root.statusFilter || $root.statusFilter == -1}",
       "items": [
         {
           "type": "ColumnSet",
@@ -132,6 +133,7 @@
                 {
                   "type": "TextBlock",
                   "text": "${if(status == 0, 'Inserted', if(status == 1, 'Processed', if(status == 2, 'Delivered', if(status == 3, 'Completed', ''))))}",
+                  "color": "${if(status == 0, 'default', if(status == 1, 'warning', if(status == 2, 'accent', if(status == 3, 'good', ''))))}",
                   "size": "small",
                   "wrap": true
                 }
