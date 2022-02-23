@@ -20,9 +20,9 @@ namespace MSGraphSDK4TermColumn
 
             #region Client Credentials
 
-            var tenantId = "6c94075a-da0a-4c6a-8411-badf652e8b53";
-            var clientId = "6f167519-d4d7-4bcb-8228-764d3359d052";
-            var clientSecret = "and7Q~x8uPqO4rhx.zmGirGqApYmLmx0k57rC";
+            var tenantId = "<tenat-id>";
+            var clientId = "<client-id>";
+            var clientSecret = "<secret>";
 
             #endregion
 
