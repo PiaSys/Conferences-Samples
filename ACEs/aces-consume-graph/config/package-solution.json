@@ -16,7 +16,7 @@
     "webApiPermissionRequests": [
       {
         "resource": "Microsoft Graph",
-        "scope": "Calendar.Read"
+        "scope": "Calendars.Read"
       }
     ]
   },
