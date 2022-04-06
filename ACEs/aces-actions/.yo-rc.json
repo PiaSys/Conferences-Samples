@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "aces-actions",
+    "libraryId": "f54839c3-75d7-4f42-9407-8eeec4311679",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "aces-actions",
+    "solutionShortDescription": "aces-actions description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Basic"
+  }
+}

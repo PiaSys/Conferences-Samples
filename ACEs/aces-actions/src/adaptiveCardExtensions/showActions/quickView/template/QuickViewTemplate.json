@@ -1,0 +1,249 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "id": "editButton",
+              "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiIGNsYXNzPSJzdmdfM2FlYjA0NWEiIGZvY3VzYWJsZT0iZmFsc2UiPjxwYXRoIGQ9Ik0yMDQ4IDMzNXEwIDY2LTI1IDEyOHQtNzMgMTEwTDYzMyAxODkwIDAgMjA0OGwxNTgtNjMzTDE0NzUgOThxNDgtNDggMTEwLTczdDEyOC0yNXE2OSAwIDEzMCAyNnQxMDYgNzIgNzIgMTA3IDI3IDEzMHpNMzI2IDE0MjhxMTA2IDM1IDE4MiAxMTF0MTEyIDE4M0wxNzAxIDY0MGwtMjkzLTI5M0wzMjYgMTQyOHptLTE1MCA0NDRsMzI5LTgycS0xMC00Ni0zMi04N3QtNTUtNzMtNzMtNTQtODctMzNsLTgyIDMyOXpNMTc5MiA1NDlxMjUtMjUgNDgtNDd0NDEtNDYgMjgtNTMgMTEtNjdxMC00My0xNi04MHQtNDUtNjYtNjYtNDUtODEtMTdxLTM4IDAtNjYgMTB0LTUzIDI5LTQ3IDQxLTQ3IDQ4bDI5MyAyOTN6IiBjbGFzcz0ieC1oaWRkZW4tZm9jdXMiPjwvcGF0aD48L3N2Zz4=",
+              "width": "20px",
+              "height": "20px",
+              "selectAction": {
+                "type": "Action.ToggleVisibility",
+                "title": "Edit",
+                "targetElements": [
+                  "viewForm",
+                  "editForm",
+                  "editButton",
+                  "saveButton",
+                  "cancelButton"
+                ]
+              }
+            },
+            {
+              "type": "Image",
+              "id": "saveButton",
+              "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB2ZXJzaW9uPScxLjEnIHZpZXdCb3g9Jy0xMCAwIDIwNjggMjA0OCc+CiAgPGcgdHJhbnNmb3JtPSdtYXRyaXgoMSAwIDAgLTEgMCAyMDQ4KSxyb3RhdGUoMCwxMDM0LDEwMjQpJz4KICAgPHBhdGggZmlsbD0nJwpkPSdNMTc5MiAxOTIwcTI3IDAgNTAgLTEwdDQwLjUgLTI3LjV0MjcuNSAtNDAuNXQxMCAtNTB2LTE2NjRoLTE1NjNsLTIyOSAyMzB2MTQzNHEwIDI3IDEwIDUwdDI3LjUgNDAuNXQ0MC41IDI3LjV0NTAgMTBoMTUzNnpNNTEyIDExNTJoMTAyNHY2NDBoLTEwMjR2LTY0MHpNMTI4MCA2NDBoLTY0MHYtMzg0aDEyOHYyNTZoMTI4di0yNTZoMzg0djM4NHpNMTc5MiAxNzkyaC0xMjh2LTc2OGgtMTI4MHY3NjhoLTEyOHYtMTM4MWwxNTQgLTE1NWgxMDJ2NTEyaDg5NnYtNTEyaDM4NHYxNTM2eicgLz4KICA8L2c+Cgo8L3N2Zz4=",
+              "width": "20px",
+              "height": "20px",
+              "isVisible": false,
+              "selectAction": {
+                "type": "Action.Submit",
+                "id": "saveButton",
+                "title": "Save",
+                "data": {}
+              }
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "Image",
+              "id": "cancelButton",
+              "url": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB2ZXJzaW9uPScxLjEnIHZpZXdCb3g9Jy0xMCAwIDIwNjggMjA0OCc+CiAgPGcgdHJhbnNmb3JtPSdtYXRyaXgoMSAwIDAgLTEgMCAyMDQ4KSxyb3RhdGUoMCwxMDM0LDEwMjQpJz4KICAgPHBhdGggZmlsbD0nJwpkPSdNMTExNSAxMDI0bDY5MCAtNjkxbC05MCAtOTBsLTY5MSA2OTBsLTY5MSAtNjkwbC05MCA5MGw2OTAgNjkxbC02OTAgNjkxbDkwIDkwbDY5MSAtNjkwbDY5MSA2OTBsOTAgLTkweicgLz4KICA8L2c+Cgo8L3N2Zz4=",
+              "width": "20px",
+              "height": "20px",
+              "isVisible": false,
+              "selectAction": {
+                "type": "Action.ToggleVisibility",
+                "title": "Cancel",
+                "targetElements": [
+                  "viewForm",
+                  "editForm",
+                  "editButton",
+                  "saveButton",
+                  "cancelButton"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "id": "viewForm",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "TextBlock",
+              "id": "shortText",
+              "weight": "default",
+              "text": "Short Text: ${shortText}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "longText",
+              "weight": "default",
+              "wrap": true,
+              "text": "Long Text: ${longText}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "phone",
+              "weight": "default",
+              "text": "Phone: ${phone}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "url",
+              "weight": "default",
+              "text": "URL: ${url}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "email",
+              "weight": "default",
+              "text": "e-mail: ${email}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "number",
+              "weight": "default",
+              "text": "Number: ${number}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "startDate",
+              "weight": "default",
+              "text": "Start Date: ${formatDateTime(date, 'yyyy-MM-dd HH:mm:ss')}"
+            },
+            {
+              "type": "TextBlock",
+              "id": "flag",
+              "weight": "default",
+              "text": "Flag: ${flag}"
+            },
+            {
+              "type": "TextBlock",
+              "weight": "default",
+              "text": "Categories:"
+            },
+            {
+              "type": "TextBlock",
+              "id": "category${$data}",
+              "$data": "${category}",
+              "weight": "default",
+              "text": "${$data}"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "id": "editForm",
+          "width": "stretch",
+          "isVisible": false,
+          "items": [
+            {
+              "type": "Input.Text",
+              "id": "shortTextEdit",
+              "label": "Short Text:",
+              "value": "${shortText}"
+            },
+            {
+              "type": "Input.Text",
+              "id": "longTextEdit",
+              "isMultiline": true,
+              "label": "Long Text",
+              "value": "${longText}"
+            },
+            {
+              "type": "Input.Text",
+              "id": "phoneEdit",
+              "style": "tel",
+              "regex": "${phoneRegex}",
+              "label": "Phone:",
+              "errorMessage": "Invalid phone",
+              "value": "${phone}"
+            },
+            {
+              "type": "Input.Text",
+              "id": "urlEdit",
+              "style": "url",
+              "regex": "${urlRegex}",
+              "label": "URL:",
+              "errorMessage": "Invalid URL",
+              "value": "${url}"
+            },
+            {
+              "type": "Input.Text",
+              "id": "emailEdit",
+              "style": "email",
+              "regex": "${emailRegex}",
+              "label": "e-mail:",
+              "errorMessage": "Invalid email",
+              "value": "${email}"
+            },
+            {
+              "type": "Input.Number",
+              "id": "numberEdit",
+              "min": 0,
+              "max": 10,
+              "label": "Number:",
+              "value": "${number}"
+            },
+            {
+              "type": "Input.Date",
+              "id": "startDateEdit",
+              "label": "Start Date:",
+              "value": "${formatDateTime(date, 'YYYY-MM-DD')}"
+            },
+            {
+              "type": "Input.Time",
+              "id": "startTimeEdit",
+              "label": "Start Time:",
+              "value": "${formatDateTime(date, 'HH:mm')}"
+            },
+            {
+              "type": "Input.Toggle",
+              "id": "flagEdit",
+              "label": "Flag:",
+              "value": "${if(flag == true, 'true', 'false')}"
+            },
+            {
+              "type": "Input.ChoiceSet",
+              "id": "categoryEdit",
+              "isMultiSelect": true,
+              "style": "expanded",
+              "label": "Category:",
+              "value": "${join(category,',')}",
+              "choices": [
+                {
+                  "title": "Category 1",
+                  "value": "C1"
+                },
+                {
+                  "title": "Category 2",
+                  "value": "C2"
+                },
+                {
+                  "title": "Category 3",
+                  "value": "C3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

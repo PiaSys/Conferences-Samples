@@ -132,6 +132,13 @@ namespace SitesSelected.ConsumerApp
                 this.configuration.GetValue<string>("AppSettings:TenantId"))
                 .GetContextAsync($"https://{spoTenant}{siteRelativeUri}"))
             {
+                // Let's see if the current user is site admin
+                var currentUser = clientContext.Web.CurrentUser;
+                clientContext.Load(currentUser, u => u.IsSiteAdmin);
+                await clientContext.ExecuteQueryAsync();
+
+                this.logger.LogInformation($"Current user is site admin? {currentUser.IsSiteAdmin}");
+
                 // Define a new generic list
                 var newList = new CSOM.ListCreationInformation
                 {

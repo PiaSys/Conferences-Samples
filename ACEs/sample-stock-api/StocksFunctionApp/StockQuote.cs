@@ -29,31 +29,31 @@ namespace StocksFunctionApp
             switch (symbol.ToUpper())
             {
                 case "MSFT":
-                    quote = 330.8M;
+                    quote = 299.49M;
                     trend = Trend.Down;
                     break;
                 case "AMZN":
-                    quote = 3482.05M;
+                    quote = 3268.16M;
                     trend = Trend.Down;
                     break;
                 case "TSLA":
-                    quote = 1067.95M;
+                    quote = 999.11M;
                     trend = Trend.Up;
                     break;
                 case "GOOGL":
-                    quote = 2917.87M;
+                    quote = 2765.51M;
                     trend = Trend.Down;
                     break;
                 case "FB":
-                    quote = 327.64M;
+                    quote = 213.46M;
                     trend = Trend.Down;
                     break;
                 case "AAPL":
-                    quote = 147.92M;
-                    trend = Trend.Down;
+                    quote = 170.21M;
+                    trend = Trend.Up;
                     break;
                 case "ZM":
-                    quote = 251.26M;
+                    quote = 116.81M;
                     trend = Trend.Down;
                     break;
                 default:
