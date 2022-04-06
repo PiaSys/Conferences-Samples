@@ -170,7 +170,7 @@
               "type": "Input.Text",
               "id": "phoneEdit",
               "style": "tel",
-              "regex": "${phoneRegex}",
+              "regex": "^\\+(\\d)*-(\\d)*-(\\d)*",
               "label": "Phone:",
               "errorMessage": "Invalid phone",
               "value": "${phone}"
@@ -179,7 +179,7 @@
               "type": "Input.Text",
               "id": "urlEdit",
               "style": "url",
-              "regex": "${urlRegex}",
+              "regex": "^http(s)?:\\/\\/(\\w)*(\\.)?(\\w)*(\\.)?(\\w)*\/(\\w|\\/)*",
               "label": "URL:",
               "errorMessage": "Invalid URL",
               "value": "${url}"
@@ -188,7 +188,7 @@
               "type": "Input.Text",
               "id": "emailEdit",
               "style": "email",
-              "regex": "${emailRegex}",
+              "regex": "^(\\w|\\.)*\\@(\\w)*\\.(\\w)+",
               "label": "e-mail:",
               "errorMessage": "Invalid email",
               "value": "${email}"
