@@ -1,0 +1,117 @@
+{
+    "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.2",
+    "body": [
+      {
+        "type": "TextBlock",
+        "weight": "Bolder",
+        "text": "${title}"
+      },
+      {
+        "type": "ColumnSet",
+        "columns": [
+          {
+            "type": "Column",
+            "items": [
+              {
+                "type": "TextBlock",
+                "weight": "Bolder",
+                "text": "${subTitle}",
+                "wrap": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "TextBlock",
+        "text": "${description}",
+        "wrap": true
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "mainCourse",
+        "style": "expanded",
+        "isMultiSelect": false,
+        "isRequired": true,
+        "label":"Main course:",
+        "errorMessage": "Required input",
+        "value": "standard",
+        "choices": [
+          {
+            "title": "Meat",
+            "value": "meat"
+          },
+          {
+            "title": "Fish",
+            "value": "fish"
+          },
+          {
+            "title": "Cheese",
+            "value": "cheese"
+          }
+        ]
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "dessert",
+        "style": "expanded",
+        "isMultiSelect": false,
+        "isRequired": true,
+        "label":"Dessert:",
+        "errorMessage": "Required input",
+        "value": "standard",
+        "choices": [
+          {
+            "title": "Chocolate Cake",
+            "value": "chocolate-cake"
+          },
+          {
+            "title": "Apple Pie",
+            "value": "apple-pie"
+          },
+          {
+            "title": "Fruit",
+            "value": "fruit"
+          }
+        ]
+      },
+      {
+        "type": "Input.ChoiceSet",
+        "id": "beverages",
+        "style": "expanded",
+        "isMultiSelect": false,
+        "isRequired": true,
+        "label":"Beverages:",
+        "errorMessage": "Required input",
+        "value": "standard",
+        "choices": [
+          {
+            "title": "Water",
+            "value": "water"
+          },
+          {
+            "title": "Beer",
+            "value": "beer"
+          },
+          {
+            "title": "Wine",
+            "value": "wine"
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.Submit",
+        "title": "Book your lunch!",
+        "id": "Submit",
+        "data":{
+          "mainCourse": "{{mainCourse.value}}",
+          "dessert": "{{dessert.value}}",
+          "beverages": "{{beverages.value}}"
+        }
+      }
+    ]
+  }

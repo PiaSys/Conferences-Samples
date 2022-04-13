@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "spfx-adaptivecardhost-demo",
+    "libraryId": "07cc1322-1c29-48ea-bfe1-cceaf2107030",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-adaptivecardhost-demo",
+    "solutionShortDescription": "spfx-adaptivecardhost-demo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

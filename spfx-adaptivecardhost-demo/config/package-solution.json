@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-adaptivecardhost-demo-client-side-solution",
+    "id": "07cc1322-1c29-48ea-bfe1-cceaf2107030",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-adaptivecardhost-demo description"
+      },
+      "longDescription": {
+        "default": "spfx-adaptivecardhost-demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-adaptivecardhost-demo Feature",
+        "description": "The feature that activates elements of the spfx-adaptivecardhost-demo solution.",
+        "id": "a6f7a8fe-35da-4b89-ba5e-acfc496d55fc",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-adaptivecardhost-demo.sppkg"
+  }
+}

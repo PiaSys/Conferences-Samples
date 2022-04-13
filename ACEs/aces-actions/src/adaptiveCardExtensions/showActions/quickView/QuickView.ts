@@ -18,9 +18,6 @@ export interface IQuickViewData {
   date: Date;
   flag: boolean;
   category: string[];
-  phoneRegex: RegExp;
-  urlRegex: RegExp;
-  emailRegex: RegExp;
 }
 
 export class QuickView extends BaseAdaptiveCardView<
@@ -40,11 +37,7 @@ export class QuickView extends BaseAdaptiveCardView<
       number: this.state.number,
       date: this.state.date,
       flag: this.state.flag,
-      category: this.state.category,
-      phoneRegex: /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/,
-      urlRegex: /(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g,
-      emailRegex: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    };
+      category: this.state.category    };
   }
 
   public get template(): ISPFxAdaptiveCard {
