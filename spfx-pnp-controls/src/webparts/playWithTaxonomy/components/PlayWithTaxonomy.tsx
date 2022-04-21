@@ -1,9 +1,51 @@
 import * as React from 'react';
 import styles from './PlayWithTaxonomy.module.scss';
 import { IPlayWithTaxonomyProps } from './IPlayWithTaxonomyProps';
+import { IPlayWithTaxonomyState } from './IPlayWithTaxonomyState';
 import { escape } from '@microsoft/sp-lodash-subset';
 
-export default class PlayWithTaxonomy extends React.Component<IPlayWithTaxonomyProps, {}> {
+import { TaxonomyPicker, IPickerTerms } from "@pnp/spfx-controls-react/lib/TaxonomyPicker";
+import { ListView, IViewField, SelectionMode, GroupOrder, IGrouping } from "@pnp/spfx-controls-react/lib/ListView";
+import SPTermStorePickerService from '@pnp/spfx-controls-react/lib/services/SPTermStorePickerService';
+import { ITerm } from '@pnp/spfx-controls-react/lib/Common';
+
+const termsViewFields: IViewField[] = [
+  {
+    name: "key",
+    displayName: "Key",
+    sorting: true,
+    minWidth: 250,
+  },
+  {
+    name: "name",
+    displayName: "Name",
+    sorting: true,
+    minWidth: 150,
+  },
+  {
+    name: "path",
+    displayName: "Path",
+    sorting: true,
+    minWidth: 250,
+  },
+  {
+    name: "termSet",
+    displayName: "Term Set ID",
+    sorting: true,
+    minWidth: 250,
+  }
+];
+
+export default class PlayWithTaxonomy extends React.Component<IPlayWithTaxonomyProps, IPlayWithTaxonomyState> {
+
+  constructor(props: IPlayWithTaxonomyProps) {
+    super(props);
+    
+    this.state = {
+      terms: undefined
+    };
+  }
+
   public render(): React.ReactElement<IPlayWithTaxonomyProps> {
     const {
       description,
@@ -13,31 +55,50 @@ export default class PlayWithTaxonomy extends React.Component<IPlayWithTaxonomyP
       userDisplayName
     } = this.props;
 
+    const { 
+      terms
+    } = this.state;
+
     return (
       <section className={`${styles.playWithTaxonomy} ${hasTeamsContext ? styles.teams : ''}`}>
         <div className={styles.welcome}>
           <img alt="" src={isDarkTheme ? require('../assets/welcome-dark.png') : require('../assets/welcome-light.png')} className={styles.welcomeImage} />
-          <h2>Well done, {escape(userDisplayName)}!</h2>
-          <div>{environmentMessage}</div>
-          <div>Web part property value: <strong>{escape(description)}</strong></div>
+          <h2>Hello, {escape(userDisplayName)}!</h2>
         </div>
         <div>
-          <h3>Welcome to SharePoint Framework!</h3>
-          <p>
-            The SharePoint Framework (SPFx) is a extensibility model for Microsoft Viva, Microsoft Teams and SharePoint. It's the easiest way to extend Microsoft 365 with automatic Single Sign On, automatic hosting and industry standard tooling.
-          </p>
-          <h4>Learn more about SPFx development:</h4>
-          <ul className={styles.links}>
-            <li><a href="https://aka.ms/spfx" target="_blank">SharePoint Framework Overview</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-graph" target="_blank">Use Microsoft Graph in your solution</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-teams" target="_blank">Build for Microsoft Teams using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-viva" target="_blank">Build for Microsoft Viva Connections using SharePoint Framework</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-store" target="_blank">Publish SharePoint Framework applications to the marketplace</a></li>
-            <li><a href="https://aka.ms/spfx-yeoman-api" target="_blank">SharePoint Framework API reference</a></li>
-            <li><a href="https://aka.ms/m365pnp" target="_blank">Microsoft 365 Developer Community</a></li>
-          </ul>
+          <h3>Here is the PnP Taxonomy Picker control in action!</h3>
+          <div>
+            <TaxonomyPicker allowMultipleSelections={true}
+              termsetNameOrID="Products"
+              panelTitle="Select Product"
+              label="Products Picker"
+              context={this.props.context}
+              onChange={this.onTaxonomyPickerChange}
+              isTermSetSelectable={false} />
+          </div>
+          { terms && terms.length > 0 ?
+              <div>
+                <h3>Here are the selected terms:</h3>
+                <div>
+                  <ListView
+                    items={terms}
+                    viewFields={termsViewFields}
+                    compact={true}
+                    selectionMode={SelectionMode.none}
+                    showFilter={false}
+                    stickyHeader={true} />
+                </div>
+              </div>
+            : null                    
+          }
         </div>
       </section>
     );
+  }
+
+  private onTaxonomyPickerChange = (terms : IPickerTerms) => {
+    this.setState({
+      terms: terms
+    });
   }
 }
