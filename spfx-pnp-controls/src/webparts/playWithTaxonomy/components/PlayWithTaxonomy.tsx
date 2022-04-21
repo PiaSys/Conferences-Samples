@@ -6,8 +6,6 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 import { TaxonomyPicker, IPickerTerms } from "@pnp/spfx-controls-react/lib/TaxonomyPicker";
 import { ListView, IViewField, SelectionMode, GroupOrder, IGrouping } from "@pnp/spfx-controls-react/lib/ListView";
-import SPTermStorePickerService from '@pnp/spfx-controls-react/lib/services/SPTermStorePickerService';
-import { ITerm } from '@pnp/spfx-controls-react/lib/Common';
 
 const termsViewFields: IViewField[] = [
   {
