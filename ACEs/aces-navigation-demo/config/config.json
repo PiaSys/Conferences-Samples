@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "play-with-navigation-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/playWithNavigation/PlayWithNavigationAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/playWithNavigation/PlayWithNavigationAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PlayWithNavigationAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/playWithNavigation/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "aces-navigation-demo-client-side-solution",
+    "id": "4fa05b8b-40fc-4e25-b35a-a60b6e20c9db",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.14.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "aces-navigation-demo description"
+      },
+      "longDescription": {
+        "default": "aces-navigation-demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "aces-navigation-demo Feature",
+        "description": "The feature that activates elements of the aces-navigation-demo solution.",
+        "id": "45ba1758-7761-4166-b644-1c791cbbc514",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/aces-navigation-demo.sppkg"
+  }
+}

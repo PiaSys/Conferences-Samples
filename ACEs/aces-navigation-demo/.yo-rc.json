@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "aces-navigation-demo",
+    "libraryId": "4fa05b8b-40fc-4e25-b35a-a60b6e20c9db",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "aces-navigation-demo",
+    "solutionShortDescription": "aces-navigation-demo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Image"
+  }
+}

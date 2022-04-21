@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.14.0",
+    "libraryName": "spfx-pnp-controls",
+    "libraryId": "21455723-45e1-48f0-add1-cf397dba46aa",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-pnp-controls",
+    "solutionShortDescription": "spfx-pnp-controls description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

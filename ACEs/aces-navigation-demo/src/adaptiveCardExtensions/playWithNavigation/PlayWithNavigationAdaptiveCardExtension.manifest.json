@@ -1,0 +1,30 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "746e6f1e-4b8a-46d1-b291-2e1880fe1682",
+  "alias": "PlayWithNavigationAdaptiveCardExtension",
+  "componentType": "AdaptiveCardExtension",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+  "supportedHosts": ["Dashboard"],
+  "supportsThemeVariants": true,
+  "preconfiguredEntries": [{
+    "groupId": "bd067b1e-3ad5-4d5d-a5fe-505f07d7f59c", // Dashboard
+    "group": { "default": "Dashboard" },
+    "title": { "default": "Cards Navigation" },
+    "description": { "default": "This is an ACE to show how to play with navitagion across CardViews and QuickViews." },
+    "officeFabricIconFontName": "SharePointLogo",
+    "cardSize": "Large",
+    "properties": {
+      "title": "Cards Navigation",
+      "description": "This is an ACE to show how to play with navitagion across CardViews and QuickViews.",
+      "iconProperty": "" // Default to sharepointlogo
+    }
+  }]
+}
