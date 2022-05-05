@@ -17,12 +17,21 @@
           "manifest": "./src/webparts/playWithPeople/PlayWithPeopleWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-list-view-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithListView/PlayWithListViewWebPart.js",
+          "manifest": "./src/webparts/playWithListView/PlayWithListViewWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
   "localizedResources": {
     "PlayWithTaxonomyWebPartStrings": "lib/webparts/playWithTaxonomy/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
-    "PlayWithPeopleWebPartStrings": "lib/webparts/playWithPeople/loc/{locale}.js"
+    "PlayWithPeopleWebPartStrings": "lib/webparts/playWithPeople/loc/{locale}.js",
+    "PlayWithListViewWebPartStrings": "lib/webparts/playWithListView/loc/{locale}.js"
   }
 }

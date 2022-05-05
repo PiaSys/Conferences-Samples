@@ -5,6 +5,7 @@ import { IUseMgtState } from './IUseMgtState';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { TextField } from 'office-ui-fabric-react/lib/TextField';
 import { Person } from '@microsoft/mgt-react/dist/es6/spfx';
+import { ViewType } from '@microsoft/mgt-spfx';
 
 export default class UseMgt extends React.Component<IUseMgtProps, IUseMgtState> {
 
@@ -33,7 +34,7 @@ export default class UseMgt extends React.Component<IUseMgtProps, IUseMgtState> 
             <div className={ styles.column }>
               <span className={ styles.title }>Welcome to MGT in SPFx!</span>
               <p><TextField onChange={this.onPersonChange} value={this.state.person} /></p>
-              <p><Person personQuery={this.state.person} /></p>
+              <p><Person personQuery={this.state.person} view={ViewType.twolines} /></p>
             </div>
           </div>
         </div>
