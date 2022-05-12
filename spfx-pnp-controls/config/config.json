@@ -25,6 +25,14 @@
           "manifest": "./src/webparts/playWithListView/PlayWithListViewWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-carousel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithCarousel/PlayWithCarouselWebPart.js",
+          "manifest": "./src/webparts/playWithCarousel/PlayWithCarouselWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -32,6 +40,7 @@
     "PlayWithTaxonomyWebPartStrings": "lib/webparts/playWithTaxonomy/loc/{locale}.js",
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "PlayWithPeopleWebPartStrings": "lib/webparts/playWithPeople/loc/{locale}.js",
-    "PlayWithListViewWebPartStrings": "lib/webparts/playWithListView/loc/{locale}.js"
+    "PlayWithListViewWebPartStrings": "lib/webparts/playWithListView/loc/{locale}.js",
+    "PlayWithCarouselWebPartStrings": "lib/webparts/playWithCarousel/loc/{locale}.js"
   }
 }
