@@ -33,6 +33,14 @@
           "manifest": "./src/webparts/playWithCarousel/PlayWithCarouselWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-pagination-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithPagination/PlayWithPaginationWebPart.js",
+          "manifest": "./src/webparts/playWithPagination/PlayWithPaginationWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -41,6 +49,7 @@
     "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
     "PlayWithPeopleWebPartStrings": "lib/webparts/playWithPeople/loc/{locale}.js",
     "PlayWithListViewWebPartStrings": "lib/webparts/playWithListView/loc/{locale}.js",
-    "PlayWithCarouselWebPartStrings": "lib/webparts/playWithCarousel/loc/{locale}.js"
+    "PlayWithCarouselWebPartStrings": "lib/webparts/playWithCarousel/loc/{locale}.js",
+    "PlayWithPaginationWebPartStrings": "lib/webparts/playWithPagination/loc/{locale}.js"
   }
 }
