@@ -74,7 +74,7 @@ export default class PlayWithPagination extends React.Component<IPlayWithPaginat
       documents
     } = this.state;
 
-    const pageCount: number = (itemsCount / this._pageSize) - 1;
+    const pageCount: number = Math.ceil(itemsCount / this._pageSize);
 
     return (
       <section className={`${styles.playWithPagination} ${hasTeamsContext ? styles.teams : ''}`}>
@@ -86,8 +86,9 @@ export default class PlayWithPagination extends React.Component<IPlayWithPaginat
           <h3>Here is your list of documents with pagination!</h3>
           <div>
             { documents != null && documents.length > 0 ?
-              <div>
+              <div className={styles.itemsContainer}>
                 <ListView
+                  className={styles.itemsListView}
                   items={documents}
                   viewFields={_documentsViewFields}
                   compact={true}
