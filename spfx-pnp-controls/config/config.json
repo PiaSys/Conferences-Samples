@@ -41,6 +41,14 @@
           "manifest": "./src/webparts/playWithPagination/PlayWithPaginationWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-placeholder-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithPlaceholder/PlayWithPlaceholderWebPart.js",
+          "manifest": "./src/webparts/playWithPlaceholder/PlayWithPlaceholderWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -50,6 +58,7 @@
     "PlayWithPeopleWebPartStrings": "lib/webparts/playWithPeople/loc/{locale}.js",
     "PlayWithListViewWebPartStrings": "lib/webparts/playWithListView/loc/{locale}.js",
     "PlayWithCarouselWebPartStrings": "lib/webparts/playWithCarousel/loc/{locale}.js",
-    "PlayWithPaginationWebPartStrings": "lib/webparts/playWithPagination/loc/{locale}.js"
+    "PlayWithPaginationWebPartStrings": "lib/webparts/playWithPagination/loc/{locale}.js",
+    "PlayWithPlaceholderWebPartStrings": "lib/webparts/playWithPlaceholder/loc/{locale}.js"
   }
 }
