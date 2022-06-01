@@ -49,6 +49,14 @@
           "manifest": "./src/webparts/playWithPlaceholder/PlayWithPlaceholderWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-security-trimmed-control-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithSecurityTrimmedControl/PlayWithSecurityTrimmedControlWebPart.js",
+          "manifest": "./src/webparts/playWithSecurityTrimmedControl/PlayWithSecurityTrimmedControlWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -59,6 +67,7 @@
     "PlayWithListViewWebPartStrings": "lib/webparts/playWithListView/loc/{locale}.js",
     "PlayWithCarouselWebPartStrings": "lib/webparts/playWithCarousel/loc/{locale}.js",
     "PlayWithPaginationWebPartStrings": "lib/webparts/playWithPagination/loc/{locale}.js",
-    "PlayWithPlaceholderWebPartStrings": "lib/webparts/playWithPlaceholder/loc/{locale}.js"
+    "PlayWithPlaceholderWebPartStrings": "lib/webparts/playWithPlaceholder/loc/{locale}.js",
+    "PlayWithSecurityTrimmedControlWebPartStrings": "lib/webparts/playWithSecurityTrimmedControl/loc/{locale}.js"
   }
 }
