@@ -57,6 +57,14 @@
           "manifest": "./src/webparts/playWithSecurityTrimmedControl/PlayWithSecurityTrimmedControlWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-drag-drop-files-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithDragDropFiles/PlayWithDragDropFilesWebPart.js",
+          "manifest": "./src/webparts/playWithDragDropFiles/PlayWithDragDropFilesWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -68,6 +76,7 @@
     "PlayWithCarouselWebPartStrings": "lib/webparts/playWithCarousel/loc/{locale}.js",
     "PlayWithPaginationWebPartStrings": "lib/webparts/playWithPagination/loc/{locale}.js",
     "PlayWithPlaceholderWebPartStrings": "lib/webparts/playWithPlaceholder/loc/{locale}.js",
-    "PlayWithSecurityTrimmedControlWebPartStrings": "lib/webparts/playWithSecurityTrimmedControl/loc/{locale}.js"
+    "PlayWithSecurityTrimmedControlWebPartStrings": "lib/webparts/playWithSecurityTrimmedControl/loc/{locale}.js",
+    "PlayWithDragDropFilesWebPartStrings": "lib/webparts/playWithDragDropFiles/loc/{locale}.js"
   }
 }
