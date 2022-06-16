@@ -65,6 +65,22 @@
           "manifest": "./src/webparts/playWithDragDropFiles/PlayWithDragDropFilesWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-monaco-editor-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithMonacoEditor/PlayWithMonacoEditorWebPart.js",
+          "manifest": "./src/webparts/playWithMonacoEditor/PlayWithMonacoEditorWebPart.manifest.json"
+        }
+      ]
+    },
+    "play-with-chart-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithChart/PlayWithChartWebPart.js",
+          "manifest": "./src/webparts/playWithChart/PlayWithChartWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -77,6 +93,8 @@
     "PlayWithPaginationWebPartStrings": "lib/webparts/playWithPagination/loc/{locale}.js",
     "PlayWithPlaceholderWebPartStrings": "lib/webparts/playWithPlaceholder/loc/{locale}.js",
     "PlayWithSecurityTrimmedControlWebPartStrings": "lib/webparts/playWithSecurityTrimmedControl/loc/{locale}.js",
-    "PlayWithDragDropFilesWebPartStrings": "lib/webparts/playWithDragDropFiles/loc/{locale}.js"
+    "PlayWithDragDropFilesWebPartStrings": "lib/webparts/playWithDragDropFiles/loc/{locale}.js",
+    "PlayWithMonacoEditorWebPartStrings": "lib/webparts/playWithMonacoEditor/loc/{locale}.js",
+    "PlayWithChartWebPartStrings": "lib/webparts/playWithChart/loc/{locale}.js"
   }
 }
