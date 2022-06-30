@@ -81,6 +81,14 @@
           "manifest": "./src/webparts/playWithChart/PlayWithChartWebPart.manifest.json"
         }
       ]
+    },
+    "play-with-team-picker-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithTeamPicker/PlayWithTeamPickerWebPart.js",
+          "manifest": "./src/webparts/playWithTeamPicker/PlayWithTeamPickerWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -95,6 +103,7 @@
     "PlayWithSecurityTrimmedControlWebPartStrings": "lib/webparts/playWithSecurityTrimmedControl/loc/{locale}.js",
     "PlayWithDragDropFilesWebPartStrings": "lib/webparts/playWithDragDropFiles/loc/{locale}.js",
     "PlayWithMonacoEditorWebPartStrings": "lib/webparts/playWithMonacoEditor/loc/{locale}.js",
-    "PlayWithChartWebPartStrings": "lib/webparts/playWithChart/loc/{locale}.js"
+    "PlayWithChartWebPartStrings": "lib/webparts/playWithChart/loc/{locale}.js",
+    "PlayWithTeamPickerWebPartStrings": "lib/webparts/playWithTeamPicker/loc/{locale}.js"
   }
 }
