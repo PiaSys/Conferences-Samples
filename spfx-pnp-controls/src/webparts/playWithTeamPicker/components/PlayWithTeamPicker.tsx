@@ -3,8 +3,10 @@ import styles from './PlayWithTeamPicker.module.scss';
 import { IPlayWithTeamPickerProps } from './IPlayWithTeamPickerProps';
 import { IPlayWithTeamPickerState } from './IPlayWithTeamPickerState';
 import { escape } from '@microsoft/sp-lodash-subset';
+
 import { TeamPicker } from "@pnp/spfx-controls-react/lib/TeamPicker";
 import { ITag } from 'office-ui-fabric-react';
+
 import { ListView, IViewField, SelectionMode } from "@pnp/spfx-controls-react/lib/ListView";
 
 const _selectedTeamsViewFields: IViewField[] = [
