@@ -32,7 +32,7 @@ const _documentsViewFields: IViewField[] = [
     name: "Title",
     displayName: "Title",
     sorting: true,
-    render: (item?: any, index?: number, column?: IColumn) => {
+    render: (item?: any, index?: number, column?: any): JSX.Element => {
       const url: string = item.ServerRedirectedEmbedUri;
       const title: string = item.Title;
       return <div><a href={url}>{title}</a></div>;

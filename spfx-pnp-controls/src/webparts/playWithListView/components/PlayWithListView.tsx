@@ -5,7 +5,8 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 import { ListView, IViewField, SelectionMode } from "@pnp/spfx-controls-react/lib/ListView";
 
-import { mergeStyles, mergeStyleSets, FontIcon, IColumn } from 'office-ui-fabric-react';
+import { IColumn } from 'office-ui-fabric-react/lib/components/DetailsList';
+import { mergeStyles, mergeStyleSets, FontIcon } from 'office-ui-fabric-react';
 import { Person } from '@microsoft/mgt-react/dist/es6/spfx';
 import { ViewType } from '@microsoft/mgt-spfx';
 
@@ -42,7 +43,7 @@ export default class PlayWithListView extends React.Component<IPlayWithListViewP
     {
       name: "email",
       displayName: "E-mail",
-      render: (item?: any, index?: number, column?: IColumn) => {
+      render: (item?: any, index?: number, column?: any): JSX.Element => {
         const emailValue: string = item.email;
         return <a href={`mailto:${emailValue}`}>{emailValue}</a>;
       },
@@ -53,7 +54,7 @@ export default class PlayWithListView extends React.Component<IPlayWithListViewP
     {
       name: "size",
       displayName: "Size",
-      render: (item?: any, index?: number, column?: IColumn) => {
+      render: (item?: any, index?: number, column?: any): JSX.Element => {
         const levelValue: CustomerLevel = item.level;
         return <div>{ levelValue == CustomerLevel.Favorite ? 
           <FontIcon aria-label="Compass" iconName="Heart" className={iconsStyles.favoriteOrange} /> :
@@ -69,7 +70,7 @@ export default class PlayWithListView extends React.Component<IPlayWithListViewP
     {
       name: "account",
       displayName: "Account",
-      render: (item?: any, index?: number, column?: IColumn) => {
+      render: (item?: any, index?: number, column?: any): JSX.Element => {
         const accountValue: string = item.account;
         return <Person personQuery={accountValue} view={ViewType.oneline}></Person>;
       },

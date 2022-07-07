@@ -89,6 +89,14 @@
           "manifest": "./src/webparts/playWithTeamPicker/PlayWithTeamPickerWebPart.manifest.json"
         }
       ]
+    },
+    "p-lay-with-dynamic-form-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/pLayWithDynamicForm/PLayWithDynamicFormWebPart.js",
+          "manifest": "./src/webparts/pLayWithDynamicForm/PLayWithDynamicFormWebPart.manifest.json"
+        }
+      ]
     }
   },
   "externals": {},
@@ -104,6 +112,8 @@
     "PlayWithDragDropFilesWebPartStrings": "lib/webparts/playWithDragDropFiles/loc/{locale}.js",
     "PlayWithMonacoEditorWebPartStrings": "lib/webparts/playWithMonacoEditor/loc/{locale}.js",
     "PlayWithChartWebPartStrings": "lib/webparts/playWithChart/loc/{locale}.js",
-    "PlayWithTeamPickerWebPartStrings": "lib/webparts/playWithTeamPicker/loc/{locale}.js"
+    "PlayWithTeamPickerWebPartStrings": "lib/webparts/playWithTeamPicker/loc/{locale}.js",
+    "PLayWithDynamicFormWebPartStrings": "lib/webparts/pLayWithDynamicForm/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
   }
 }

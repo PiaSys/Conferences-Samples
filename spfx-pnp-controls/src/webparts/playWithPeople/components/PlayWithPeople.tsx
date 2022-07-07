@@ -86,7 +86,7 @@ export default class PlayWithPeople extends React.Component<IPlayWithPeopleProps
               titleText="People Picker"
               personSelectionLimit={10}
               showtooltip={true}
-              required={true}
+              required={true}              
               onChange={this.onChangePeoplePickerItems}
               showHiddenInUI={false}
               principalTypes={[PrincipalType.User,PrincipalType.SharePointGroup]}
