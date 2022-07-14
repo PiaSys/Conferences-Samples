@@ -1,0 +1,123 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 8,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Demo List",
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_list_NewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 8,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Demo List",
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_list_EditForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 6,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Demo List",
+        "ID": 1,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_list_ViewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 4,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Demo List",
+        "ID": 1,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_lib_NewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 8,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Demo Library",
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_lib_EditForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 6,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Demo Library",
+        "ID": 1,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_lib_ViewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 4,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Demo Library",
+        "ID": 1,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_docset_NewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 8,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Demo DocumentSet Library",
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_docset_EditForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 6,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Demo DocumentSet Library",
+        "ID": 2,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    },
+    "demo_docset_ViewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
+        "PageType": 4,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Demo DocumentSet Library",
+        "ID": 2,
+        "properties": {
+          "sampleText": "Value"
+        }
+      }
+    }
+  }
+}
