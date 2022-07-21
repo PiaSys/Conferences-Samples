@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.0",
+    "libraryName": "spfx-servicescope-demo",
+    "libraryId": "fa177706-29a1-417f-ba26-933373d5d586",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-servicescope-demo",
+    "solutionShortDescription": "spfx-servicescope-demo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
