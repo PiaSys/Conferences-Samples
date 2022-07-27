@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Log, FormDisplayMode } from '@microsoft/sp-core-library';
 import { FormCustomizerContext } from '@microsoft/sp-listview-extensibility';
-
+import { IItem } from '@pnp/sp/items';
 import styles from './Demo.module.scss';
 
 import { DynamicForm } from "@pnp/spfx-controls-react/lib/DynamicForm";
@@ -9,7 +9,7 @@ import { DynamicForm } from "@pnp/spfx-controls-react/lib/DynamicForm";
 export interface IDemoProps {
   context: FormCustomizerContext;
   displayMode: FormDisplayMode;
-  onSave: () => void;
+  onSave: (listItemData: any, listItem?: IItem) => void;
   onClose: () => void;
 }
 
@@ -30,11 +30,10 @@ export default class Demo extends React.Component<IDemoProps, {}> {
         context={this.props.context as any} 
         listId={this.props.context.list.guid.toString()}  
         listItemId={this.props.context.itemId}
-        onCancelled={() => { console.log('Cancelled') }}
+        onCancelled={this.props.onClose}
         onBeforeSubmit={async (listItem) => { return false; }}
         onSubmitError={(listItem, error) => { alert(error.message); }}
-        onSubmitted={async (listItemData) => { console.log(listItemData); }}>
-      </DynamicForm>
+        onSubmitted={this.props.onSave} />
     </div>;
   }
 }

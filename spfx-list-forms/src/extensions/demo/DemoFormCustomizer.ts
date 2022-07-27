@@ -6,6 +6,7 @@ import {
   BaseFormCustomizer
 } from '@microsoft/sp-listview-extensibility';
 
+import { IItem } from '@pnp/sp/items';
 import Demo, { IDemoProps } from './components/Demo';
 
 /**
@@ -53,8 +54,7 @@ export default class DemoFormCustomizer
     super.onDispose();
   }
 
-  private _onSave = (): void => {
-
+  private _onSave = (listItemData: any, listItem?: IItem): void => {
     // You MUST call this.formSaved() after you save the form.
     this.formSaved();
   }
