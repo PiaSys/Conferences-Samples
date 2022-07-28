@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.0",
+    "libraryName": "spfx-pnpjs-3-service-class",
+    "libraryId": "a4a959ca-1cc3-4d76-8872-e35af91cc2b6",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-pnpjs-3-service-class",
+    "solutionShortDescription": "spfx-pnpjs-3-service-class description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

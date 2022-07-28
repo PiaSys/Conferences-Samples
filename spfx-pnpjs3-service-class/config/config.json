@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "consume-pn-pjs-service-class-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/consumePnPjsServiceClass/ConsumePnPjsServiceClassWebPart.js",
+          "manifest": "./src/webparts/consumePnPjsServiceClass/ConsumePnPjsServiceClassWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ConsumePnPjsServiceClassWebPartStrings": "lib/webparts/consumePnPjsServiceClass/loc/{locale}.js"
+  }
+}

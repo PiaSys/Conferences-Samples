@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-pnpjs-3-service-class-client-side-solution",
+    "id": "a4a959ca-1cc3-4d76-8872-e35af91cc2b6",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-pnpjs-3-service-class description"
+      },
+      "longDescription": {
+        "default": "spfx-pnpjs-3-service-class description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-pnpjs-3-service-class Feature",
+        "description": "The feature that activates elements of the spfx-pnpjs-3-service-class solution.",
+        "id": "284d46f2-029c-49ff-ad76-9938da307578",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-pnpjs-3-service-class.sppkg"
+  }
+}
