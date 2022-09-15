@@ -1,0 +1,9 @@
+{
+  "id": "4aa68557-fb09-4219-9e2a-12491b55544c",
+  "alias": "DemoSearchExtensionLibrary",
+  "componentType": "Library",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
+  "manifestVersion": 2
+}

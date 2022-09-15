@@ -1,0 +1,83 @@
+{
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+      {
+        "type": "TextBlock",
+        "text": "**${$root.data.totalItemsCount}** results",
+        "size": "Medium",
+        "wrap": true,
+        "$when": "${$root.properties.showResultsCount == true}"
+      },
+      {
+        "type": "Container",
+        "$data": "${data.items}",
+        "items": [
+          {
+            "type": "ColumnSet",
+            "id": "${hitId}",
+            "columns": [
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "wrap": true,
+                    "text": "<pnp-iconfile class='icon' data-extension='${if(empty($root.slots['FileType']),'',string(jPath($data, concat('.',$root.slots['FileType']))[0]))}'></pnp-iconfile>"
+                  }
+                ],
+                "width": "auto"
+              },
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "wrap": true,
+                    "text": "[${string(jPath($data, concat('.',$root.slots['Title']))[0])}](${string(jPath($data, concat('.',$root.slots['Path']))[0])})"
+                  }
+                ],
+                "width": "auto"
+              },
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "ActionSet",
+                    "actions": [
+                      {
+                        "type": "Action.Submit",
+                        "title": "Open",
+                        "style": "positive",
+                        "data": {
+                          "listId": "${ListId}",
+                          "itemId": "${ListItemID}"
+                        }
+                      }
+                    ],
+                    "spacing": "medium"
+                  }
+                ],
+                "width": "auto"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "type": "Action.Submit",
+        "title": "Global click",
+        "data": {
+          "id": "456"
+        }
+      },
+      {
+        "type": "Action.OpenUrl",
+        "title": "Open URL",
+        "url": "https://pnp.github.io/"
+      }
+    ]
+  }

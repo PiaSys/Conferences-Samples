@@ -1,0 +1,16 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.0",
+    "libraryName": "pnp-search-extensibility-demo",
+    "libraryId": "09784027-d66b-4e00-a361-81848679ce8b",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "pnp-search-extensibility-demo",
+    "solutionShortDescription": "pnp-search-extensibility-demo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "library"
+  }
+}

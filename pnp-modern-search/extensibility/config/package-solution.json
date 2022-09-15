@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "pnp-search-extensibility-demo-client-side-solution",
+    "id": "09784027-d66b-4e00-a361-81848679ce8b",
+    "version": "1.0.0.4",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "pnp-search-extensibility-demo description"
+      },
+      "longDescription": {
+        "default": "pnp-search-extensibility-demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "pnp-search-extensibility-demo Feature",
+        "description": "The feature that activates elements of the pnp-search-extensibility-demo solution.",
+        "id": "398e3d31-1cc5-45a9-a3c3-50252b76a453",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/pnp-search-extensibility-demo.sppkg"
+  }
+}

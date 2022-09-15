@@ -7,7 +7,7 @@ import { Providers } from '@microsoft/mgt-element';
 import { Msal2Provider } from '@microsoft/mgt-msal2-provider';
 
 Providers.globalProvider = new Msal2Provider({
-  clientId: '<YOUR-CLIENT-ID>',
+  clientId: 'a06db923-e6b7-4c35-9bc1-e2c6403ac816',
   scopes: ['files.read', 'user.read', 'openid', 'profile']
 });
 
