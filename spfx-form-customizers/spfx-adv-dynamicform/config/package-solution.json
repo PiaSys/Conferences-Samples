@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-adv-dynamicform-client-side-solution",
+    "id": "a89312c7-b69a-4a6f-8206-bf9d1975e144",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.15.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-adv-dynamicform description"
+      },
+      "longDescription": {
+        "default": "spfx-adv-dynamicform description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-adv-dynamicform Feature",
+        "description": "The feature that activates elements of the spfx-adv-dynamicform solution.",
+        "id": "4c9f4433-be81-4ca6-a379-97d44ddf828a",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-adv-dynamicform.sppkg"
+  }
+}

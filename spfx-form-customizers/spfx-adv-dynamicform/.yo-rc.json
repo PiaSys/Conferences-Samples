@@ -1,0 +1,17 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "version": "1.15.2",
+    "libraryName": "spfx-adv-dynamicform",
+    "libraryId": "a89312c7-b69a-4a6f-8206-bf9d1975e144",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-adv-dynamicform",
+    "solutionShortDescription": "spfx-adv-dynamicform description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "extension",
+    "extensionType": "FormCustomizer"
+  }
+}

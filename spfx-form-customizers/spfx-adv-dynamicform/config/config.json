@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "advanced-dynamic-form-form-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/advancedDynamicForm/AdvancedDynamicFormFormCustomizer.js",
+          "manifest": "./src/extensions/advancedDynamicForm/AdvancedDynamicFormFormCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AdvancedDynamicFormFormCustomizerStrings": "lib/extensions/advancedDynamicForm/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js"
+  }
+}

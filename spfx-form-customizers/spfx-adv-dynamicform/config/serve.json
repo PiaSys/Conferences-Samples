@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "42903696-ec78-449a-84d3-c1d5847a29de",
+        "PageType": 8,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Issue%20tracker",
+        "properties": {}
+      }
+    },
+    "advancedDynamicForm_NewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "42903696-ec78-449a-84d3-c1d5847a29de",
+        "PageType": 8,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Issue%20tracker",
+        "properties": {}
+      }
+    },
+    "advancedDynamicForm_EditForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "42903696-ec78-449a-84d3-c1d5847a29de",
+        "PageType": 6,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Issue%20tracker",
+        "ID": 1,
+        "properties": {}
+      }
+    },
+    "advancedDynamicForm_ViewForm": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "formCustomizer": {
+        "componentId": "42903696-ec78-449a-84d3-c1d5847a29de",
+        "PageType": 4,
+        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Issue%20tracker",
+        "ID": 1,
+        "properties": {}
+      }
+    }
+  }
+}
