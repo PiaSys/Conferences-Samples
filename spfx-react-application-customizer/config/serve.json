@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/ESPC22-124452342/",
+      "customActions": {
+        "54e15c2f-8385-4622-97ca-8de204e1243a": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+          }
+        }
+      }
+    },
+    "showMailboxStatus": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/ESPC22-124452342/",
+      "customActions": {
+        "54e15c2f-8385-4622-97ca-8de204e1243a": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+          }
+        }
+      }
+    }
+  }
+}
