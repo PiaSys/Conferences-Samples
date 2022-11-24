@@ -1,0 +1,27 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/spfx-serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/ESPC22-124452342/Shared%20Documents/Forms/AllItems.aspx",
+      "customActions": {
+        "4638c18c-8e24-4f62-ac83-1188b88bb524": {
+          "location": "ClientSideExtension.ListViewCommandSet",
+          "properties": {
+          }
+        }
+      }
+    },
+    "fileDetails": {
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/ESPC22-124452342/Shared%20Documents/Forms/AllItems.aspx",
+      "customActions": {
+        "4638c18c-8e24-4f62-ac83-1188b88bb524": {
+          "location": "ClientSideExtension.ListViewCommandSet",
+          "properties": {
+          }
+        }
+      }
+    }
+  }
+}

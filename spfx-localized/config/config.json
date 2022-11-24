@@ -1,18 +1,19 @@
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
   "version": "2.0",
   "bundles": {
-    "locale-sample-web-part": {
+    "localized-web-part-web-part": {
       "components": [
         {
-          "entrypoint": "./lib/webparts/localeSample/LocaleSampleWebPart.js",
-          "manifest": "./src/webparts/localeSample/LocaleSampleWebPart.manifest.json"
+          "entrypoint": "./lib/webparts/localizedWebPart/LocalizedWebPartWebPart.js",
+          "manifest": "./src/webparts/localizedWebPart/LocalizedWebPartWebPart.manifest.json"
         }
       ]
     }
   },
   "externals": {},
   "localizedResources": {
-    "LocaleSampleWebPartStrings": "lib/webparts/localeSample/loc/{locale}.js"
+    "LocalizedWebPartWebPartStrings": "lib/webparts/localizedWebPart/loc/{locale}.js",
+    "CustomServiceStrings": "lib/services/customService/loc/{locale}.js"
   }
 }

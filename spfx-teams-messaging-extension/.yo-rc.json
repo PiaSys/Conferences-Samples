@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.18.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.4.1"
+    },
+    "version": "1.16.0",
+    "libraryName": "spfx-teams-messaging-extension",
+    "libraryId": "5c657f4e-cee3-4900-8823-3d87c126b14a",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-teams-messaging-extension",
+    "solutionShortDescription": "spfx-teams-messaging-extension description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

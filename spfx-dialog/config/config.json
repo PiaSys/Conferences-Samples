@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "file-details-command-set": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/fileDetails/FileDetailsCommandSet.js",
+          "manifest": "./src/extensions/fileDetails/FileDetailsCommandSet.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "FileDetailsCommandSetStrings": "lib/extensions/fileDetails/loc/{locale}.js",
+    "FileDetailsDialogCommandSetStrings": "lib/extensions/fileDetails/components/fileDetailsDialog/loc/{locale}.js"
+  }
+}

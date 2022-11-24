@@ -1,0 +1,76 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.1",
+    "showLoadingIndicator": false,
+    "id": "387b1a1a-3b88-4874-ad0a-5b426ace2118",
+    "packageName": "com.piasys.spfx.messagingextension",
+    "developer": {
+        "name": "PiaSys.com",
+        "websiteUrl": "https://www.piasys.com/",
+        "privacyUrl": "https://www.piasys.com/privacy",
+        "termsOfUseUrl": "https://www.piasys.com/"
+    },
+    "icons": {
+        "color": "icon-color.png",
+        "outline": "icon-outline.png"
+    },
+    "name": {
+        "short": "PiaSys SPFx Messaging Extension",
+        "full": "PiaSys SPFx Messaging Extension"
+    },
+    "description": {
+        "short": "PiaSys SPFx Messaging Extension",
+        "full": "Shows how to use a SPFx Web Part as a Messaging Extension"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+      {
+        "botId": "497d8534-9235-4d08-98cf-4d2b73f50a2c",
+        "needsChannelSelector": false,
+        "isNotificationOnly": false,
+        "scopes": [
+          "team",
+          "personal"
+        ]
+      }
+    ],
+    "composeExtensions": [
+        {
+          "botId": "497d8534-9235-4d08-98cf-4d2b73f50a2c",
+          "canUpdateConfiguration": true,
+          "commands": [
+            {
+              "id": "spfxExtension",
+              "type": "action",
+              "title": "SPFx Extension",
+              "description": "See the SPFx Extension in action",
+              "initialRun": false,
+              "fetchTask": false,
+              "context": [
+                "message",
+                "compose"
+              ],
+              "taskInfo": {
+                "title": "SPFx Extension",
+                "width": "1200",
+                "height": "700",
+                "url": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamstaskhostedapp.aspx%3Fteams%26personal%26componentId=24d6dffc-21f7-436f-abe4-21da44b83e5d%26forceLocale={locale}"
+              }
+            }
+          ]
+        }
+    ],
+    "permissions": [
+        "identity"
+    ],
+    "validDomains": [
+        "*.login.microsoftonline.com",
+        "*.sharepoint.com",
+        "*.sharepoint-df.com",
+        "spoppe-a.akamaihd.net",
+        "spoprod-a.akamaihd.net",
+        "resourceseng.blob.core.windows.net",
+        "msft.spoppe.com"
+    ]
+}
