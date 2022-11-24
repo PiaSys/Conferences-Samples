@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "play-with-pn-p-js-v-3-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithPnPJsV3/PlayWithPnPJsV3WebPart.js",
+          "manifest": "./src/webparts/playWithPnPJsV3/PlayWithPnPJsV3WebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PlayWithPnPJsV3WebPartStrings": "lib/webparts/playWithPnPJsV3/loc/{locale}.js"
+  }
+}

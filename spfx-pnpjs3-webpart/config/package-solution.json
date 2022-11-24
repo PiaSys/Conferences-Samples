@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-pnpjs-3-webpart-client-side-solution",
+    "id": "339851e0-9101-4c27-9ec6-53eacee49762",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-pnpjs-3-webpart description"
+      },
+      "longDescription": {
+        "default": "spfx-pnpjs-3-webpart description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-pnpjs-3-webpart Feature",
+        "description": "The feature that activates elements of the spfx-pnpjs-3-webpart solution.",
+        "id": "790b20da-4583-43c3-b266-a87b186dde11",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-pnpjs-3-webpart.sppkg"
+  }
+}
