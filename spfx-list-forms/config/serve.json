@@ -4,11 +4,11 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://piasysdev.sharepoint.com/sites/SPFxFormCustomizerDemo/_layouts/15/SPListForm.aspx",
+      "pageUrl": "https://piasysdev.sharepoint.com/sites/PnPSamplesTests04/_layouts/15/SPListForm.aspx",
       "formCustomizer": {
         "componentId": "39d2b6b3-ff14-45ad-9028-e53094cb0e2f",
         "PageType": 8,
-        "RootFolder": "/sites/SPFxFormCustomizerDemo/Lists/Demo List",
+        "RootFolder": "/sites/PnPSamplesTests04/Lists/Customers",
         "properties": {
           "sampleText": "Value"
         }
