@@ -7,10 +7,9 @@ import { PageContext } from "@microsoft/sp-page-context";
 
 // Import PnPjs types
 import { spfi, SPFI, SPFx } from '@pnp/sp';
-import { Caching } from "@pnp/queryable";
 import "@pnp/sp/webs";
 import "@pnp/sp/lists";
-import { IListInfo, ILists } from "@pnp/sp/lists";
+import { IListInfo } from "@pnp/sp/lists";
 
 /**
  * Defines the concrete implementation of the interface for the Assets Service
@@ -25,7 +24,7 @@ export class ListsService implements IListsService {
      * Constructor for the service class
      * @param serviceScope Service Scope to initialize the service class
      */
-    constructor(serviceScope: ServiceScope) {
+    public constructor(serviceScope: ServiceScope) {
 
         // Initialized the PnPjs framework for SPFx
         serviceScope.whenFinished(() => {

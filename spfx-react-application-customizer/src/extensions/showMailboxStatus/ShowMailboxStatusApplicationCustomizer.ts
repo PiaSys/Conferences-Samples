@@ -59,7 +59,7 @@ export default class ShowMailboxStatusApplicationCustomizer
       const element: React.ReactElement<IShowMailboxStatusProps> = React.createElement(
         ShowMailboxStatus,
         {
-          grapClient: this._graphClient        }
+          graphClient: this._graphClient        }
       );
 
       ReactDom.render(element, this._footerPlaceholder.domElement);

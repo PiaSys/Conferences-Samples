@@ -30,7 +30,7 @@ export default class ShowMailboxStatus extends React.Component<IShowMailboxStatu
 
     private _loadMessages(): void {
 
-        if (!this.props.grapClient) {
+        if (!this.props.graphClient) {
             return;
         }
 
@@ -42,7 +42,7 @@ export default class ShowMailboxStatus extends React.Component<IShowMailboxStatu
 
         const graphURI: string = 'me/mailFolders/Inbox';
 
-        this.props.grapClient
+        this.props.graphClient
             .api(graphURI)
             .version('v1.0')
             .select('unreadItemCount')

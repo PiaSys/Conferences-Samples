@@ -20,8 +20,8 @@ export interface IConsumePnPjsServiceClassWebPartProps {
 
 export default class ConsumePnPjsServiceClassWebPart extends BaseClientSideWebPart<IConsumePnPjsServiceClassWebPartProps> {
 
-  private _isDarkTheme: boolean = false;
-  private _environmentMessage: string = '';
+  private _isDarkTheme = false;
+  private _environmentMessage = '';
 
   private _listsService: IListsService = null;
 
@@ -52,7 +52,7 @@ export default class ConsumePnPjsServiceClassWebPart extends BaseClientSideWebPa
   }
 
   private _getEnvironmentMessage(): string {
-    if (!!this.context.sdks.microsoftTeams) { // running in Teams
+    if (!this.context.sdks.microsoftTeams) { // running in Teams
       return this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentTeams : strings.AppTeamsTabEnvironment;
     }
 
