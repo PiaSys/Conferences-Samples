@@ -5,6 +5,7 @@ import { ITestMsGraphV3State } from './ITestMsGraphV3State';
 import { escape } from '@microsoft/sp-lodash-subset';
 import { DefaultButton } from '@fluentui/react';
 import { FileUpload, OneDriveLargeFileUploadOptions, OneDriveLargeFileUploadTask, UploadResult } from "@microsoft/microsoft-graph-client";
+import { ProgressIndicator } from '@fluentui/react';
 
 export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, ITestMsGraphV3State> {
 
@@ -12,7 +13,9 @@ export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, 
     super(props);
     
     this.state = {
-      files: null
+      files: null,
+      uploading: false,
+      percentComplete: 0
     };
   }
 
@@ -25,6 +28,12 @@ export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, 
       userDisplayName
     } = this.props;
 
+    const {
+      uploading,
+      percentComplete,
+      fileName
+    } = this.state;
+
     return (
       <section className={`${styles.testMsGraphV3} ${hasTeamsContext ? styles.teams : ''}`}>
         <div className={styles.welcome}>
@@ -36,6 +45,12 @@ export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, 
         <div>
           <div><input type="file" id="fileToUpload" onChange={this._fileToUploadChanged} /></div>
           <div><DefaultButton text="Upload large file" onClick={this._uploadLargeFile} /></div>
+          <div>
+            { uploading ?
+              <ProgressIndicator label="Upload progress" description={fileName} percentComplete={percentComplete} />
+              : null
+            }
+          </div>
         </div>
       </section>
     );
@@ -55,6 +70,7 @@ export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, 
     }
 
     const file = this.state.files[0];
+    console.log(file);
     const fileObject = new FileUpload(file, file.name, file.size);
 
     const options: OneDriveLargeFileUploadOptions = {
@@ -68,6 +84,12 @@ export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, 
         // Called as each "slice" of the file is uploaded
         progress: (range, e) => {
           console.log(`Uploaded ${range?.minValue} to ${range?.maxValue}`);
+
+          const percentComplete: number = (range?.maxValue / file.size % 1);
+          console.log(percentComplete);
+          this.setState({
+            percentComplete: percentComplete
+          });
         }
       }
     };
@@ -77,12 +99,19 @@ export default class TestMsGraphV3 extends React.Component<ITestMsGraphV3Props, 
       .createTaskWithFileObject(this.props.graphClient.client, fileObject, options);
 
     // Do the upload
+    this.setState({
+      uploading: true
+    });
     const uploadResult: UploadResult = await uploadTask.upload();
 
     // The response body will be of the corresponding type of the
     // item being uploaded. For OneDrive, this is a DriveItem
     const driveItem: any = uploadResult.responseBody;
     console.log(`Uploaded file with ID: ${driveItem.id}`);
+
+    this.setState({
+      uploading: false
+    });
 
     return;
   }
