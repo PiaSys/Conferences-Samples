@@ -17,6 +17,7 @@ export interface IM365EventDashboardWebPartProps {
 export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM365EventDashboardWebPartProps> {
 
   private _isDarkTheme: boolean = false;
+  private _teamId: string = null;
   private _environmentMessage: string = '';
   private _eventsService: IEventsService = null;
 
@@ -25,6 +26,7 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
       M365EventDashboard,
       {
         eventsService: this._eventsService,
+        teamId: this._teamId,
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
@@ -49,6 +51,7 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
     if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
       return this.context.sdks.microsoftTeams.teamsJs.app.getContext()
         .then(context => {
+          this._teamId = context.team.internalId;
           let environmentMessage: string = '';
           switch (context.app.host.name) {
             case 'Office': // running in Office

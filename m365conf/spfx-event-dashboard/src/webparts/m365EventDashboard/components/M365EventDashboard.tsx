@@ -11,6 +11,7 @@ import { ChartControl, ChartPalette, ChartType } from '@pnp/spfx-controls-react'
 import { Spinner, SpinnerSize } from '@fluentui/react';
 
 import * as strings from 'M365EventDashboardWebPartStrings';
+import { DefaultButton } from '@fluentui/react';
 
 const iconClass = mergeStyles({
   fontSize: 25,
@@ -23,6 +24,8 @@ const iconsStyles = mergeStyleSets({
   noviceGreen: [{ color: 'green' }, iconClass],
   regularBlu: [{ color: 'blue' }, iconClass],
   expertRed: [{ color: 'red' }, iconClass],
+  checkedGreen: [{ color: 'green' }, iconClass],
+  uncheckedBlack: [{ color: 'black' }, iconClass]
 });
 
 export default class M365EventDashboard extends React.Component<IM365EventDashboardProps, IM365EventDashboardState> {
@@ -106,6 +109,56 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
     }
   ];
 
+  private _sessionsViewFields: IViewField[] = [
+    {
+      name: "id",
+      displayName: "ID",
+      sorting: false,
+      minWidth: 50,
+      maxWidth: 50
+    },
+    {
+      name: "title",
+      displayName: "Name",
+      sorting: true,
+      minWidth: 100,
+      maxWidth: 100
+    },
+    {
+      name: "topic",
+      displayName: "Topic",
+      sorting: true,
+      minWidth: 100,
+      maxWidth: 100
+    },
+    {
+      name: "leve",
+      displayName: "Level",
+      sorting: true,
+      minWidth: 100,
+      maxWidth: 100
+    },
+    {
+      name: "approved",
+      displayName: "Approval",
+      render: (item?: any, index?: number, column?: any): JSX.Element => {
+        const approvedValue: boolean = item.approved;
+        console.log(approvedValue);
+        if (this.props.teamId) {
+          return <DefaultButton text="Request Eval" onClick={async () => { await this.AssignEvalTask(item); }} />;
+        } else {
+          <div>{ approvedValue ? 
+            <FontIcon aria-label="Compass" iconName="CheckboxComposite" className={iconsStyles.checkedGreen} /> :
+            <FontIcon aria-label="Compass" iconName="Checkbox" className={iconsStyles.uncheckedBlack} />
+          }</div>
+        }
+      },
+      sorting: true,
+      minWidth: 150,
+      maxWidth: 150
+    }
+  ];
+
   constructor(props: IM365EventDashboardProps) {
     super(props);    
 
@@ -151,8 +204,11 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
 
   public render(): React.ReactElement<IM365EventDashboardProps> {
     const {
+      teamId,
       hasTeamsContext
     } = this.props;
+
+    console.log(teamId);
 
     const {
       loading,
@@ -200,6 +256,19 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
       size: WidgetSize.Double,
       body: [
         {
+          id: "sessionsListTab",
+          title: strings.Dashboard.SessionsWidgetTitle,
+          content: (
+            this.getSessionsListTab()
+          )
+        }
+      ]
+    },
+    {
+      title: strings.Dashboard.SessionsWidgetTitle,
+      size: WidgetSize.Double,
+      body: [
+        {
           id: "sessionsChartTab",
           title: strings.Dashboard.SessionsWidgetTitle,
           content: (
@@ -237,6 +306,20 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
       stickyHeader={true} />;
   }
 
+  /**
+   * Get the content for the Speakers list widget
+   * @returns Element representing the Speakers list tab
+   */
+  private getSessionsListTab = () => {
+      return <ListView
+        items={this.state.sessions}
+        viewFields={this._sessionsViewFields}
+        compact={true}
+        selectionMode={SelectionMode.single}
+        showFilter={false}
+        stickyHeader={true} />;
+  }
+  
   /**
    * Get the content for the Attendees list widget
    * @returns Element representing the Attendees list tab
@@ -279,5 +362,9 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
         }
       ]
     };
+  }
+
+  private AssignEvalTask = async (session: ISession) => {
+    await this.props.eventsService.AssignSessionEvaluationTask(session, this.props.teamId);
   }
 }

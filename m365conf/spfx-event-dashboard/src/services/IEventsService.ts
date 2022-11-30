@@ -22,4 +22,10 @@ export interface IEventsService {
      * @returns The whole list of attendees
      */
     ListAttendees: () => Promise<IAttendee[]>;
+
+    /**
+     * Assing an evaluation task for a session in the conference tasks plan
+     * @returns Nothing in case of success
+     */
+    AssignSessionEvaluationTask: (session: ISession, groupId: string) => Promise<void>;
 }
