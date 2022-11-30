@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "spfx-event-dashboard-client-side-solution",
-    "id": "8e6461c1-0daf-4424-91c8-3d11ebbbb8f8",
+    "id": "59c651dc-3b36-4eb2-bc1b-b47fa603130f",
     "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
@@ -29,7 +29,7 @@
       {
         "title": "spfx-event-dashboard Feature",
         "description": "The feature that activates elements of the spfx-event-dashboard solution.",
-        "id": "2437f820-7c4c-42be-b2c7-9213eb036712",
+        "id": "f4d071b3-bdf3-46e6-af43-90474b0ce841",
         "version": "1.0.0.0"
       }
     ]

@@ -12,7 +12,6 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "@fluentui/react-icons-northstar": "^0.65.0",
     "@microsoft/sp-core-library": "1.16.0",
     "@microsoft/sp-lodash-subset": "1.16.0",
     "@microsoft/sp-office-ui-fabric-core": "1.16.0",
@@ -21,7 +20,7 @@
     "@pnp/graph": "^3.9.0",
     "@pnp/logging": "^3.9.0",
     "@pnp/sp": "^3.9.0",
-    "@pnp/spfx-controls-react": "^3.12.0",
+    "@pnp/spfx-controls-react": "3.12.0",
     "office-ui-fabric-react": "^7.199.1",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -40,6 +39,6 @@
     "ajv": "^6.12.5",
     "eslint-plugin-react-hooks": "4.3.0",
     "gulp": "4.0.2",
-    "typescript": "4.5.5"
+    "typescript": "^4.5.5"
   }
 }

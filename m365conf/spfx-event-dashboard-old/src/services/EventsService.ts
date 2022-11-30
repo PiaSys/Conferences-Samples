@@ -39,9 +39,12 @@ import "@pnp/sp/items";
      * @returns The whole list of speakers
      */
     public async ListSpeakers(): Promise<ISpeaker[]> {
+
         const items: any = await this._sp.web.lists.getByTitle('Speakers').items();
-        return items.map((i: { Id: any; Title: any; SpeakerEmail: any; SpeakerExpertise: any; }) => 
-            <ISpeaker>{ id: i.Id, title: i.Title, email: i.SpeakerEmail, expertise: i.SpeakerExpertise });
+        console.log(items);
+        // return items.map(i => { id: i.id, title: i.title, email: i.email, expertise: i.expertise });
+
+        return null;
     }
 
      /**
@@ -49,9 +52,11 @@ import "@pnp/sp/items";
       * @returns The whole list of sessions
       */
     public async ListSessions(): Promise<ISession[]> {
+
         const items: any = await this._sp.web.lists.getByTitle('Sessions').items();
-        return items.map((i: { Id: any; Title: any; SessionTopic: any; SessionLevel: any; SessionApproved: any; }) => 
-            <ISession>{ id: i.Id, title: i.Title, topic: i.SessionTopic, level: i.SessionLevel, approved: i.SessionApproved });
+        console.log(items);
+
+        return null;
     }
   
      /**
@@ -59,8 +64,10 @@ import "@pnp/sp/items";
       * @returns The whole list of attendees
       */
     public async ListAttendees(): Promise<IAttendee[]> {
+
         const items: any = await this._sp.web.lists.getByTitle('Attendees').items();
-        return items.map((i: { Id: any; Title: any; AttendeeCompany: any; AttendeeEmail: any; }) => 
-            <IAttendee>{ id: i.Id, title: i.Title, company: i.AttendeeCompany, email: i.AttendeeEmail });
+        console.log(items);
+
+        return null;
     }
  }

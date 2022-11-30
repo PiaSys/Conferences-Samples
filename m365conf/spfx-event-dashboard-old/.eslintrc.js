@@ -323,9 +323,7 @@ module.exports = {
         // ====================================================================
         '@microsoft/spfx/import-requires-chunk-name': 1,
         '@microsoft/spfx/no-require-ensure': 2,
-        '@microsoft/spfx/pair-react-dom-render-unmount': 1,
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off'
+        '@microsoft/spfx/pair-react-dom-render-unmount': 1
       }
     },
     {
