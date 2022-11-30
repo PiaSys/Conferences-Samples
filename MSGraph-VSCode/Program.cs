@@ -143,15 +143,15 @@ var batchRequestContent = new BatchRequestContent();
 
 // Using AddBatchRequestStep adds each request as a step with no specified order of execution
 var addMessage01RequestId = batchRequestContent.AddBatchRequestStep(chatMessagesRequest01);
-var addMessage02RequestId = batchRequestContent.AddBatchRequestStep(chatMessagesRequest02);
+// var addMessage02RequestId = batchRequestContent.AddBatchRequestStep(chatMessagesRequest02);
 
 #region Ordered batching demo
-// var addMessage02RequestId = Guid.NewGuid().ToString();
-// batchRequestContent.AddBatchRequestStep(new BatchRequestStep(
-//     addMessage02RequestId,
-//     chatMessagesRequest02,
-//     new List<string> {addMessage01RequestId }
-// ));
+var addMessage02RequestId = Guid.NewGuid().ToString();
+batchRequestContent.AddBatchRequestStep(new BatchRequestStep(
+    addMessage02RequestId,
+    chatMessagesRequest02,
+    new List<string> {addMessage01RequestId }
+));
 #endregion
 
 // And now invoke Microsoft Graph with one batch request

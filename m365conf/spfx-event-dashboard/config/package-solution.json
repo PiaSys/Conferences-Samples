@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-event-dashboard-client-side-solution",
+    "id": "59c651dc-3b36-4eb2-bc1b-b47fa603130f",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-event-dashboard description"
+      },
+      "longDescription": {
+        "default": "spfx-event-dashboard description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-event-dashboard Feature",
+        "description": "The feature that activates elements of the spfx-event-dashboard solution.",
+        "id": "f4d071b3-bdf3-46e6-af43-90474b0ce841",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-event-dashboard.sppkg"
+  }
+}
