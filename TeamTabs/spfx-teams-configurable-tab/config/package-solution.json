@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-teams-configurable-tab-client-side-solution",
+    "id": "0376890d-6f3d-4249-8a03-e4c38aeb8b54",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-teams-configurable-tab description"
+      },
+      "longDescription": {
+        "default": "spfx-teams-configurable-tab description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-teams-configurable-tab Feature",
+        "description": "The feature that activates elements of the spfx-teams-configurable-tab solution.",
+        "id": "dc6853fd-7e8e-475f-9d3b-73646e894cf2",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-teams-configurable-tab.sppkg"
+  }
+}

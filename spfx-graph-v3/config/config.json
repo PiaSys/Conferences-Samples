@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "test-ms-graph-v-3-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/testMsGraphV3/TestMsGraphV3WebPart.js",
+          "manifest": "./src/webparts/testMsGraphV3/TestMsGraphV3WebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TestMsGraphV3WebPartStrings": "lib/webparts/testMsGraphV3/loc/{locale}.js"
+  }
+}

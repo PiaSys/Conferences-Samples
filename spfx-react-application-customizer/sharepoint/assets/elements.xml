@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <CustomAction
+        Title="ShowMailboxStatus"
+        Location="ClientSideExtension.ApplicationCustomizer"
+        ClientSideComponentId="54e15c2f-8385-4622-97ca-8de204e1243a"
+        ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
+    </CustomAction>
+</Elements>

@@ -33,11 +33,8 @@ export default class ConsumePnPjsServiceClass extends React.Component<IConsumePn
 
   public render(): React.ReactElement<IConsumePnPjsServiceClassProps> {
     const {
-      description,
       isDarkTheme,
-      environmentMessage,
-      hasTeamsContext,
-      userDisplayName,
+      hasTeamsContext
     } = this.props;
 
     const {
@@ -53,7 +50,7 @@ export default class ConsumePnPjsServiceClass extends React.Component<IConsumePn
         <div>
           <ul className={styles.links}>
             {
-              lists.map(l => <li>[{l.id}] - {l.title}</li>)
+              lists.map(l => <li key={l.id}>[{l.id}] - {l.title}</li>)
             }
           </ul>
         </div>

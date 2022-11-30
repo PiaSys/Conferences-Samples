@@ -1,10 +1,38 @@
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "spfx-localized-client-side-solution",
-    "id": "dccba19a-8b29-4c51-a0bb-0646a9d6c52d",
+    "id": "bacc18d5-655f-4cc4-9ebc-1ed8f5bd92f2",
     "version": "1.0.0.0",
-    "includeClientSideAssets": true
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-localized description"
+      },
+      "longDescription": {
+        "default": "spfx-localized description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-localized Feature",
+        "description": "The feature that activates elements of the spfx-localized solution.",
+        "id": "cb20d6b3-c8cd-47fb-8d1c-59e8b52ceca8",
+        "version": "1.0.0.0"
+      }
+    ]
   },
   "paths": {
     "zippedPackage": "solution/spfx-localized.sppkg"

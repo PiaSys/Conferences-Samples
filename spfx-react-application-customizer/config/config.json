@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "show-mailbox-status-application-customizer": {
+      "components": [
+        {
+          "entrypoint": "./lib/extensions/showMailboxStatus/ShowMailboxStatusApplicationCustomizer.js",
+          "manifest": "./src/extensions/showMailboxStatus/ShowMailboxStatusApplicationCustomizer.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ShowMailboxStatusApplicationCustomizerStrings": "lib/extensions/showMailboxStatus/loc/{locale}.js"
+  }
+}

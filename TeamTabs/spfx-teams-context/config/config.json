@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "teams-play-with-context-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/teamsPlayWithContext/TeamsPlayWithContextWebPart.js",
+          "manifest": "./src/webparts/teamsPlayWithContext/TeamsPlayWithContextWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TeamsPlayWithContextWebPartStrings": "lib/webparts/teamsPlayWithContext/loc/{locale}.js"
+  }
+}

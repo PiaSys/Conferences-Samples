@@ -1,0 +1,9 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.showMailboxStatusFooter {
+    .showMailboxStatusFooterContainer {
+        background-color: $ms-color-neutralLighter;
+        color: $ms-color-neutralPrimary;
+        width: 100%;
+    }
+}

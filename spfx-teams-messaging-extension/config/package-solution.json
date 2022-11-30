@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-teams-messaging-extension-client-side-solution",
+    "id": "5c657f4e-cee3-4900-8823-3d87c126b14a",
+    "version": "1.0.0.1",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-teams-messaging-extension description"
+      },
+      "longDescription": {
+        "default": "spfx-teams-messaging-extension description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-teams-messaging-extension Feature",
+        "description": "The feature that activates elements of the spfx-teams-messaging-extension solution.",
+        "id": "6a8135ad-211d-4c8d-a765-a47ec320bd36",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-teams-messaging-extension.sppkg"
+  }
+}
