@@ -12,9 +12,9 @@ export interface ISpeaker {
  * Defines the expertise levels for speakers
  */
  export enum SpeakerExpertise {
-    Novice = 'Novice',
-    Regular = 'Regular',
-    Expert = 'Expert'
+    Novice,
+    Regular,
+    Expert
 }
 
 /**

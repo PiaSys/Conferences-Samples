@@ -3,7 +3,6 @@ import * as ReactDom from 'react-dom';
 import { Version } from '@microsoft/sp-core-library';
 import { IPropertyPaneConfiguration } from '@microsoft/sp-property-pane';
 import { BaseClientSideWebPart } from '@microsoft/sp-webpart-base';
-import { IReadonlyTheme } from '@microsoft/sp-component-base';
 
 import * as strings from 'M365EventDashboardWebPartStrings';
 import M365EventDashboard from './components/M365EventDashboard';
@@ -16,7 +15,6 @@ export interface IM365EventDashboardWebPartProps {
 
 export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM365EventDashboardWebPartProps> {
 
-  private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
   private _eventsService: IEventsService = null;
 
@@ -25,7 +23,6 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
       M365EventDashboard,
       {
         eventsService: this._eventsService,
-        isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName
@@ -42,8 +39,6 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
 
     return super.onInit();
   }
-
-
 
   private _getEnvironmentMessage(): Promise<string> {
     if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
@@ -69,24 +64,6 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
     }
 
     return Promise.resolve(this.context.isServedFromLocalhost ? strings.AppLocalEnvironmentSharePoint : strings.AppSharePointEnvironment);
-  }
-
-  protected onThemeChanged(currentTheme: IReadonlyTheme | undefined): void {
-    if (!currentTheme) {
-      return;
-    }
-
-    this._isDarkTheme = !!currentTheme.isInverted;
-    const {
-      semanticColors
-    } = currentTheme;
-
-    if (semanticColors) {
-      this.domElement.style.setProperty('--bodyText', semanticColors.bodyText || null);
-      this.domElement.style.setProperty('--link', semanticColors.link || null);
-      this.domElement.style.setProperty('--linkHovered', semanticColors.linkHovered || null);
-    }
-
   }
 
   protected onDispose(): void {

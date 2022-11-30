@@ -25,6 +25,7 @@ namespace MSALPublicClientDemo
             AuthenticationResult result = await publicClient.AcquireTokenInteractive(scopes).ExecuteAsync();
 
             Console.WriteLine(result.AccessToken);
+            Console.WriteLine("\n\n");
 
             var httpClient = new HttpClient();
             var httpRequest = new HttpRequestMessage(HttpMethod.Get,

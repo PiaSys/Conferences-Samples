@@ -1,6 +1,6 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
-  "id": "1901f4d6-25ab-4985-a737-669583b13cca",
+  "id": "91c8443b-44c5-4006-8fef-af7e45e04b17",
   "alias": "M365EventDashboardWebPart",
   "componentType": "WebPart",
 

@@ -10,12 +10,6 @@ declare interface IM365EventDashboardWebPartStrings {
   AppTeamsTabEnvironment: string;
   AppOfficeEnvironment: string;
   AppOutlookEnvironment: string;
-  Dashboard: {
-    SpeakersWidgetTitle: string;
-    SessionsWidgetTitle: string;
-    AttendeesWidgetTitle: string;
-  },
-  Loading: string;
 }
 
 declare module 'M365EventDashboardWebPartStrings' {
