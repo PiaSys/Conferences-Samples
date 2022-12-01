@@ -78,7 +78,7 @@ import "@pnp/sp/items";
         const plans: { value: { id: string, title: string}[] } = await this._graphClient
             .api(`/groups/${groupId}/planner/plans`)
             .version("v1.0")
-            .select('id, title')
+            .select('id,title')
             .get();
 
         if (plans.value.length <= 0) {
@@ -88,7 +88,7 @@ import "@pnp/sp/items";
         const buckets: { value: { id: string}[] } = await this._graphClient
             .api(`/groups/${groupId}/planner/plans/${plans.value[0].id}/buckets`)
             .version("v1.0")
-            .select('id, title')
+            .select('id,name')
             .get();
 
         if (buckets.value.length <= 0) {

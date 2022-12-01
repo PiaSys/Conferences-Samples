@@ -8,8 +8,8 @@ namespace MSALPublicClientDemo
     class Program
     {
         static IPublicClientApplication publicClient;
-        static string clientId = "{client_id}";
-        static string tenantId = "{tenant_id}";
+        static string clientId = "797b0e87-6626-4eb2-8a29-a4cb4206c81e";
+        static string tenantId = "6c94075a-da0a-4c6a-8411-badf652e8b53";
         static Uri authority = new Uri($"https://login.microsoftonline.com/{tenantId}");
 
         static async Task Main(string[] args)
