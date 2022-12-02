@@ -143,7 +143,6 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
       displayName: "Approval",
       render: (item?: any, index?: number, column?: any): JSX.Element => {
         const approvedValue: boolean = item.approved;
-        console.log(approvedValue);
         if (this.props.teamId) {
           return <DefaultButton text="Request Eval" onClick={async () => { await this.AssignEvalTask(item); }} />;
         } else {

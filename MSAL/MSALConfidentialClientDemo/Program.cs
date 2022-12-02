@@ -8,9 +8,9 @@ namespace MSALConfidentialClientDemo
     class Program
     {
         static IConfidentialClientApplication confidentialClient;
-        static string clientId = "{client_id}";
-        static string clientSecret = "{client_secret}";
-        static string tenantId = "{tenant_id}";
+        static string clientId = "797b0e87-6626-4eb2-8a29-a4cb4206c81e";
+        static string clientSecret = "1Hd8Q~T6gd.B2rZBUCoFVX5f2v-2-wsVXVmuSbFH";
+        static string tenantId = "6c94075a-da0a-4c6a-8411-badf652e8b53";
         static Uri authority = new Uri($"https://login.microsoftonline.com/{tenantId}");
 
         static async Task Main(string[] args)

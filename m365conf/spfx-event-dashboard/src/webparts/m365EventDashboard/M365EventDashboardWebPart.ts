@@ -51,7 +51,7 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
     if (!!this.context.sdks.microsoftTeams) { // running in Teams, office.com or Outlook
       return this.context.sdks.microsoftTeams.teamsJs.app.getContext()
         .then(context => {
-          this._teamId = context.team.internalId;
+          this._teamId = context.team.groupId;
           let environmentMessage: string = '';
           switch (context.app.host.name) {
             case 'Office': // running in Office
