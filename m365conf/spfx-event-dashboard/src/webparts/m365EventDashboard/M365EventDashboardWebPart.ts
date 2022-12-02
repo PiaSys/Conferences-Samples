@@ -11,6 +11,8 @@ import { IM365EventDashboardProps } from './components/IM365EventDashboardProps'
 import { EventsService } from '../../services/EventsService';
 import { IEventsService } from '../../services/IEventsService';
 
+import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
+
 export interface IM365EventDashboardWebPartProps {
 }
 
@@ -40,6 +42,10 @@ export default class M365EventDashboardWebPart extends BaseClientSideWebPart<IM3
   protected async onInit(): Promise<void> {
     this._environmentMessage = await this._getEnvironmentMessage();
 
+    if (!Providers.globalProvider) {
+      Providers.globalProvider = new SharePointProvider(this.context);
+    }
+    
     this._eventsService = this.context.serviceScope.consume(EventsService.serviceKey);
 
     return super.onInit();

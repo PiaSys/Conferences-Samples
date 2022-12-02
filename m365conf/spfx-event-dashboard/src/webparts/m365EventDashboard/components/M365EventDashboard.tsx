@@ -12,6 +12,8 @@ import { Spinner, SpinnerSize } from '@fluentui/react';
 
 import * as strings from 'M365EventDashboardWebPartStrings';
 import { DefaultButton } from '@fluentui/react';
+import { Person } from '@microsoft/mgt-react/dist/es6/spfx';
+import { PersonViewType } from '@microsoft/mgt-spfx';
 
 const iconClass = mergeStyles({
   fontSize: 25,
@@ -226,6 +228,7 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
         <div className={styles.welcome}>
           { loading && <Spinner size={SpinnerSize.large} title={strings.Loading} className={styles.loader} /> }
           { error && <div className={styles.error}>{error}</div> }
+          <div className={styles.personTopBar}><Person personQuery='me' view={PersonViewType.oneline} /></div>
           { !loading && !error && <Dashboard widgets={this.getDashboardWidgets()} /> }
         </div>
       </section>
