@@ -12,21 +12,21 @@
         "title": "Speakers",
         "includeItems": true,
         "query": {
-          "includeAttachments": true
+          "includeAttachments": false
         }
       },
       {
         "title": "Sessions",
         "includeItems": true,
         "query": {
-          "includeAttachments": true
+          "includeAttachments": false
         }
       },
       {
         "title": "Attendees",
         "includeItems": true,
         "query": {
-          "includeAttachments": true
+          "includeAttachments": false
         }
       }
     ]
