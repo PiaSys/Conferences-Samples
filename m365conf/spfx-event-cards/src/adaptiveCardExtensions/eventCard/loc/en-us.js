@@ -3,8 +3,7 @@ define([], function() {
     PropertyPane: {
       PropertyPaneDescription: "This Adapative Card allows you to book sessions in your agenda.",
       TitleFieldLabel: "Card title",
-      GroupIdFieldLabel: "Group ID",
-      SiteUrlFieldLabel: "Site URL"
+      GroupIdFieldLabel: "Group ID"
     },
     CardView: {
       PrimaryText: "Sessions List",

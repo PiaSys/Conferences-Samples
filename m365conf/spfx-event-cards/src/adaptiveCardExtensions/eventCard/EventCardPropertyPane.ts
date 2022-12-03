@@ -15,9 +15,6 @@ export class EventCardPropertyPane {
                 }),
                 PropertyPaneTextField('groupId', {
                   label: strings.PropertyPane.GroupIdFieldLabel
-                }),
-                PropertyPaneTextField('siteUrl', {
-                  label: strings.PropertyPane.SiteUrlFieldLabel
                 })
               ]
             }

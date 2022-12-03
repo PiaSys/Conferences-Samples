@@ -3,7 +3,6 @@ declare interface IEventCardAdaptiveCardExtensionStrings {
     PropertyPaneDescription: string;
     TitleFieldLabel: string;
     GroupIdFieldLabel: string;
-    SiteUrlFieldLabel: string;
   },
   CardView: {
     PrimaryText: string;

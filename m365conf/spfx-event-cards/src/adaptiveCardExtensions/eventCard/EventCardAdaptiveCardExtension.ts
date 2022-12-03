@@ -24,7 +24,10 @@ export default class EventCardAdaptiveCardExtension extends BaseAdaptiveCardExte
   private _graphClient: MSGraphClientV3 = null;
 
   public async onInit(): Promise<void> {
-    this.state = { };
+    this.state = {
+      error: '',
+      events: []
+    };
 
     this.cardNavigator.register(CARD_VIEW_MAIN_ID, () => new CardView());
     this.quickViewNavigator.register(QUICK_VIEW_LIST_EVENTS_ID, () => new ListSessionsQuickView());
