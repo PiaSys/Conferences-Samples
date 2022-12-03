@@ -1,0 +1,37 @@
+{
+  "$schema":"https://aka.ms/sppnp-extract-configuration-schema",
+  "persistAssetFiles": true,
+  "handlers": [
+    "Fields",
+    "ContentTypes",
+    "Lists"
+  ],
+  "lists": {
+    "lists": [
+      {
+        "title": "Speakers",
+        "includeItems": true,
+        "query": {
+          "includeAttachments": true
+        }
+      },
+      {
+        "title": "Sessions",
+        "includeItems": true,
+        "query": {
+          "includeAttachments": true
+        }
+      },
+      {
+        "title": "Attendees",
+        "includeItems": true,
+        "query": {
+          "includeAttachments": true
+        }
+      }
+    ]
+  },
+  "pages": {
+    "includeAllClientSidePages": true
+  }
+}
