@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-event-cards-client-side-solution",
+    "id": "86a081e8-f3d7-4867-b30d-26bfe2667214",
+    "version": "1.0.0.4",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.0"
+    },
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "Calendars.ReadWrite"
+      }
+    ],
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-event-cards description"
+      },
+      "longDescription": {
+        "default": "spfx-event-cards description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-event-cards Feature",
+        "description": "The feature that activates elements of the spfx-event-cards solution.",
+        "id": "7b50ec91-af78-44cf-8fd6-9cef50ffd859",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-event-cards.sppkg"
+  }
+}

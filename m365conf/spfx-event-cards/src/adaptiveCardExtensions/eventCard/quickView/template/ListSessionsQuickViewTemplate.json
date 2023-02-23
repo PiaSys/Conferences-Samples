@@ -1,0 +1,144 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.2",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "TextBlock",
+      "text": "${subTitle}",
+      "wrap": true
+    },
+    {
+      "type": "Container",
+      "spacing": "Large",
+      "style": "emphasis",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "TITLE",
+                  "wrap": true
+                }
+              ],
+              "width": "180px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "horizontalAlignment": "Right",
+                  "text": "DATE",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            }
+          ]
+        }
+      ],
+      "bleed": true
+    },
+    {
+      "$data": "${events}",
+      "type": "Container",
+      "items": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "${subject}",
+                  "wrap": true
+                }
+              ],
+              "width": "180px"
+            },
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "horizontalAlignment": "Right",
+                  "text": "${formatDateTime(start.dateTime, 'yyyy-MM-dd HH:mm')}",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "Small",
+              "selectAction": {
+                "type": "Action.ToggleVisibility",
+                "targetElements": [
+                  "eventBody${$index}",
+                  "chevronDown${$index}",
+                  "chevronUp${$index}"
+                ]
+              },
+              "verticalContentAlignment": "Center",
+              "items": [
+                {
+                  "type": "Image",
+                  "id": "chevronDown${$index}",
+                  "url": "${$root.imageDownUrl}",
+                  "width": "20px"
+                },
+                {
+                  "type": "Image",
+                  "id": "chevronUp${$index}",
+                  "url": "${$root.imageUpUrl}",
+                  "width": "20px",
+                  "isVisible": false
+                }
+              ],
+              "width": "auto"
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "id": "eventBody${$index}",
+          "isVisible": false,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${bodyPreview}",
+              "wrap": true
+            },
+            {
+              "type": "ActionSet",
+              "actions": [
+                {
+                  "type": "Action.Submit",
+                  "id": "addToMyAgenda${$index}",
+                  "title": "Add to my agenda",
+                  "data": {
+                    "id": "${id}",
+                    "itemIndex": "{$index}"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+     ]
+    }
+  ]
+}

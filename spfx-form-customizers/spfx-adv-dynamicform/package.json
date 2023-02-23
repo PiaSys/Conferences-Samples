@@ -14,7 +14,7 @@
     "@microsoft/sp-listview-extensibility": "1.15.2",
     "@microsoft/sp-lodash-subset": "1.15.2",
     "@microsoft/sp-office-ui-fabric-core": "1.15.2",
-    "@pnp/spfx-controls-react": "3.10.0",
+    "@pnp/spfx-controls-react": "3.12.0",
     "office-ui-fabric-react": "7.185.7",
     "react": "16.13.1",
     "react-dom": "16.13.1",

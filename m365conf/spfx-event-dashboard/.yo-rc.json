@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.18.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.4.1"
+    },
+    "version": "1.16.0",
+    "libraryName": "spfx-event-dashboard",
+    "libraryId": "8e6461c1-0daf-4424-91c8-3d11ebbbb8f8",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-event-dashboard",
+    "solutionShortDescription": "spfx-event-dashboard description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
