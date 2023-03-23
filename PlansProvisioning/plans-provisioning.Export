@@ -1,0 +1,364 @@
+{
+	"info": {
+		"_postman_id": "230279b5-f12d-42ec-91a8-e0981a7e858a",
+		"name": "PiaSys Tech Bites",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1154016"
+	},
+	"item": [
+		{
+			"name": "Create Plan with Graph",
+			"item": [
+				{
+					"name": "Get target Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/groups?$filter=displayName%20eq%20'PiaSys%20Tech%20Bites%20Demos'&$select=id,displayName",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"groups"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "displayName%20eq%20'PiaSys%20Tech%20Bites%20Demos'"
+								},
+								{
+									"key": "$select",
+									"value": "id,displayName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get plans for Group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/groups/49392514-cdfd-4de2-8bc9-48bdcc11a0bb/planner/plans",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"groups",
+								"49392514-cdfd-4de2-8bc9-48bdcc11a0bb",
+								"planner",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"49392514-cdfd-4de2-8bc9-48bdcc11a0bb\",\r\n  \"title\": \"Template based plan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/planner/plans",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"planner",
+								"plans"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get created plan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/groups/49392514-cdfd-4de2-8bc9-48bdcc11a0bb/planner/plans/5d8Vt_d0v0yCBgvD-2E5AJYAAM_z",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"groups",
+								"49392514-cdfd-4de2-8bc9-48bdcc11a0bb",
+								"planner",
+								"plans",
+								"5d8Vt_d0v0yCBgvD-2E5AJYAAM_z"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get buckets for plan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"49392514-cdfd-4de2-8bc9-48bdcc11a0bb\",\r\n  \"title\": \"Template based plan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/groups/49392514-cdfd-4de2-8bc9-48bdcc11a0bb/planner/plans/5d8Vt_d0v0yCBgvD-2E5AJYAAM_z/buckets",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"groups",
+								"49392514-cdfd-4de2-8bc9-48bdcc11a0bb",
+								"planner",
+								"plans",
+								"5d8Vt_d0v0yCBgvD-2E5AJYAAM_z",
+								"buckets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create bucket for plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Marketing\",\r\n  \"planId\": \"5d8Vt_d0v0yCBgvD-2E5AJYAAM_z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/planner/buckets",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"planner",
+								"buckets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tasks for plan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"49392514-cdfd-4de2-8bc9-48bdcc11a0bb\",\r\n  \"title\": \"Template based plan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/groups/49392514-cdfd-4de2-8bc9-48bdcc11a0bb/planner/plans/5d8Vt_d0v0yCBgvD-2E5AJYAAM_z/tasks",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"groups",
+								"49392514-cdfd-4de2-8bc9-48bdcc11a0bb",
+								"planner",
+								"plans",
+								"5d8Vt_d0v0yCBgvD-2E5AJYAAM_z",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get target user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/users?$filter=displayName%20eq%20'Guido%20Zambarda'",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"users"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "displayName%20eq%20'Guido%20Zambarda'"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create task for plan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"planId\": \"5d8Vt_d0v0yCBgvD-2E5AJYAAM_z\",\r\n  \"bucketId\": \"Ud5IIshaKkOu7utk5016DZYAN25u\",\r\n  \"title\": \"Promote products\",\r\n  \"dueDateTime\": \"2023-02-28T00:00:00Z\",\r\n  \"priority\": 1,\r\n  \"assignments\": {\r\n    \"fab8403a-f0e1-47c5-8dd3-6d7d7580e581\": {\r\n      \"@odata.type\": \"#microsoft.graph.plannerAssignment\",\r\n      \"orderHint\": \" !\"\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/planner/tasks/",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"planner",
+								"tasks",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create tab in Channel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"displayName\": \"Custom Plan\",\r\n  \"teamsApp@odata.bind\" : \"https://graph.microsoft.com/v1.0/appCatalogs/teamsApps/com.microsoft.teamspace.tab.planner\",\r\n  \"configuration\": {\r\n    \"entityId\": \"19:1Ygh7vr51Mdu-dil8hYg-RIpcr65GcHrZoWM9fY863g1@thread.tacv2\",\r\n    \"contentUrl\": \"https://tasks.teams.microsoft.com/teamsui/{tid}/Home/PlannerFrame?page=7&auth_pvr=OrgId&auth_upn={userPrincipalName}&groupId={groupId}&planId=5d8Vt_d0v0yCBgvD-2E5AJYAAM_z&channelId={channelId}&entityId={entityId}&tid={tid}&userObjectId={userObjectId}&subEntityId={subEntityId}&sessionId={sessionId}&theme={theme}&mkt={locale}&ringId={ringId}&PlannerRouteHint={tid}\",\r\n    \"removeUrl\": \"https://tasks.teams.microsoft.com/teamsui/{tid}/Home/PlannerFrame?page=13&auth_pvr=OrgId&auth_upn={userPrincipalName}&groupId={groupId}&planId=5d8Vt_d0v0yCBgvD-2E5AJYAAM_z&channelId={channelId}&entityId={entityId}&tid={tid}&userObjectId={userObjectId}&subEntityId={subEntityId}&sessionId={sessionId}&theme={theme}&mkt={locale}&ringId={ringId}&PlannerRouteHint={tid}\",\r\n    \"websiteUrl\": \"https://tasks.office.com/{tid}/Home/PlanViews/5d8Vt_d0v0yCBgvD-2E5AJYAAM_z?Type=PlanLink&Channel=TeamsTab\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/teams/49392514-cdfd-4de2-8bc9-48bdcc11a0bb/channels/19:1Ygh7vr51Mdu-dil8hYg-RIpcr65GcHrZoWM9fY863g1@thread.tacv2/tabs",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"teams",
+								"49392514-cdfd-4de2-8bc9-48bdcc11a0bb",
+								"channels",
+								"19:1Ygh7vr51Mdu-dil8hYg-RIpcr65GcHrZoWM9fY863g1@thread.tacv2",
+								"tabs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete plan from Group",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "If-Match",
+								"value": "W/\"JzEtUGxhbiAgQEBAQEBAQEBAQEBAQEBATCc=\"",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"owner\": \"49392514-cdfd-4de2-8bc9-48bdcc11a0bb\",\r\n  \"title\": \"Template based plan\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.microsoft.com/v1.0/planner/plans/5d8Vt_d0v0yCBgvD-2E5AJYAAM_z",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"microsoft",
+								"com"
+							],
+							"path": [
+								"v1.0",
+								"planner",
+								"plans",
+								"5d8Vt_d0v0yCBgvD-2E5AJYAAM_z"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
