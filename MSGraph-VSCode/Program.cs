@@ -9,7 +9,7 @@ var clientId = "32893fbf-f8ba-414d-aa19-f674da7b8226";
 var tenantId = "6c94075a-da0a-4c6a-8411-badf652e8b53";
 var authority = $"https://login.microsoftonline.com/{tenantId}/";
 var redirectUri = "http://localhost";
-var scopes = new String[] {"User.Read", "User.Read.All", "Chat.Create", "Chat.ReadWrite"};
+var scopes = new String[] { "User.Read", "User.Read.All", "Chat.Create", "Chat.ReadWrite", "Files.ReadWrite.All" };
 
 // Define the general settings for the sample app
 var chatMembers = new String[] { 
@@ -54,6 +54,8 @@ var graphClient = new GraphServiceClient(new DelegateAuthenticationProvider((req
 
     return Task.CompletedTask;
 }));
+
+var bundles = await graphClient.Me.Drive.Bundles.Request().GetAsync();
 
 // Create a new chat group
 var chat = new Chat
