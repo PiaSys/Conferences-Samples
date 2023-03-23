@@ -1,0 +1,1 @@
+az deployment group create --resource-group bicep-demo --template-file ./first-sample.bicep --parameters resourcesPrefix=ptb01
