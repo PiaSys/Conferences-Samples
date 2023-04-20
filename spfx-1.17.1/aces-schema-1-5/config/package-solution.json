@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "aces-schema-1-5-client-side-solution",
+    "id": "54c04445-6bc4-4fba-ab42-c673b606a706",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "aces-schema-1-5 description"
+      },
+      "longDescription": {
+        "default": "aces-schema-1-5 description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "aces-schema-1-5 Feature",
+        "description": "The feature that activates elements of the aces-schema-1-5 solution.",
+        "id": "5456ca0a-38f0-4127-822d-07dbb5108684",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/aces-schema-1-5.sppkg"
+  }
+}

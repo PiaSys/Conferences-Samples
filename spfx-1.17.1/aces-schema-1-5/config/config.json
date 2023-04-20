@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "task-list-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/taskList/TaskListAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/taskList/TaskListAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TaskListAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/taskList/loc/{locale}.js"
+  }
+}
