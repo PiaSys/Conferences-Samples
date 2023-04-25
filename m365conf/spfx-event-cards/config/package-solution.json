@@ -3,7 +3,7 @@
   "solution": {
     "name": "spfx-event-cards-client-side-solution",
     "id": "86a081e8-f3d7-4867-b30d-26bfe2667214",
-    "version": "1.0.0.4",
+    "version": "1.0.0.5",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

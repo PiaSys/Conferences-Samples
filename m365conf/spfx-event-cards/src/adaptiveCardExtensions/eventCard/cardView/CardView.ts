@@ -36,7 +36,7 @@ export class CardView extends BaseImageCardView<IEventCardAdaptiveCardExtensionP
   public get data(): IImageCardParameters {
     return {
       primaryText: this.state.events?.length > 0 ? `There are ${this.state.events.length} sessions in the calendar` : 'No sessions to manage!',
-      imageUrl: require('../assets/elfs.png'),
+      imageUrl: require('../assets/summer.png'),
       title: this.properties.title
     };
   }
