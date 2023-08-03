@@ -45,18 +45,20 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
           <h2>Well done, {escape(userDisplayName)}!</h2>
           <div>{environmentMessage}</div>
           <div>Web part property value: <strong>{escape(description)}</strong></div>
-          <div><DefaultButton text="Show MGT component" onClick={this._showMGTComponent} /></div>
-          <div><DefaultButton text="Load Microsoft Graph data - no error handling" onClick={this._requestGraphData} /></div>
-          <div><DefaultButton text="Load Microsoft Graph data - with error handling" onClick={this._requestGraphDataWithErrorHandling} /></div>
-          { showMGTComponent ? 
-            <div><Person personQuery="me" view={ViewType.twolines} /></div>
-            : null
-          }
+          <div className={styles.commandBox}><DefaultButton text="Invoke Microsoft Graph via SPFx - no error handling" onClick={this._invokeGraphSPFx} /></div>
+          <div className={styles.commandBox}><DefaultButton text="Invoke Microsoft Graph via SPFx - with error handling" onClick={this._invokeGraphSPFxWithErrorHandling} /></div>
+          <div className={styles.commandBox}><DefaultButton text="Invoke Microsoft Graph via PnPjs - no error handling" onClick={this._invokePnPjs} /></div>
+          <div className={styles.commandBox}><DefaultButton text="Invoke Microsoft Graph via PnPjs - with error handling" onClick={this._invokePnPjsWithErrorHandling} /></div>
+          <div className={styles.commandBox}><DefaultButton text="Show MGT component" onClick={this._showMGTComponent} /></div>
           { showGraphData ?
             <div>
               <div>UPN from Microsoft Graph: <strong>{upn}</strong></div>
               <div>DisplayName from Microsoft Graph: <strong>{displayName}</strong></div>
             </div>
+            : null
+          }
+          { showMGTComponent ? 
+            <div><Person personQuery="me" view={ViewType.twolines} /></div>
             : null
           }
           { errorMessage ? <div className={styles.error}>Error: {errorMessage}</div> : null }
@@ -65,14 +67,49 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
     );
   }
 
-  private _showMGTComponent = (): void => {
-    this.setState({
-      showMGTComponent: true
-    });
-  }
+  private _invokeGraphSPFx = async (): Promise<void> => {
+    const userData: User = await this.props.demoService.getCurrentUserDataViaSPFx();
+    if (userData) {
+      this.setState({
+        upn: userData.upn,
+        displayName: userData.displayName,
+        showGraphData: true,
+        errorMessage: ''
+      });
+    } else {
+      this.setState({
+        showGraphData: false,
+        errorMessage: ''
+      });
+    }
+  }    
 
-  private _requestGraphData = async (): Promise<void> => {
-    const userData: User = await this.props.demoService.getCurrentUserData();
+  private _invokeGraphSPFxWithErrorHandling = async (): Promise<void> => {
+    try {
+      const userData: User = await this.props.demoService.getCurrentUserDataViaSPFxWithThrottlingHandler();
+      if (userData) {
+        this.setState({
+          upn: userData.upn,
+          displayName: userData.displayName,
+          showGraphData: true,
+          errorMessage: ''
+        });
+      } else {
+        this.setState({
+          showGraphData: false,
+          errorMessage: ''
+        });
+      }
+    } catch (e) {
+      this.setState({
+        showGraphData: false,
+        errorMessage: 'Error while invoking Microsoft Graph via SPFx'
+      });
+    }
+  }    
+
+  private _invokePnPjs = async (): Promise<void> => {
+    const userData: User = await this.props.demoService.getCurrentUserDataViaPnPjs();
     if (userData) {
       this.setState({
         upn: userData.upn,
@@ -88,9 +125,9 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
     }
   }
 
-  private _requestGraphDataWithErrorHandling = async (): Promise<void> => {
+  private _invokePnPjsWithErrorHandling = async (): Promise<void> => {
     try {
-      const userData: User = await this.props.demoService.getCurrentUserDataWithThrottlingHandler();
+      const userData: User = await this.props.demoService.getCurrentUserDataViaPnPjsWithThrottlingHandler();
       if (userData) {
         this.setState({
           upn: userData.upn,
@@ -110,5 +147,11 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
         errorMessage: e.message
       });
     }
+  }
+
+  private _showMGTComponent = (): void => {
+    this.setState({
+      showMGTComponent: true
+    });
   }
 }

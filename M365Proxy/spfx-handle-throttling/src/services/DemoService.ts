@@ -1,6 +1,6 @@
 // Import types for supporting SPFx with the service class
 import { ServiceKey, ServiceScope } from "@microsoft/sp-core-library";
-import { AadTokenProviderFactory } from "@microsoft/sp-http";
+import { AadTokenProviderFactory, MSGraphClientFactory, MSGraphClientV3 } from "@microsoft/sp-http";
 
 // Import PnPjs types
 import { graphfi, GraphFI, SPFx } from "@pnp/graph";
@@ -15,6 +15,7 @@ export class DemoService implements IDemoService {
 
     public static readonly serviceKey: ServiceKey<IDemoService> = ServiceKey.create<IDemoService>('PiaSys:DemoService', DemoService);
     
+    private _graphClient: MSGraphClientV3 = null;
     private _graph: GraphFI = null;
 
     /**
@@ -25,17 +26,42 @@ export class DemoService implements IDemoService {
 
         // Initialized the PnPjs framework for SPFx
         serviceScope.whenFinished(async () => {
+            const graphClientFactory = serviceScope.consume(MSGraphClientFactory.serviceKey);
+            this._graphClient = await graphClientFactory.getClient('3');
+
             const aadTokenProviderFactory = serviceScope.consume(AadTokenProviderFactory.serviceKey);
             this._graph = graphfi().using(SPFx({ aadTokenProviderFactory }));
         });
     }
 
-    public async getCurrentUserData(): Promise<User> {
+    public async getCurrentUserDataViaSPFx(): Promise<User> {
+        const result = await this._graphClient.api('/me').select('userPrincipalName,displayName').get();
+        return { upn: result.userPrincipalName, displayName: result.displayName };
+    }
+
+    public async getCurrentUserDataViaSPFxWithThrottlingHandler(): Promise<User> {
+        try {
+
+            const result = await this._graphClient.api('/me').select('userPrincipalName,displayName').get();
+            return { upn: result.userPrincipalName, displayName: result.displayName };
+              
+        } catch (e) {
+          
+            // log the error
+            console.log(e);
+
+            // and rethrow the error
+            throw e;
+        }
+
+    }
+
+    public async getCurrentUserDataViaPnPjs(): Promise<User> {
         const result = await this._graph.me();
         return { upn: result.userPrincipalName, displayName: result.displayName };
     }
 
-    public async getCurrentUserDataWithThrottlingHandler(): Promise<User> {
+    public async getCurrentUserDataViaPnPjsWithThrottlingHandler(): Promise<User> {
         try {
 
             const result = await this._graph.me.select('userPrincipalName,displayName')();

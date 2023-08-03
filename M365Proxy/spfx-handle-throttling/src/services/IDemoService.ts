@@ -1,6 +1,10 @@
 import { User } from "./User";
 
 export interface IDemoService {
-    getCurrentUserData(): Promise<User>;
-    getCurrentUserDataWithThrottlingHandler(): Promise<User>;
+
+    getCurrentUserDataViaSPFx(): Promise<User>;
+    getCurrentUserDataViaSPFxWithThrottlingHandler(): Promise<User>;
+
+    getCurrentUserDataViaPnPjs(): Promise<User>;
+    getCurrentUserDataViaPnPjsWithThrottlingHandler(): Promise<User>;
 }
