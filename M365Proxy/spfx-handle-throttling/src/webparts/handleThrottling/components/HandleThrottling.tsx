@@ -7,6 +7,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 import { Person } from '@microsoft/mgt-react/dist/es6/spfx';
 import { ViewType } from '@microsoft/mgt-spfx';
 import { User } from '../../../services/User';
+import { GraphError } from '@microsoft/microsoft-graph-client';
 
 import { DefaultButton } from '@fluentui/react/lib/Button';
 
@@ -68,11 +69,12 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
   }
 
   private _invokeGraphSPFx = async (): Promise<void> => {
-    const userData: User = await this.props.demoService.getCurrentUserDataViaSPFx();
-    if (userData) {
+
+    const result = await this.props.msGraphClient.api('/me').select('userPrincipalName,displayName').get();
+    if (result) {
       this.setState({
-        upn: userData.upn,
-        displayName: userData.displayName,
+        upn: result.userPrincipalName,
+        displayName: result.displayName,
         showGraphData: true,
         errorMessage: ''
       });
@@ -82,30 +84,33 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
         errorMessage: ''
       });
     }
+
   }    
 
   private _invokeGraphSPFxWithErrorHandling = async (): Promise<void> => {
-    try {
-      const userData: User = await this.props.demoService.getCurrentUserDataViaSPFxWithThrottlingHandler();
-      if (userData) {
+
+    await this.props.msGraphClient.api('/me').select('userPrincipalName,displayName').get((error: GraphError, result: any) => {
+      if (error) {
+        if (error.statusCode === 429) {
+          this.setState({
+            showGraphData: false,
+            errorMessage: 'Request throttled by Microsoft Graph!'
+          });
+        } else {
+          this.setState({
+            showGraphData: false,
+            errorMessage: error.message
+          });
+        }
+      } else {
         this.setState({
-          upn: userData.upn,
-          displayName: userData.displayName,
+          upn: result.userPrincipalName,
+          displayName: result.displayName,
           showGraphData: true,
           errorMessage: ''
         });
-      } else {
-        this.setState({
-          showGraphData: false,
-          errorMessage: ''
-        });
       }
-    } catch (e) {
-      this.setState({
-        showGraphData: false,
-        errorMessage: 'Error while invoking Microsoft Graph via SPFx'
-      });
-    }
+    });
   }    
 
   private _invokePnPjs = async (): Promise<void> => {

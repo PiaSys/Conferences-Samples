@@ -1,4 +1,5 @@
 import { IDemoService } from "../../../services/IDemoService";
+import { MSGraphClientV3 } from "@microsoft/sp-http";
 
 export interface IHandleThrottlingProps {
   description: string;
@@ -6,5 +7,6 @@ export interface IHandleThrottlingProps {
   environmentMessage: string;
   hasTeamsContext: boolean;
   userDisplayName: string;
+  msGraphClient: MSGraphClientV3;
   demoService: IDemoService;
 }

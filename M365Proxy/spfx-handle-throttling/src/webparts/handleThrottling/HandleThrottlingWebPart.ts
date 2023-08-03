@@ -16,6 +16,8 @@ import { Providers, SharePointProvider } from '@microsoft/mgt-spfx';
 import { IDemoService } from '../../services/IDemoService';
 import { DemoService } from '../../services/DemoService';
 
+import {MSGraphClientV3} from '@microsoft/sp-http';
+
 export interface IHandleThrottlingWebPartProps {
   description: string;
 }
@@ -25,6 +27,7 @@ export default class HandleThrottlingWebPart extends BaseClientSideWebPart<IHand
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
   private _demoService: IDemoService = null;
+  private _msGraphClient: MSGraphClientV3 = null;
 
   public render(): void {
     const element: React.ReactElement<IHandleThrottlingProps> = React.createElement(
@@ -35,6 +38,7 @@ export default class HandleThrottlingWebPart extends BaseClientSideWebPart<IHand
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
+        msGraphClient: this._msGraphClient,
         demoService: this._demoService
       }
     );
@@ -42,12 +46,13 @@ export default class HandleThrottlingWebPart extends BaseClientSideWebPart<IHand
     ReactDom.render(element, this.domElement);
   }
 
-  protected onInit(): Promise<void> {
+  protected async onInit(): Promise<void> {
     
     if (!Providers.globalProvider) {
       Providers.globalProvider = new SharePointProvider(this.context);
     }
 
+    this._msGraphClient = await this.context.msGraphClientFactory.getClient('3');
     this._demoService = this.context.serviceScope.consume(DemoService.serviceKey);
 
 
