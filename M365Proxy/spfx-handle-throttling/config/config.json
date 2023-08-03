@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "handle-throttling-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/handleThrottling/HandleThrottlingWebPart.js",
+          "manifest": "./src/webparts/handleThrottling/HandleThrottlingWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "HandleThrottlingWebPartStrings": "lib/webparts/handleThrottling/loc/{locale}.js"
+  }
+}
