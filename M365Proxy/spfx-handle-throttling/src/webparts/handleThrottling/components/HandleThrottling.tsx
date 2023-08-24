@@ -11,6 +11,21 @@ import { GraphError } from '@microsoft/microsoft-graph-client';
 
 import { DefaultButton } from '@fluentui/react/lib/Button';
 
+import { MgtTemplateProps } from '@microsoft/mgt-react';
+
+const PersonTemplate = (props: MgtTemplateProps) : JSX.Element => {
+  console.log(props.dataContext);
+
+  switch (props.template) {
+    case 'loading':
+      return <div>Loading data ...</div>;
+    case 'no-data':
+      return <div>Cannot retrieve data for the current query!</div>;
+    default:
+      return <div>Invalid template!</div>;
+  }
+};
+
 export default class HandleThrottling extends React.Component<IHandleThrottlingProps, IHandleThrottlingState> {
 
   /**
@@ -59,7 +74,12 @@ export default class HandleThrottling extends React.Component<IHandleThrottlingP
             : null
           }
           { showMGTComponent ? 
-            <div><Person personQuery="me" view={ViewType.twolines} /></div>
+            <div>
+              <Person personQuery="me" view={ViewType.twolines}>
+                <PersonTemplate template="loading" />  
+                <PersonTemplate template="no-data" />  
+              </Person>
+            </div>
             : null
           }
           { errorMessage ? <div className={styles.error}>Error: {errorMessage}</div> : null }
