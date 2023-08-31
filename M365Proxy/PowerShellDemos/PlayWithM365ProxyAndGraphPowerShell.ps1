@@ -8,9 +8,7 @@ catch {
     Write-Host "An error occurred:"
     Write-Host $_.Exception.Message
 
-    if ($_.Exception.Message -match 'Code: (?<code>[a-zA-Z]*)') {
-        if ($Matches['code'] -eq 'tooManyRetries') {
-            Write-Host 'You have been throttled!'
-        }
+    if ($_.Exception.Message -match 'Too many retries performed') {
+        Write-Host 'You have been throttled!'
     }
 }
