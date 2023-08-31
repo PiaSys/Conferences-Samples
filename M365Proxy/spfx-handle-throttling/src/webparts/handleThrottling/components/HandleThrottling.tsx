@@ -14,8 +14,6 @@ import { DefaultButton } from '@fluentui/react/lib/Button';
 import { MgtTemplateProps } from '@microsoft/mgt-react';
 
 const PersonTemplate = (props: MgtTemplateProps) : JSX.Element => {
-  console.log(props.dataContext);
-
   switch (props.template) {
     case 'loading':
       return <div>Loading data ...</div>;
