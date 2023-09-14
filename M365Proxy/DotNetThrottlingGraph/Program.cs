@@ -1,15 +1,11 @@
 ﻿#define USE_POLLY
 
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Polly;
 using Microsoft.Identity.Client;
-using static System.Formats.Asn1.AsnWriter;
 using System.Net.Http.Headers;
 using Polly.Extensions.Http;
 using System.Net;
