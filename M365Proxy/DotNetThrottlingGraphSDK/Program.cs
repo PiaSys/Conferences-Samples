@@ -4,7 +4,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Identity.Client;
 using System.Net.Http.Headers;
-using Polly.Extensions.Http;
 using System.Net;
 using Azure.Identity;
 using Microsoft.Graph.Models;
