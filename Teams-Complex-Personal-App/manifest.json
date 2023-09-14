@@ -1,0 +1,77 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.13",
+    "showLoadingIndicator": false,
+    "id": "7f982e63-94b3-41c7-83e9-07e6b0a914ef",
+    "packageName": "piasys.demo.complex.app",
+    "developer": {
+        "name": "PiaSys.com",
+        "websiteUrl": "https://www.piasys.com/",
+        "privacyUrl": "http://piasys.com/privacy/",
+        "termsOfUseUrl": "https://www.piasys.com/terms-of-use/",
+        "mpnId": "1075379"
+    },
+    "icons": {
+        "color": "icon_color.png",
+        "outline": "icon_outline.png"
+    },
+    "name": {
+        "short": "PiaSys - Demo Complex App",
+        "full": "PiaSys - Demo Complex App"
+    },
+    "description": {
+        "short": "Complex Personal App Demo",
+        "full": "Demo of a Complex Personal App with Power Apps, Forms, SPFx, and more ..."
+    },
+    "accentColor": "#FFFFFF",
+    "staticTabs": [
+        {
+            "entityId": "piasys.demo.complex.app.home",
+            "name": "Canvas App",
+            "contentUrl": "https://web.powerapps.com/webplayer/iframeapp?source=teamstab&appId=/providers/Microsoft.PowerApps/apps/d04b9493-b051-4a4f-aef0-e34726c7ddab",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "piasys.demo.complex.app.form",
+            "name": "Form",
+            "contentUrl": "https://forms.office.com/Pages/ResponsePage.aspx?id=WgeUbAraakyEEbrfZS6LU0iop75ZBO5LkDRVE-5_ZuBUNVZVNTFOMFA5TDE4N0JXTFZRMUc5QVFHQy4u",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "piasys.demo.complex.app.webpart",
+            "name": "Web Part",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=c3140421-d160-42ce-a98b-d9a536889254%26forceLocale={locale}",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "piasys.demo.complex.app.webpage",
+            "name": "Web Page",
+            "contentUrl": "https://www.piasys.com/",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity"
+    ],
+    "validDomains": [
+        "www.piasys.com",
+        "*.powerapps.com",
+        "forms.office.com",
+        "{teamSiteDomain}",
+        "*.login.microsoftonline.com",
+        "*.sharepoint-df.com",
+        "spoppe-a.akamaihd.net",
+        "spoprod-a.akamaihd.net",
+        "resourceseng.blob.core.windows.net",
+        "msft.spoppe.com"
+    ]
+}
