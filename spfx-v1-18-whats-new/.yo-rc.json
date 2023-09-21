@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "16.18.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.0",
+    "libraryName": "spfx-v-1-18-whats-new",
+    "libraryId": "1a8f318f-cadb-430f-a4b9-933d294c1bbd",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-v-1-18-whats-new",
+    "solutionShortDescription": "spfx-v-1-18-whats-new description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Search"
+  }
+}
