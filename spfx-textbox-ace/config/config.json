@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "textbox-ace-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/textboxAce/TextboxAceAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/textboxAce/TextboxAceAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TextboxAceAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/textboxAce/loc/{locale}.js"
+  }
+}
