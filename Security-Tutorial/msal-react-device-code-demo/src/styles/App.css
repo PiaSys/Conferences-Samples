@@ -1,0 +1,105 @@
+footer {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
+
+.App {
+    text-align: center;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+.iconText {
+    margin: 0 0.5rem;
+}
+
+.navbarStyle {
+    padding: 0.5rem 1rem !important;
+}
+
+.navbarButton {
+    color: #fff !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.iconText {
+    margin: 0 0.5rem;
+}
+
+.navbarStyle {
+    padding: 0.5rem 1rem;
+}
+
+.navbarButton {
+    color: #fff !important;
+}
+
+.data-area-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.todo-form {
+    width: 60%;
+}
+
+.todo-list {
+    width: 60%;
+}
+
+.todo-label {
+    font-size: large;
+    margin-right: 22%;
+    margin-left: 3%;
+}
+
+.todo-view-btn {
+    float: right;
+}
+
+.tableColumn {
+    word-break: break-all;
+}
+
+.table-responsive {
+    max-height: 37rem !important;
+}
+
+.warningMessage {
+    color: red;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.signInButton {
+    margin: 1rem;
+}
