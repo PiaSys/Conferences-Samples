@@ -26,34 +26,46 @@ namespace MICustomApplications.Consumer
         {
             _logger.LogInformation("C# HTTP trigger function ConsumeListProducts received a request.");
 
-            var apiUrl = Environment.GetEnvironmentVariable("MICustomApplications.Provider.Url");
-            var credential = new DefaultAzureCredential();
+            Products products = null;
+            string errorMessage = null;
 
-            string[] scopes = new[] { "api://piasys-security-tutorial-provider/.default" };
-
-            var tokenResponse = await credential.GetTokenAsync(new Azure.Core.TokenRequestContext(new[] { "api://piasys-security-tutorial-provider/" }));
-            var accessToken = tokenResponse.Token;
-
-            var request = new HttpRequestMessage
+            try
             {
-                RequestUri = new Uri($"{apiUrl}api/ListProducts", UriKind.Absolute),
-                Version = DefaultVersion,
-                Method = HttpMethod.Get
-            };
+                var apiUrl = Environment.GetEnvironmentVariable("MICustomApplications.Provider.Url");
+                var credential = new DefaultAzureCredential();
 
-            request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+                string[] scopes = new[] { "api://piasys-security-tutorial-provider/.default" };
 
-            var httpClient = _httpClientFactory.CreateClient();
-            var productsResponse = await httpClient.SendAsync(request);
-            var productsString = await productsResponse.Content.ReadAsStringAsync();
+                var tokenResponse = await credential.GetTokenAsync(new Azure.Core.TokenRequestContext(scopes));
+                var accessToken = tokenResponse.Token;
 
-            var products = JsonSerializer.Deserialize<Products>(productsString, new JsonSerializerOptions
+                var request = new HttpRequestMessage
+                {
+                    RequestUri = new Uri($"{apiUrl}api/ListProducts", UriKind.Absolute),
+                    Version = DefaultVersion,
+                    Method = HttpMethod.Get
+                };
+
+                request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+
+                var httpClient = _httpClientFactory.CreateClient();
+                var productsResponse = await httpClient.SendAsync(request);
+                var productsString = await productsResponse.Content.ReadAsStringAsync();
+
+                products = JsonSerializer.Deserialize<Products>(productsString, new JsonSerializerOptions
+                {
+                    PropertyNameCaseInsensitive = true,
+                });
+            }
+            catch (Exception ex)
             {
-                PropertyNameCaseInsensitive = true,                
-            });
+                errorMessage = ex.Message;
+            }
 
-            var response = req.CreateResponse(HttpStatusCode.OK);
-            await response.WriteAsJsonAsync(products);
+            var response = req.CreateResponse(products != null ? HttpStatusCode.OK : HttpStatusCode.InternalServerError);
+            if (products != null) {
+                await response.WriteAsJsonAsync(products);
+            }
 
             _logger.LogInformation("C# HTTP trigger function ConsumeListProducts processed a request.");
 
