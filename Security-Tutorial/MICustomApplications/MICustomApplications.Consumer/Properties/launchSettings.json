@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "MICustomApplications.Consumer": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7071 --useHttps --cert \"certificate.pfx\" --password \"P@ssw0rd!\"",
+      "launchBrowser": false
+    }
+  }
+}
