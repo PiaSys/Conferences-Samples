@@ -4,6 +4,7 @@ import { readFileSync } from 'fs';
 import { SPDefault } from "@pnp/nodejs";
 import { spfi } from "@pnp/sp";
 import "@pnp/sp/webs/index.js";
+import "@pnp/sp/lists/index.js";
 
 // Initialize the environment variables
 dotenv.config();
@@ -31,6 +32,12 @@ const sp = spfi().using(SPDefault({
 }));
 
 // make a call to SharePoint and log it in the console
-sp.web.select("Title", "Description")().then(w => {
+sp.web.select("ID", "Title", "Description")().then(w => {
     console.log(JSON.stringify(w, null, 4));
+
+    sp.web.lists.getByTitle("Documents").items.select("ID", "Title", "FileLeafRef")().then(items => {
+        console.log(JSON.stringify(items, null, 4));
+    }).catch(e => console.error(e));
+
 }).catch(e => console.error(e));
+
