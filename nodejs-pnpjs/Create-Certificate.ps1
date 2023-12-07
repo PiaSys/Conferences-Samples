@@ -1,0 +1,1 @@
+New-PnPAzureCertificate -CommonName "Nodejs-PnpJs" -Organization "PiaSysDev" -OutPfx .\certificates\nodejs-pnpjs.pfx -OutCert .\certificates\nodejs-pnpjs.cer -ValidYears 2 -CertificatePassword (ConvertTo-SecureString -String '<Password>' -AsPlainText)
