@@ -39,3 +39,4 @@ packages/
 *.pfx
 *.cer
 /MSGraphSDK/Presence-Notifications/PiaSys.PresenceNotifications/PiaSys.PresenceNotifications.Subscriber/Properties/launchSettings.json
+Copilot/python-f1-copilot-graph-connector/.env
