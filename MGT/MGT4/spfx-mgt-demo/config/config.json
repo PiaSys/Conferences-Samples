@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "play-with-mgt-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/playWithMgt/PlayWithMgtWebPart.js",
+          "manifest": "./src/webparts/playWithMgt/PlayWithMgtWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PlayWithMgtWebPartStrings": "lib/webparts/playWithMgt/loc/{locale}.js"
+  }
+}
