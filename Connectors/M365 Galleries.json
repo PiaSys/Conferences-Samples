@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "1f683812-492a-4c31-a4c6-64e5b6d08d3e",
+		"name": "M365 Galleries for Connectors",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1154016"
+	},
+	"item": [
+		{
+			"name": "Search Samples",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sort\": {\r\n    \"field\": \"Title\",\r\n    \"descending\": true\r\n  },\r\n  \"filter\": {\r\n    \"search\": \"pialorsi\"\r\n  },\r\n  \"pagination\": {\r\n    \"size\": 20,\r\n    \"index\": 1\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://m365-galleries.azurewebsites.net/Samples/searchSamples",
+					"protocol": "https",
+					"host": [
+						"m365-galleries",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Samples",
+						"searchSamples"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "sampleId",
+			"value": "pnp-spfx-reference-scenarios-samples-react-retail-dashboard",
+			"type": "string"
+		}
+	]
+}
