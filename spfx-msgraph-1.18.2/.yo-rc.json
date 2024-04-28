@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.18.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "spfx-msgraph-demo",
+    "libraryId": "19aae51b-58fd-4706-ac7b-364066ef223d",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-msgraph-demo",
+    "solutionShortDescription": "spfx-msgraph-demo description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}
