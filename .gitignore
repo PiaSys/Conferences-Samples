@@ -43,3 +43,5 @@ Copilot/python-f1-copilot-graph-connector/.env
 /Copilot/cs-f1-copilot-plugin-sso/csf1circuitspluginsso/env/.env.dev
 MSGraphSDK/SDKv5/pyMsGraphSDK5Demos/.env
 MSGraphSDK/SDKv5/tsMsGraphSDK5Demos/.env
+Copilot/ts-orders-copilot-plugin/env/.env.dev
+Copilot/ts-orders-copilot-plugin/env/.env.testtool

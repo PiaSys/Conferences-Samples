@@ -1,0 +1,13 @@
+orderId,orderDate,customerName,customerEmail,orderStatus,amount
+202400001,06/12/2024,PiaSys.com,paolo@pialorsi.com,Delivered,12000
+202400002,06/13/2024,PiaSys.com,paolo@pialorsi.com,Pending,54000
+202400003,06/16/2024,Contoso,mike@contoso.com,Delivered,5000
+202400004,06/18/2024,Fabrikam,john@fabrikam.com,Pending,7000
+202400005,06/19/2024,PiaSys.com,paolo@pialorsi.com,Processing,5600
+202400006,06/20/2024,Fabrikam,john@fabrikam.com,Pending,12000
+202400007,06/21/2024,PiaSys.com,paolo@pialorsi.com,Delivered,6300
+202400008,06/21/2024,Contoso,mike@contoso.com,Pending,21000
+202400009,06/22/2024,PiaSys.com,paolo@pialorsi.com,Shipped,2500
+202400010,06/23/2024,Contoso,mike@contoso.com,Pending,9500
+
+
