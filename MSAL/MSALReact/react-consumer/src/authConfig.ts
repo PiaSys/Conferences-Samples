@@ -13,3 +13,7 @@ export const msalConfig = {
 export const loginRequest = {
     scopes: ["User.Read"],
   };
+  
+export const apiTokenRequest = {
+    scopes: ["api://msal.react.restapi/RestApi.Consumer.ReadWrite"],
+  };

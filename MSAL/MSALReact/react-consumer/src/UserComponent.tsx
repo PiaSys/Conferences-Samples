@@ -38,7 +38,7 @@ const UserComponent: React.FC = () => {
 
   return (
     <div>
-        <button onClick={getDisplayNameViaGraph}>Invoke REST API</button>
+        <button onClick={getDisplayNameViaGraph}>Invoke Microsoft Graph</button>
         {displayName && <p>Your display name is: {displayName}</p>}
     </div>
   );

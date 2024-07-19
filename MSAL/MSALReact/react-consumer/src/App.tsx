@@ -4,6 +4,7 @@ import './App.css';
 
 import AuthComponent from './AuthComponent';
 import UserComponent from './UserComponent';
+import RestAPIComponent from './RestAPIComponent';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <AuthComponent />
         <UserComponent />
+        <RestAPIComponent />
       </header>
     </div>
   );
