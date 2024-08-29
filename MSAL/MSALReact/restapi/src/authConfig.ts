@@ -2,6 +2,7 @@ export const msalConfig = {
     auth: {
       clientId: "YOUR_API_CLIENT_ID",
       authority: "https://login.microsoftonline.com/TENANT_ID",
+      clientSecret: "YOUR_API_CLIENT_SECRET",
     },
     system: {
       loggerOptions: {

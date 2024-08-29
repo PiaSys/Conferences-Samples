@@ -11,10 +11,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@azure/msal-node": "^2.13.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.6",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "isomorphic-fetch": "^3.0.0",
     "jsonwebtoken": "^9.0.2",
     "jwks-rsa": "^3.1.0",
     "msal-node": "^0.0.1-security",
