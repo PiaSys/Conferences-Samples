@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-ace-data-visualization-client-side-solution",
+    "id": "8cb4383a-95fe-44b2-99a6-4015c911eddc",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.20.0-beta.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-ace-data-visualization description"
+      },
+      "longDescription": {
+        "default": "spfx-ace-data-visualization description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-ace-data-visualization Feature",
+        "description": "The feature that activates elements of the spfx-ace-data-visualization solution.",
+        "id": "e49720dc-d96e-49e9-9836-b8e5eea52dec",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-ace-data-visualization.sppkg"
+  }
+}
