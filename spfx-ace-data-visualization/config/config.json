@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "chart-card-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/chartCard/ChartCardAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/chartCard/ChartCardAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ChartCardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/chartCard/loc/{locale}.js"
+  }
+}
