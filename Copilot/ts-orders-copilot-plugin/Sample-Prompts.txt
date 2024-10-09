@@ -1,0 +1,11 @@
+List the latest 10 emails that I received from Paolo Pialorsi using a table including subject (translated in English), date and time, summary of the email in English language.
+
+Search for orders in the Orders Management System where the customer name is PiaSys.com.
+
+Search for customer name and order status of order with ID 202400007 in the orders management system.
+
+Search in the orders management system for order with order ID 202400007 and provide information about order date, order status, customer name, and customer email.
+
+List the latest emails that I received from Paolo Pialorsi about orders confirmations, using a table including subject (translated in English), date and time, summary of the email in English language. Also search in the Orders Management System using the order id mentioned in the email, if any, and provide the order status in an additional column.
+
+List emails received by Paolo Pialorsi in June 2024, using a table including subject (translated in English), date and time, summary of the email in English language. Also search in the Orders Management System using the order id mentioned in the email, if any, and provide the order status in an additional column.
