@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.18.1",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.9.1"
+    },
+    "version": "1.17.1",
+    "libraryName": "aces-schema-1-5",
+    "libraryId": "54c04445-6bc4-4fba-ab42-c673b606a706",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "aces-schema-1-5",
+    "solutionShortDescription": "aces-schema-1-5 description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "Image"
+  }
+}

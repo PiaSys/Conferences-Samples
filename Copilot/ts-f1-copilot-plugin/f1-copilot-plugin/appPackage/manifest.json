@@ -1,0 +1,83 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "PiaSys.com",
+        "websiteUrl": "https://www.piasys.com/",
+        "privacyUrl": "https://piasys.com/privacy/",
+        "termsOfUseUrl": "https://piasys.com/terms/"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "f1-copilot-plugin${{APP_NAME_SUFFIX}}",
+        "full": "full name for f1-copilot-plugin"
+    },
+    "description": {
+        "short": "Apps allows you to find information about F1 World Championship drivers.",
+        "full": "This is a tool to search for F1 World Championship drivers. It allows you to search for drivers and get information about them including number, code, firstname, lastname, date of birth, nationality, and a link to Wikipedia to get additional information."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [
+        {
+            "botId": "${{BOT_ID}}",
+            "commands": [
+                {
+                    "id": "driversSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for F1 World Championship drivers by firstname, lastname, date of birth, nationality, or number.",
+                    "title": "Search drivers",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "number",
+                            "title": "Number",
+                            "description": "Enter a driver number here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "forename",
+                            "title": "Firstname",
+                            "description": "Enter a driver firstname here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "surname",
+                            "title": "Lastname",
+                            "description": "Enter a driver lastname here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "dob",
+                            "title": "Date of birth",
+                            "description": "Enter a driver date of birth here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "nationality",
+                            "title": "Nationality",
+                            "description": "Enter a driver nationality here",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}

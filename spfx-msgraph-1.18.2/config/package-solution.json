@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-msgraph-demo-client-side-solution",
+    "id": "19aae51b-58fd-4706-ac7b-364066ef223d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "webApiPermissionRequests": [
+      {
+        "resource": "Microsoft Graph",
+        "scope": "User.Read"
+      }
+    ],
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-msgraph-demo description"
+      },
+      "longDescription": {
+        "default": "spfx-msgraph-demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-msgraph-demo Feature",
+        "description": "The feature that activates elements of the spfx-msgraph-demo solution.",
+        "id": "aea3909a-978c-43b1-bcc7-1fc40ed4b9ba",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-msgraph-demo.sppkg"
+  }
+}

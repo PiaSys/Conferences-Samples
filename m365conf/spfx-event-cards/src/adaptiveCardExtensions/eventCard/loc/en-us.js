@@ -1,7 +1,10 @@
 define([], function() {
   return {
-    PropertyPaneDescription: "This Adapative Card allows you to book sessions in your agenda.",
-    TitleFieldLabel: "Card title",
+    PropertyPane: {
+      PropertyPaneDescription: "This Adapative Card allows you to book sessions in your agenda.",
+      TitleFieldLabel: "Card title",
+      GroupIdFieldLabel: "Group ID"
+    },
     CardView: {
       PrimaryText: "Sessions List",
       Description: "ACE to book sessions",

@@ -6,12 +6,15 @@ export class EventCardPropertyPane {
     return {
       pages: [
         {
-          header: { description: strings.PropertyPaneDescription },
+          header: { description: strings.PropertyPane.PropertyPaneDescription },
           groups: [
             {
               groupFields: [
                 PropertyPaneTextField('title', {
-                  label: strings.TitleFieldLabel
+                  label: strings.PropertyPane.TitleFieldLabel
+                }),
+                PropertyPaneTextField('groupId', {
+                  label: strings.PropertyPane.GroupIdFieldLabel
                 })
               ]
             }

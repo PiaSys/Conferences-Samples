@@ -16,7 +16,7 @@ export class CardView extends BaseImageCardView<IEventCardAdaptiveCardExtensionP
    * It will support up to two buttons for 'Large' card size.
    */
   public get cardButtons(): [ICardButton] | [ICardButton, ICardButton] | undefined {
-    if (this.state.events.length > 0) {
+    if (this.state.events?.length > 0) {
       return [
         {
           title: strings.CardView.QuickViewButton,
@@ -35,14 +35,14 @@ export class CardView extends BaseImageCardView<IEventCardAdaptiveCardExtensionP
 
   public get data(): IImageCardParameters {
     return {
-      primaryText: this.state.events.length > 0 ? `There are ${this.state.events.length} sessions in the calendar` : 'No sessions to manage!',
-      imageUrl: require('../assets/elfs.png'),
+      primaryText: this.state.events?.length > 0 ? `There are ${this.state.events.length} sessions in the calendar` : 'No sessions to manage!',
+      imageUrl: require('../assets/summer.png'),
       title: this.properties.title
     };
   }
 
   public get onCardSelection(): IQuickViewCardAction | IExternalLinkCardAction | undefined {
-    if (this.state.events.length > 0) {
+    if (this.state.events?.length > 0) {
       return {
         type: 'QuickView',
         parameters: {

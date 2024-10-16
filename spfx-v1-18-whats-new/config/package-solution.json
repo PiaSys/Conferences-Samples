@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-v-1-18-whats-new-client-side-solution",
+    "id": "1a8f318f-cadb-430f-a4b9-933d294c1bbd",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-v-1-18-whats-new description"
+      },
+      "longDescription": {
+        "default": "spfx-v-1-18-whats-new description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-v-1-18-whats-new Feature",
+        "description": "The feature that activates elements of the spfx-v-1-18-whats-new solution.",
+        "id": "67a62087-9320-4ee0-b67a-a15efb9a7fb8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-v-1-18-whats-new.sppkg"
+  }
+}

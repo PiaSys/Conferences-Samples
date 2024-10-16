@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "react-card-adaptive-card-extension": {
+      "components": [
+        {
+          "entrypoint": "./lib/adaptiveCardExtensions/reactCard/ReactCardAdaptiveCardExtension.js",
+          "manifest": "./src/adaptiveCardExtensions/reactCard/ReactCardAdaptiveCardExtension.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ReactCardAdaptiveCardExtensionStrings": "lib/adaptiveCardExtensions/reactCard/loc/{locale}.js"
+  }
+}

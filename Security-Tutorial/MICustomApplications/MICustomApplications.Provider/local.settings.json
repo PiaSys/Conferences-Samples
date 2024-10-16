@@ -1,0 +1,14 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "TenantId": "439c9ea4-2e00-4e75-ad60-f41f27ef8bb3",
+    "ClientId": "f8579da4-1888-45bc-941f-f42f64046987",
+    "Audience": "api://piasys-security-tutorial-provider",
+    "Authority": "https://login.microsoft.com/common"
+  },
+  "Host": {
+    "CORS": "*"
+  }
+}

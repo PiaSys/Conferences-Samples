@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-mgt-demo-client-side-solution",
+    "id": "d1e9db97-21f9-4fda-b11c-8d22bca2fd4d",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-mgt-demo description"
+      },
+      "longDescription": {
+        "default": "spfx-mgt-demo description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-mgt-demo Feature",
+        "description": "The feature that activates elements of the spfx-mgt-demo solution.",
+        "id": "4fb47b88-2355-4b05-a1c5-cfb053d22dbf",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-mgt-demo.sppkg"
+  }
+}

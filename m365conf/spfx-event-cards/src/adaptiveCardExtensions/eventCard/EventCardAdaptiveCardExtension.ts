@@ -24,7 +24,10 @@ export default class EventCardAdaptiveCardExtension extends BaseAdaptiveCardExte
   private _graphClient: MSGraphClientV3 = null;
 
   public async onInit(): Promise<void> {
-    this.state = { };
+    this.state = {
+      error: '',
+      events: []
+    };
 
     this.cardNavigator.register(CARD_VIEW_MAIN_ID, () => new CardView());
     this.quickViewNavigator.register(QUICK_VIEW_LIST_EVENTS_ID, () => new ListSessionsQuickView());
@@ -39,7 +42,11 @@ export default class EventCardAdaptiveCardExtension extends BaseAdaptiveCardExte
 
   private loadEvents = async(): Promise<void> => {
     // Read the current group ID
-    const groupId: string =  this.context.pageContext.site.group.id._guid;
+    const groupId: string = this.properties.groupId ?? this.context.pageContext.site.group?.id?._guid;
+
+    if (!groupId) {
+      return;
+    }
 
     // Get the Microsoft Graph client object, if needed
     if (this._graphClient === null) {

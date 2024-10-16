@@ -3,7 +3,7 @@
   "solution": {
     "name": "spfx-event-dashboard-client-side-solution",
     "id": "8e6461c1-0daf-4424-91c8-3d11ebbbb8f8",
-    "version": "1.0.0.4",
+    "version": "1.0.0.7",
     "includeClientSideAssets": true,
     "skipFeatureDeployment": true,
     "isDomainIsolated": false,

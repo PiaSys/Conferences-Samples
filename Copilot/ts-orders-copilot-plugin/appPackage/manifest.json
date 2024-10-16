@@ -1,0 +1,89 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.16",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "PiaSys.com",
+        "websiteUrl": "https://www.piasys.com/",
+        "privacyUrl": "https://piasys.com/privacy/",
+        "termsOfUseUrl": "https://piasys.com/terms/"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "ts-orders-copilot-plugin${{APP_NAME_SUFFIX}}",
+        "full": "Orders Copilot Plugin${{APP_NAME_SUFFIX}}"
+    },
+    "description": {
+        "short": "Allows you to search for orders in the Orders management system.",
+        "full": "Allows searching for orders in the Orders system. Allows to search by different criteria like orderId, customer name, customer email, or order status and to get a detailed view of each order."
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [],
+    "composeExtensions": [
+        {
+            "botId": "${{BOT_ID}}",
+            "commands": [
+                {
+                    "id": "searchQuery",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for orders in the Orders management system by order ID, order date, customer name, customer email, order status.",
+                    "title": "Search orders",
+                    "semanticDescription": "Search for orders in the Orders management system by order ID, order date, customer name, customer email, order status. Returns information about the order like: order ID, order date, customer name, customer email, order status, and order details.",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "orderId",
+                            "title": "Order ID",
+                            "description": "Enter the order ID to search for",
+                            "semanticDescription": "The order ID to search for",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "orderDate",
+                            "title": "Order Date",
+                            "description": "Enter the order date to search for",
+                            "semanticDescription": "The order date to search for",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "customerName",
+                            "title": "Customer Name",
+                            "description": "Enter the customer name to search for",
+                            "semanticDescription": "The customer name to search for",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "customerEmail",
+                            "title": "Customer Email",
+                            "description": "Enter the customer email to search for",
+                            "semanticDescription": "The customer email to search for",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "orderStatus",
+                            "title": "Order Status",
+                            "description": "Enter the order status to search for. Accepted values are 'Pending', 'Processing', 'Shipped', 'Delivered'.",
+                            "semanticDescription": "The order status to search for. Accepted values are 'Pending', 'Processing', 'Shipped', 'Delivered'.",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": []
+}

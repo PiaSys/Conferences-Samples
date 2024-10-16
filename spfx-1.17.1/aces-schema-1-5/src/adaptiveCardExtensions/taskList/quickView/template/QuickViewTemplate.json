@@ -1,0 +1,120 @@
+{
+  "schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "weight": "Bolder",
+      "text": "${title}"
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "weight": "Bolder",
+              "text": "${subTitle}",
+              "wrap": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "Table",
+      "horizontalCellContentAlignment": "Left",
+      "verticalCellContentAlignment": "Top",
+      "horizontalAlignment": "Center",
+      "gridStyle": "accent",
+      "firstRowAsHeaders": true,
+      "columns": [
+          {
+              "width": 1
+          },
+          {
+              "width": 3
+          },
+          {
+              "width": 2
+          }
+      ],
+      "rows": [
+        {
+          "type": "TableRow",
+          "cells": [
+              {
+                  "type": "TableCell",
+                  "horizontalAlignment": "Center",
+                  "items": [
+                      {
+                        "type": "TextBlock",
+                        "text": "ID"
+                      }
+                  ]
+              },
+              {
+                  "type": "TableCell",
+                  "horizontalAlignment": "Left",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "Title"
+                    }
+                  ]
+              },
+              {
+                  "type": "TableCell",
+                  "horizontalAlignment": "Right",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "Due Date"
+                    }
+                  ]
+              }
+            ]
+        },
+        {
+          "$data": "${tasks}",
+          "type": "TableRow",
+          "cells": [
+              {
+                  "type": "TableCell",
+                  "horizontalAlignment": "Center",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "${formatNumber(id, 0)}"
+                    }
+                  ]
+              },
+              {
+                  "type": "TableCell",
+                  "horizontalAlignment": "Left",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "${title}"
+                    }
+                  ]
+              },
+              {
+                  "type": "TableCell",
+                  "horizontalAlignment": "Right",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "${formatDateTime(dueDate, 'yyyy-MM-dd')}"
+                    }
+                  ]
+              }
+            ]
+        }
+      ]
+    }
+  ]
+}

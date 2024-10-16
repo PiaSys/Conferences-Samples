@@ -1,6 +1,9 @@
 declare interface IEventCardAdaptiveCardExtensionStrings {
-  PropertyPaneDescription: string;
-  TitleFieldLabel: string;
+  PropertyPane: {
+    PropertyPaneDescription: string;
+    TitleFieldLabel: string;
+    GroupIdFieldLabel: string;
+  },
   CardView: {
     PrimaryText: string;
     Description: string;

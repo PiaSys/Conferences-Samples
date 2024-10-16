@@ -1,0 +1,22 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": true,
+    "isCreatingSolution": true,
+    "nodeVersion": "16.17.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.24.0"
+    },
+    "version": "1.20.0-beta.0",
+    "libraryName": "spfx-ace-data-visualization",
+    "libraryId": "8cb4383a-95fe-44b2-99a6-4015c911eddc",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "spfx-ace-data-visualization",
+    "solutionShortDescription": "spfx-ace-data-visualization description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "adaptiveCardExtension",
+    "aceTemplateType": "DataVisualization"
+  }
+}

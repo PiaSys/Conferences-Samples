@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-handle-throttling-client-side-solution",
+    "id": "54cbc66b-c9f9-426d-9128-414401b51a8a",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.17.3"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-handle-throttling description"
+      },
+      "longDescription": {
+        "default": "spfx-handle-throttling description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-handle-throttling Feature",
+        "description": "The feature that activates elements of the spfx-handle-throttling solution.",
+        "id": "7e5b537f-091f-417f-990b-4e14e7acf4b8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-handle-throttling.sppkg"
+  }
+}

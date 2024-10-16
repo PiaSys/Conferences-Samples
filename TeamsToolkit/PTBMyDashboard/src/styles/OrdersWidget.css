@@ -1,0 +1,39 @@
+.orders-body {
+    display: grid;
+    row-gap: var(--spacingVerticalS);
+    align-content: start;
+    min-width: 13.5rem;
+  }
+  
+  .orders-body div {
+    display: grid;
+  }
+  
+  .orders-body .divider {
+    margin: 0 -2rem 0.5rem;
+    height: var(--strokeWidthThin);
+    background: var(--colorNeutralStroke2);
+  }
+  
+  .orders-body .orderId {
+    font-weight: var(--fontWeightSemibold);
+  }
+  
+  .orders-body .description {
+    font-size: var(--fontSizeBase200);
+  }
+  
+  .orders-body .customer {
+    font-size: var(--fontSizeBase200);
+  }
+  
+  .orders-body .price {
+    font-size: var(--fontSizeBase200);
+  }
+  
+  .loading {
+    display: grid;
+    justify-content: center;
+    height: 100%;
+  }
+  

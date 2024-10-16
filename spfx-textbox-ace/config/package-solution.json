@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-textbox-ace-client-side-solution",
+    "id": "d13b4f07-0d49-4b6d-968f-8c64834a872b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-textbox-ace description"
+      },
+      "longDescription": {
+        "default": "spfx-textbox-ace description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-textbox-ace Feature",
+        "description": "The feature that activates elements of the spfx-textbox-ace solution.",
+        "id": "6d74ce05-f441-4e8e-b658-b0c3e726f6c8",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-textbox-ace.sppkg"
+  }
+}

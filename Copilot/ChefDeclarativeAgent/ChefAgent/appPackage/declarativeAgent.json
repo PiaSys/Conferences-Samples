@@ -1,0 +1,38 @@
+{
+    "$schema": "https://aka.ms/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+    "version": "v1.0",
+    "name": "Chef Agent",
+    "description": "Declarative agent to help cooking food",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "WebSearch"
+        },
+        {
+            "name": "OneDriveAndSharePoint",
+            "items_by_url": [
+                {
+                    "url": "https://piasysdev.sharepoint.com/sites/MasterChef"
+                }
+            ]
+        },
+        {
+            "name": "GraphConnectors",
+            "connections": [
+                {
+                    "connection_id": "cookingrecipes"
+                }
+            ]
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Getting Started",
+            "text": "How can I cook spaghetti alla carbonara?"
+        },
+        {
+            "title": "Chef's Special",
+            "text": "Show me the recipe of risotto with pumpkin and rosemary?"
+        }
+    ]
+}

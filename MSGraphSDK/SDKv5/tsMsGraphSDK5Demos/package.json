@@ -1,0 +1,26 @@
+{
+  "name": "tsmsgraphsdk5demos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/identity": "^4.1.0",
+    "@microsoft/microsoft-graph-client": "^3.0.7",
+    "dotenv": "^16.4.5",
+    "isomorphic-fetch": "^3.0.0",
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@microsoft/microsoft-graph-types": "^2.40.0",
+    "@types/isomorphic-fetch": "^0.0.39",
+    "@types/node": "^20.12.7",
+    "@types/readline-sync": "^1.4.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.3",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://raw.githubusercontent.com/PiaSys/Conferences-Samples/master/Copilot/python-f1-copilot-graph-connector/f1-driver-helmet.png",
+              "size": "Small",
+              "horizontalAlignment": "Center",
+              "altText": "Result logo"
+            }
+          ],
+          "height": "stretch"
+        },
+        {
+          "type": "Column",
+          "width": 8,
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "[${title}](${url})",
+              "color": "Accent",
+              "size": "Medium",
+              "weight": "Bolder"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Birthdate: {{DATE(${birthdate})}}",
+              "spacing": "Small"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "Small",
+              "text": "Number: ${number}"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "Small",
+              "text": "Code: ${code}"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "Small",
+              "text": "Nationality: ${nationality}"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "Small",
+              "text": "Reference: ${reference}"
+            },
+            {
+              "type": "TextBlock",
+              "spacing": "Small",
+              "text": "DriverID: ${driverId}"
+            }
+          ],
+          "horizontalAlignment": "Center",
+          "spacing": "Medium"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}

@@ -134,7 +134,7 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
       maxWidth: 100
     },
     {
-      name: "leve",
+      name: "level",
       displayName: "Level",
       sorting: true,
       minWidth: 100,
@@ -341,17 +341,33 @@ export default class M365EventDashboard extends React.Component<IM365EventDashbo
    * @returns Element representing the Attendees list tab
    */
    private getSessionsChartTab = () => {    
+    const options = {
+      scales:
+      {
+        yAxes:
+          [
+            {
+              ticks:
+              {
+                beginAtZero: true
+              }
+            }
+          ]
+      }
+    };
+    
     return <ChartControl 
       type={ChartType.Bar}
       palette={ChartPalette.OfficeColorful4}
       data={this.getSessionsData()}
+      options={options}
       loadingtemplate={() => <Spinner size={SpinnerSize.large} label={strings.Loading} />}
       />;
   }
 
   private getSessionsData = () => {
     return {
-      labels: ['Microsoft SharePoint Online', 'Microsoft Teams', 'Microsoft Viva', 'Microsoft Graph'],
+      labels: ['Microsoft SPO', 'Microsoft Teams', 'Microsoft Viva', 'Microsoft Graph'],
       datasets: [
         {
           label: 'Submissions Count',

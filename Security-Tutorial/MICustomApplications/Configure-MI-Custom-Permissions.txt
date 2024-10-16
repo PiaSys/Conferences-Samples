@@ -1,0 +1,12 @@
+BASH
+
+functionAppName="piasys-security-tutorial-consumer"
+providerAppName="piasys-security-tutorial-provider"
+
+spId=$(az resource list -n $functionAppName --query [*].identity.principalId --out tsv)
+providerResourceId=$(az ad sp list --display-name $providerAppName --query [0].id --out tsv)
+appRoleId=$(az ad sp list --display-name $providerAppName --query "[0].appRoles[?value=='Provider.Consume' && contains(allowedMemberTypes, 'Application')].id" --output tsv)
+
+uri=https://graph.microsoft.com/v1.0/servicePrincipals/$spId/appRoleAssignments
+body="{'principalId':'$spId','resourceId':'$providerResourceId','appRoleId':'$appRoleId'}"
+az rest --method post --uri $uri --body $body --headers "Content-Type=application/json"

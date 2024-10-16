@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "MIMicrosoftGraphFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7001",
+      "launchBrowser": false
+    }
+  }
+}

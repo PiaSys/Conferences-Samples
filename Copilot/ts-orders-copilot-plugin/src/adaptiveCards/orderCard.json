@@ -1,0 +1,44 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Order ID: ${orderId}",
+      "wrap": true,
+      "size": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Placed on: ${orderDate}",
+      "wrap": true,
+      "size": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Customer name: ${customerName}",
+      "wrap": true,
+      "size": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Customer e-mail: ${customerEmail}",
+      "wrap": true,
+      "size": "Medium"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Order status: ${orderStatus}",
+      "wrap": true,
+      "size": "Medium"
+    } 
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Details",
+      "url": "https://pnp.github.io/?orderId=${orderId}"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}
