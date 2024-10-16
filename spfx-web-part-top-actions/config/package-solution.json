@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-web-part-top-actions-client-side-solution",
+    "id": "bbfecef6-b4b9-4cc5-bfbd-7d1020af8c65",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.16.1"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "spfx-web-part-top-actions description"
+      },
+      "longDescription": {
+        "default": "spfx-web-part-top-actions description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "spfx-web-part-top-actions Feature",
+        "description": "The feature that activates elements of the spfx-web-part-top-actions solution.",
+        "id": "a0330851-4192-4cd2-a6bf-c02832828fee",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-web-part-top-actions.sppkg"
+  }
+}

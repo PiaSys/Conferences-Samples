@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "with-top-actions-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/withTopActions/WithTopActionsWebPart.js",
+          "manifest": "./src/webparts/withTopActions/WithTopActionsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "WithTopActionsWebPartStrings": "lib/webparts/withTopActions/loc/{locale}.js"
+  }
+}
