@@ -1,0 +1,30 @@
+{
+    "$schema": "https://aka.ms/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+    "version": "v1.0",
+    "name": "GardenerAgent",
+    "description": "Declarative agent to help gardening enthusiasts",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "WebSearch"
+        },
+        {
+            "name": "OneDriveAndSharePoint",
+            "items_by_url": [
+                {
+                    "url": "https://piasysdev.sharepoint.com/sites/Gardening"
+                }
+            ]
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Getting Started",
+            "text": "How can I maintain my home garden?"
+        },
+        {
+            "title": "Most common plants",
+            "text": "What are the most common plants for a home garden?"
+        }
+    ]
+}
