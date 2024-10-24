@@ -1,13 +1,10 @@
 {
     "$schema": "https://aka.ms/json-schemas/copilot/declarative-agent/v1.0/schema.json",
     "version": "v1.0",
-    "name": "GardenerAgent",
+    "name": "Gardener Agent",
     "description": "Declarative agent to help gardening enthusiasts",
     "instructions": "$[file('instruction.txt')]",
     "capabilities": [
-        {
-            "name": "WebSearch"
-        },
         {
             "name": "OneDriveAndSharePoint",
             "items_by_url": [
@@ -25,6 +22,10 @@
         {
             "title": "Most common plants",
             "text": "What are the most common plants for a home garden?"
+        },
+        {
+            "title": "Play with me",
+            "text": "Let's play a game and let me find out the name of a plant based on its features!"
         }
     ]
 }
