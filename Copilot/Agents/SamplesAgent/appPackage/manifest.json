@@ -1,0 +1,39 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.19",
+    "version": "1.0.0",
+    "id": "${{TEAMS_APP_ID}}",
+    "developer": {
+        "name": "PiaSys.com",
+        "websiteUrl": "https://www.piasys.com/",
+        "privacyUrl": "https://www.piasys.com/privacy/",
+        "termsOfUseUrl": "https://www.piasys.com/terms-of-use/"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "Samples Agent-${{APP_NAME_SUFFIX}}",
+        "full": "Microsoft 365 & Power Platform Community Samples Gallery Agent"
+    },
+    "description": {
+        "short": "Declarative Agent for Samples Gallery",
+        "full": "Declarative Agent to work with the samples of the Microsoft 365 & Power Platform Community Samples Gallery"
+    },
+    "accentColor": "#FFFFFF",
+    "composeExtensions": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "copilotAgents": {
+        "declarativeAgents": [            
+            {
+                "id": "declarativeAgent",
+                "file": "declarativeAgent.json"
+            }
+        ]
+    },
+    "validDomains": []
+}

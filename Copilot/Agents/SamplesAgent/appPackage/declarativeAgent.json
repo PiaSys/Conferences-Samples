@@ -1,0 +1,31 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/declarative-agent/v1.0/schema.json",
+    "version": "v1.0",
+    "name": "Samples Agent",
+    "description": "Declarative agent created with Teams Toolkit",
+    "instructions": "$[file('instruction.txt')]",
+    "capabilities": [
+        {
+            "name": "GraphConnectors",
+            "connections": [
+                {
+                    "connection_id": "samplesolutiongallery"
+                }
+            ]
+        }
+    ],
+    "conversation_starters": [
+        {
+            "title": "Sample about Microsoft 365 Copilot",
+            "text": "Give me a table with the most recent samples about Microsoft 365 Copilot"
+        },
+        {
+            "title": "Most recent sample about Microsoft 365 Copilot",
+            "text": "Give me the most recent sample about Microsoft 365 Copilot"
+        },
+        {
+            "title": "Sample of Paolo Pialorsi",
+            "text": "Give me a table with the most recent samples where one of the authors is Paolo Pialorsi"
+        }
+    ]
+}
