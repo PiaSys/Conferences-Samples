@@ -1,0 +1,170 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/copilot/plugin/v2.1/schema.json",
+    "schema_version": "v2.1",
+    "name_for_human": "StockAgent",
+    "description_for_human": "API for trading stocks",
+    "namespace": "stockagent",
+    "functions": [
+        {
+            "name": "getStock",
+            "description": "Get stock details",
+            "capabilities": {
+                "response_semantics": {
+                    "data_path": "$.stock",
+                    "properties": {
+                        "title": "$.symbol",
+                        "subtitle": "$.description"
+                    },
+                    "static_template": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.5",
+                        "body": [
+                            {
+                                "type": "TextBlock",
+                                "text": "symbol: ${if(symbol, symbol, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "description: ${if(description, description, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "price: ${if(price, price, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "marketVolume: ${if(marketVolume, marketVolume, 'N/A')}",
+                                "wrap": true
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "getStockList",
+            "description": "Get list of all stocks",
+            "capabilities": {
+                "response_semantics": {
+                    "data_path": "$",
+                    "properties": {
+                        "title": "$.symbol",
+                        "subtitle": "$.description"
+                    },
+                    "static_template": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.5",
+                        "body": [
+                            {
+                                "type": "Container",
+                                "$data": "${$root}",
+                                "items": [
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "symbol: ${if(symbol, symbol, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "description: ${if(description, description, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "price: ${if(price, price, 'N/A')}",
+                                        "wrap": true
+                                    },
+                                    {
+                                        "type": "TextBlock",
+                                        "text": "marketVolume: ${if(marketVolume, marketVolume, 'N/A')}",
+                                        "wrap": true
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "tradeStock",
+            "description": "Trade a stock",
+            "capabilities": {
+                "response_semantics": {
+                    "data_path": "$",
+                    "properties": {
+                        "title": "$.symbol",
+                        "subtitle": "$.action"
+                    },
+                    "static_template": {
+                        "type": "AdaptiveCard",
+                        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                        "version": "1.5",
+                        "body": [
+                            {
+                                "type": "TextBlock",
+                                "text": "symbol: ${if(symbol, symbol, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "action: ${if(action, action, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "quantity: ${if(quantity, quantity, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "price: ${if(price, price, 'N/A')}",
+                                "wrap": true
+                            },
+                            {
+                                "type": "TextBlock",
+                                "text": "status: ${if(status, status, 'N/A')}",
+                                "wrap": true
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    ],
+    "runtimes": [
+        {
+            "type": "OpenApi",
+            "auth": {
+                "type": "None"
+            },
+            "spec": {
+                "url": "apiSpecificationFile/openapi.yaml"
+            },
+            "run_for_functions": [
+                "getStock",
+                "getStockList",
+                "tradeStock"
+            ]
+        }
+    ],
+    "capabilities": {
+        "localization": {},
+        "conversation_starters": [
+            {
+                "text": "Get stock details"
+            },
+            {
+                "text": "Get list of all stocks"
+            },
+            {
+                "text": "Trade a stock"
+            }
+        ]
+    }
+}
