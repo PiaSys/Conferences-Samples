@@ -1,0 +1,1 @@
+ngrok http --region=us --hostname=piasys-stock-api.ngrok.dev 7071

@@ -1,0 +1,68 @@
+[
+    {
+        "symbol": "MSFT",
+        "description": "Microsoft Corporation",
+        "price": 425.20,
+        "marketVolume": 25000000
+    },
+    {
+        "symbol": "AMZN",
+        "description": "Amazon.com, Inc.",
+        "price": 214.10,
+        "marketVolume": 3000000
+    },
+    {
+        "symbol": "NVDA",
+        "description": "NVIDIA Corporation",
+        "price": 146.27,
+        "marketVolume": 15000000
+    },
+    {
+        "symbol": "TSLA",
+        "description": "Tesla, Inc.",
+        "price": 330.24,
+        "marketVolume": 20000000
+    },
+    {
+        "symbol": "GOOGL",
+        "description": "Alphabet Inc.",
+        "price": 178.88,
+        "marketVolume": 1800000
+    },
+    {
+        "symbol": "META",
+        "description": "Meta Platforms, Inc.",
+        "price": 580.00,
+        "marketVolume": 12000000
+    },
+    {
+        "symbol": "APPL",
+        "description": "Apple Inc.",
+        "price": 225.12,
+        "marketVolume": 50000000
+    },
+    {
+        "symbol": "ZM",
+        "description": "Zoom Video Communications, Inc.",
+        "price": 85.04,
+        "marketVolume": 8000000
+    },
+    {
+        "symbol": "ARM",
+        "description": "Arm Holdings plc",
+        "price": 135.09,
+        "marketVolume": 10000000
+    },
+    {
+        "symbol": "AMD",
+        "description": "Advanced Micro Devices, Inc.",
+        "price": 139.30,
+        "marketVolume": 25000000
+    },
+    {
+        "symbol": "NFLX",
+        "description": "Netflix, Inc.",
+        "price": 8340.47,
+        "marketVolume": 7000000
+    }
+]

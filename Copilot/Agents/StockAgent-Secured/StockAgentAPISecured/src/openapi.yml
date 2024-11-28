@@ -1,0 +1,130 @@
+openapi: 3.0.1
+info:
+  title: Stock Trading Secured API
+  version: 1.0.0
+  description: API for trading stocks
+servers:
+  - url: https://piasys-stock-api.ngrok.dev/api
+    description: The stocks API server
+components:
+  securitySchemes:
+    OAuth2:
+      type: oauth2
+      flows:
+        authorizationCode:
+          authorizationUrl: https://login.microsoftonline.com/6c94075a-da0a-4c6a-8411-badf652e8b53/oauth2/v2.0/authorize
+          tokenUrl: https://login.microsoftonline.com/6c94075a-da0a-4c6a-8411-badf652e8b53/oauth2/v2.0/token
+          scopes:
+            StockAgent.Consume: Consume stock operations
+security:
+  - OAuth2:
+      - StockAgent.Consume
+paths:
+  /getStockList:
+    get:
+      summary: Get list of all stocks
+      operationId: getStockList
+      responses:
+        '200':
+          description: List of stocks retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    symbol:
+                      type: string
+                    description:
+                      type: string
+                    price:
+                      type: number
+                    marketVolume:
+                      type: integer
+        '400':
+          description: Invalid input
+      security:
+        - OAuth2:
+            - StockAgent.Consume
+  /getStock:
+    get:
+      summary: Get stock details
+      operationId: getStock
+      parameters:
+        - name: symbol
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Stock symbol to retrieve details for
+      responses:
+        '200':
+          description: Stock details retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  symbol:
+                    type: string
+                  description:
+                    type: string
+                  price:
+                    type: number
+                  marketVolume:
+                    type: integer
+        '400':
+          description: Invalid input
+        '404':
+          description: Stock item not found
+      security:
+        - OAuth2:
+            - StockAgent.Consume
+  /tradeStock:
+    post:
+      summary: Trade a stock
+      operationId: tradeStock
+      requestBody:
+        description: Trade details
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                symbol:
+                  type: string
+                action:
+                  type: string
+                  enum: [buy, sell]
+                quantity:
+                  type: integer
+                price:
+                  type: number
+              required: [symbol, action, quantity, price]
+      responses:
+        '200':
+          description: Trade processed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  symbol:
+                    type: string
+                  action:
+                    type: string
+                  quantity:
+                    type: integer
+                  price:
+                    type: number
+                  status:
+                    type: string
+        '400':
+          description: Invalid input
+        '404':
+          description: Stock item not found
+      security:
+        - OAuth2:
+            - StockAgent.Consume
